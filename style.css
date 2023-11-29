@@ -1,0 +1,56 @@
+*{ /*definit le style global(selecteur universel)*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /*Indique que l'on va inclure les marges internes et bordure dans la tailles des parents*/
+}
+body{
+    font-family: 'Hedvig Letters Serif', serif;
+}
+.welcome { /*Commentaire en css*/
+    
+}
+/*---------------Header------------*/
+.header {
+    display: flex;
+    justify-content:space-around;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+nav ul li a {
+    color: #d42c2c;
+    text-decoration: none;
+}
+.tchoupiImage{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imageTchoupi{
+    width: 100px;
+}
+.describeImage{
+    display: flex;
+    justify-content: space-evenly;
+}
+/*----------Header end-----------*/
+
+  /*ANcre
+  .divMark {
+    margin-top: 800px;
+  } */
+/*------------DYnamisme en CSS-------------*/
+/*a:hover {
+    background-color: aqua;
+    color: blueviolet;
+}*/
+.linearSection{
+    width: 500px;
+    height: 300px;
+    background: linear-gradient(90deg, #8360c3, #2ebf91);
+    border-width: 3px #EB5353 dotted;
+}

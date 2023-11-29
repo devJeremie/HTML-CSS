@@ -1,0 +1,75 @@
+<!DOCTYPE html> <!--Permet de definir au navigateur de quel document il s'agit et comment il doit le rendre-->
+<html lang="fr"><!--Permet de definir la langue utilisé-->
+<head>
+    <meta charset="UTF-8"> <!--Dis au navigateur d'utiliser le jeu de caractere universel-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Permet de donner les instructions d'echelle de taille aux navigateur mobiles-->
+    <link href="style.css" rel="stylesheet"> <!--Permet de linker son css a son fichier index.html-->
+    <title>Html/CSS</title> <!--Titre de l'onglet-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div>
+                <img src="image/disney_logo.png" alt="Logo">
+            </div>
+            <div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="Link/services.html">Services</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="tchoupiImage">
+            <div><img class="imageTchoupi" src="image/thcoupi.jpg" alt="image tchoupi"></div>
+            <div><img class="imageTchoupi" src="image/tchoupi2.jpg" alt="image tchoupi"></div>
+        </div>
+        <div class="describeImage">
+            <p>Image de tchoupi</p>
+            <p>Image de tchoupi</p>
+        </div>
+    </section>
+    <section class="linearSection">
+        <button><a href="Link/services.html">Services</a></button>
+    </section>
+    <h1 id="ancre">HELLO WORLD</h1>
+    <p class="welcome">Bienvenue à l'initiation html</p>
+    <ol>
+        <li>Ceci est un liste numérotée</li><!--Liste numeroté-->
+    </ol>
+    <ul>
+        <li>Ceci est une liste à points</li><!--Liste a points-->
+    </ul>
+    <br><!--Saute une ligne mais tres mauvaise pratique-->
+    <div class="divMark"><!--La boite magique type block-->
+        <h2><mark>Ceci est une div</mark></h2><!--à utilser avec parcimonie car influence le SEO-->
+        <p>hello</p>
+        <p><em>BLue</em></p>
+        <p><strong>Green</strong></p>
+        <p>purple</p>
+    </div>
+    <div>
+        <img src="monimg.png" alt="C'est ma photo"><!--Mettre toute une ligner en comm ctrl K, ctrl C-->
+        <p>Justify-content: aligne les elements horizontalement</p>
+        <p>Align-items: aligne les éléments verticalement</p>
+    </div>
+    <div>
+        <a href="https://www.google.com/" target="_blank">Accédez à GOOGLE</a><!--Lien absolu car adresse complète-->
+        <a href="Link/services.html">Pages Services</a><!--Lien relatif indique ou trouver le fichier-->
+        <!--Si plus haut dans l'arborescence on mettra ../ -->
+    </div>
+    <div><!--Les ANCRES-->
+        <a href="#ancre">Aller vers l'ancre</a>
+        <a href="Link/services.html#servicesPage">Ancre sur autre page</a>
+    </div>
+    
+</body>
+</html>
