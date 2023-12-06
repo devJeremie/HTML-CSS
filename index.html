@@ -2,7 +2,7 @@
 <html lang="fr"><!--Permet de definir la langue utilisé-->
 <head>
     <meta charset="UTF-8"> <!--Dis au navigateur d'utiliser le jeu de caractere universel-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Permet de donner les instructions d'echelle de taille aux navigateur mobiles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Permet de donner les instructions d'echelle de taille aux navigateur-->
     <link href="style.css" rel="stylesheet"> <!--Permet de linker son css a son fichier index.html-->
     <title>Html/CSS</title> <!--Titre de l'onglet-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,6 +26,19 @@
                 </nav>
             </div>
         </div>
+        <div class="menuBurger"><!---Menu burger-->
+            <nav>
+                <div class="navigation">
+                    <ul class="navLien">
+                        <li><a href="#">Accueil</a></li>
+                        <li><a href="Link/services.html">Services</a></li>
+                        <li><a href="#">Produits</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                    <div class="basculant"></div>
+                </div>
+                </nav>
+            </div>
     </header>
     <section>
         <div class="tchoupiImage">
@@ -66,10 +79,159 @@
         <a href="Link/services.html">Pages Services</a><!--Lien relatif indique ou trouver le fichier-->
         <!--Si plus haut dans l'arborescence on mettra ../ -->
     </div>
+    <section class="containerContent"><!--Exercice flexbox et double class-->
+        <!--1 : aligner les bloc,2 :  et aligner tout les bloc en ligne-->
+        <!--Essayer le column, le row, ainsi que le flex-wrap-->
+        <div class="container">
+            <div class="bloc yellow">Jaune</div>
+            <div class="bloc blue">Bleu</div>
+            <div class="bloc red">Rouge</div>
+        </div>
+        <div class="container">
+            <div class="bloc yellow">Jaune</div>
+            <div class="bloc blue">Bleu</div>
+            <div class="bloc red">Rouge</div>
+            <div class="bloc red">Rouge</div>
+            <div class="bloc red">Rouge</div>
+        </div>
+        <article class="purple"></article>
+    </section>
+    <section class="gridSection"><!--Exercice grid-->
+        <!---->
+        <div class="containerGrid">
+            <div class="box">Boite 1</div>
+            <div class="box">Boite 2</div>
+            <div class="box">Boite 3</div>
+            <div class="box">Boite 4</div>
+            <div class="box">Boite 5</div>
+            <div class="box">Boite 6</div>
+            <div class="box">Boite 7</div>
+            <div class="box">Boite 8</div>
+        </div>
+    </section>
+    <section><!--Exercice grid touchy-->
+        <div class="containeurGridTouchy">
+            <div class="boite one">Boite 1</div>
+            <div class="boite two">Boite 2</div>
+            <div class="boite three">Boite 3</div>
+            <div class="boite four">Boite 4</div>
+            <div class="boite five">Boite 5</div>
+            <div class="boite six">Boite 6</div>
+            <div class="boite seven">Boite 7</div>
+            <div class="boite height">Boite 8</div>
+        </div>
+        <div class="conteneur">
+            <div class="box une">Élément 1</div>
+            <div class="box deux">Élément 2</div>
+            <div class="box trois">Élément 3</div>
+            <div class="box quatre">Élément 4</div>
+            <div class="box cinq">Élément 5</div>
+            <div class="box six">Élément 6</div>
+            <div class="box sept">Élément 7</div>
+            <div class="box huit">Élément 8</div>
+          </div>
+    </section>
     <div><!--Les ANCRES-->
         <a href="#ancre">Aller vers l'ancre</a>
         <a href="Link/services.html#servicesPage">Ancre sur autre page</a>
     </div>
-    
+    <section><!--Les tableaux-->
+        <table>
+            <caption>Apprenants 2023/2024</caption>
+            <tr>
+                <th>Nom</th>
+                <th>Âge</th>
+                <th>Pays</th>
+            </tr>
+            <tr>
+                <td>Bassekou</td>
+                <td>30 ans</td>
+                <td>Sénégal</td> <!--Fusion de deux lignes (rowspan="2") se met comme une classe-->
+            </tr>
+            <tr>
+                <td>Joseph</td>
+                <td>23 ans</td>
+                <td>France</td>
+            </tr>
+            <tr>
+                <td>Patrick</td>
+                <td>31 ans</td><!--Fusion de deux colonnes (colspan="2")-->
+                <td>France</td>
+            </tr>
+        </table>
+    </section>
+    <section><!-----------Les Formulaires------------>
+        <p>Création formulaire</p>
+        <form method="get" action="">
+            <p>
+                <label for="prenom">Votre prénom :</label>
+                <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" size="30" maxlength="20">
+            </p>
+            <p><!--Checkbox-->
+                    Cochez les aliments que vous préféré :<br>
+                    <input type="checkbox" name="frites" id="frites"> <label for="frites">Frites</label><br>
+                    <input type="checkbox" name="steak" id="steak"> <label for="steak">Steak</label><br>
+                    <input type="checkbox" name="panini" id="panini"> <label for="panini">Panini</label><br>
+                    <input type="checkbox" name="salade" id="salade"> <label for="salade">Salade</label>
+            </p>
+            <p><!--Radio-->
+                Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
+                <input type="radio" name="age" value="moins15" id="moins15"> <label for="moins15">Moins de 15 ans</label><br>
+                <input type="radio" name="age" value="medium15-25" id="medium15-25"> <label for="medium15-25">15-25 ans</label><br>
+                <input type="radio" name="age" value="medium25-40" id="medium25-40"> <label for="medium25-40">25-40 ans</label><br>
+                <input type="radio" name="age" value="plus40" id="plus40"> <label for="plus40">Plus de 40 ans</label>
+            </p>
+        </form>
+        <form method="get" action="">
+            <p>
+                <label for="pays">De quel pays venez-vous ?</label><br>
+                <select name="pays" id="pays">
+                    <option value="sénégal">Sénégal</option>
+                    <option value="royaume-uni">Royaume-Uni</option>
+                    <option value="france" selected>France</option>
+                    <option value="maroc">Maroc</option>
+                </select>
+            </p>
+            <fieldset>
+                <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+                <label for="nom">Quel est votre nom ?</label>
+                <input type="text" name="nom" id="nom">
+                <label for="prenom">Quel est votre prénom ?</label>
+                <input type="text" name="prenom" id="prenom" required><!--required rend le champ obligatoire-->
+                <label for="email">Quel est votre e-mail ?</label>
+                <input type="email" name="email" id="email">
+             </fieldset>
+             <p>Quel somptueux formulaire</p>
+             <input type="submit" value="Envoyer mon form">
+        </form>
+    </section>
+    <section class="funnyContainerOne"><!--DU FUN EN CSS ET OUI-->
+        <p class="funnyOne">Imane</p><br>
+        <p class="funnyOne">Mathias</p><br>
+        <p class="funnyOne">Alexandre</p><br>
+        <p class="funnyOne">Tyfaine</p><br>
+        <p class="funnyOne">Guillaume</p><br>
+    </section>
+    <section class="funnyContainerTwo">
+        <div class="containerAnimationTwo">
+            <h1 class="rollerTitle">Css is not fun ???: <div class="roller">
+              <span id="rolltext">Kevin<br/>
+              Claude<br/>
+              Joseph<br/>
+              Patrick<br/>
+              Bassekou<br/>
+              <span id="spare-time">Mouah aha aha aha</span><br/>
+              </div>
+              </h1>
+        </div>
+    </section>
+    <section><!--JAVASCRIPT-->
+        <p id="demo"></p>
+            <script>
+            let carName = "Vous allez tout déchirer les p'tits devs";
+            document.getElementById("demo").innerHTML = carName;
+            </script>
+    </section>
 </body>
+<script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 </html>
