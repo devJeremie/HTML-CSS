@@ -6,11 +6,26 @@
 body{
     font-family: 'Hedvig Letters Serif', serif;
 }
+.parallax{
+  background-image:url(image/africaParallax.jpg);/*definit mon image de fond*/
+  height: 100%;/*permet de dire de remplir 100% de son conteneur*/
+  background-attachment: fixed;/*fixe l'image de fond au scroll*/
+  background-position: center;/*positionne l'image de fond au centre*/
+  background-repeat: no-repeat;/*empeche la répétition de l'image*/
+  background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
+}
+main{
+  padding-top: 80px;/*ajoute un padding top a tout mon contenu 
+  donc du main pour ne pas etre en dessous de mon header fixed*/
+}
 /*---------------Header------------*/
 .header {
     display: flex;
-    display: none;
+    /*display: none;*/
     justify-content:space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 nav ul {
     list-style: none;
@@ -21,7 +36,7 @@ nav ul li {
     margin-right: 20px;
 }
 nav ul li a {
-    color: #d42c2c;
+    color: whitesmoke;
     text-decoration: none;
 }
 .tchoupiImage{
@@ -34,6 +49,9 @@ nav ul li a {
 .describeImage{
     display: flex;
     justify-content: space-evenly;
+}
+.textWhite{
+  color: whitesmoke;
 }
 /*----------Header end-----------*/
 
@@ -479,8 +497,11 @@ a:hover{
         display: flex;
         justify-content: flex-start;
     }
+    .header{
+      display: none;
+    }
 }
-@media screen  and (min-width:800px){
+@media screen and (min-width:800px){
     .menuBurger{
         display: none;
     }
