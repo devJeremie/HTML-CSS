@@ -9,6 +9,7 @@ body{
 /*---------------Header------------*/
 .header {
     display: flex;
+    display: none;
     justify-content:space-around;
 }
 nav ul {
@@ -466,7 +467,7 @@ a:hover{
 .menuBurger.active .basculant::after {
     transform: rotate(-135deg);
     margin-top: 0;
-}
+}/*Mise en  place appear dissapear*/
 @media screen and (max-width: 800px) {
    .menuBurger{
         display: block;
