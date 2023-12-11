@@ -40,7 +40,7 @@
                 </nav>
             </div>
     </header>
-    <main>
+    <!--<main>
         <section>
             <div class="tchoupiImage">
                 <div><img class="imageTchoupi" src="image/thcoupi.jpg" alt="image tchoupi"></div>
@@ -58,32 +58,32 @@
         <p class="welcome textWhite">Bienvenue à l'initiation html</p>
         <ol>
             <li class=" textWhite">Ceci est un liste numérotée</li><!--Liste numeroté-->
-        </ol>
+      <!--  </ol>
         <ul>
             <li class="textWhite">Ceci est une liste à points</li><!--Liste a points-->
-        </ul>
+       <!-- </ul>
         <br><!--Saute une ligne mais tres mauvaise pratique-->
-        <div class="divMark"><!--La boite magique type block--> class="textWhite"
+       <!-- <div class="divMark"><!--La boite magique type block--> class="textWhite"
             <h2><mark>Ceci est une div</mark></h2><!--à utilser avec parcimonie car influence le SEO-->
             <p class="textWhite">hello</p>
             <p class="textWhite"><em>BLue</em></p>
             <p class="textWhite"><strong>Green</strong></p>
             <p class="textWhite">purple</p>
-        </div>
+       <!-- </div>
         <div>
             <img src="monimg.png" alt="C'est ma photo"><!--Mettre toute une ligner en comm ctrl K, ctrl C-->
-            <p class="textWhite">Justify-content: aligne les elements horizontalement</p>
+           <!-- <p class="textWhite">Justify-content: aligne les elements horizontalement</p>
             <p class="textWhite">Align-items: aligne les éléments verticalement</p>
         </div>
         <div>
             <a href="https://www.google.com/" target="_blank">Accédez à GOOGLE</a><!--Lien absolu car adresse complète-->
-            <a href="Link/services.html">Pages Services</a><!--Lien relatif indique ou trouver le fichier-->
+          <!--  <a href="Link/services.html">Pages Services</a><!--Lien relatif indique ou trouver le fichier-->
             <!--Si plus haut dans l'arborescence on mettra ../ -->
-        </div>
+       <!-- </div>
         <section class="containerContent"><!--Exercice flexbox et double class-->
             <!--1 : aligner les bloc,2 :  et aligner tout les bloc en ligne-->
             <!--Essayer le column, le row, ainsi que le flex-wrap-->
-            <div class="container">
+            <!--<div class="container">
                 <div class="bloc yellow">Jaune</div>
                 <div class="bloc blue">Bleu</div>
                 <div class="bloc red">Rouge</div>
@@ -99,7 +99,7 @@
         </section>
         <section class="gridSection"><!--Exercice grid-->
             <!---->
-            <div class="containerGrid">
+           <!-- <div class="containerGrid">
                 <div class="box">Boite 1</div>
                 <div class="box">Boite 2</div>
                 <div class="box">Boite 3</div>
@@ -111,7 +111,7 @@
             </div>
         </section>
         <section><!--Exercice grid touchy-->
-            <div class="containeurGridTouchy">
+           <!-- <div class="containeurGridTouchy">
                 <div class="boite one">Boite 1</div>
                 <div class="boite two">Boite 2</div>
                 <div class="boite three">Boite 3</div>
@@ -133,11 +133,11 @@
             </div>
         </section>
         <div><!--Les ANCRES-->
-            <a href="#ancre">Aller vers l'ancre</a>
+           <!--- <a href="#ancre">Aller vers l'ancre</a>
             <a href="Link/services.html#servicesPage">Ancre sur autre page</a>
         </div>
         <section><!--Les tableaux-->
-            <table>
+           <!-- <table>
                 <caption>Apprenants 2023/2024</caption>
                 <tr>
                     <th>Nom</th>
@@ -148,7 +148,7 @@
                     <td>Bassekou</td>
                     <td>30 ans</td>
                     <td>Sénégal</td> <!--Fusion de deux lignes (rowspan="2") se met comme une classe-->
-                </tr>
+              <!--  </tr>
                 <tr>
                     <td>Joseph</td>
                     <td>23 ans</td>
@@ -157,26 +157,26 @@
                 <tr>
                     <td>Patrick</td>
                     <td>31 ans</td><!--Fusion de deux colonnes (colspan="2")-->
-                    <td>France</td>
+                  <!-- <td>France</td>
                 </tr>
             </table>
         </section>
         <section><!-----------Les Formulaires------------>
-            <p>Création formulaire</p>
+           <!-- <p>Création formulaire</p>
             <form method="get" action="">
                 <p>
                     <label for="prenom">Votre prénom :</label>
                     <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" size="30" maxlength="20">
                 </p>
                 <p><!--Checkbox-->
-                        Cochez les aliments que vous préféré :<br>
+                      <!--  Cochez les aliments que vous préféré :<br>
                         <input type="checkbox" name="frites" id="frites"> <label for="frites">Frites</label><br>
                         <input type="checkbox" name="steak" id="steak"> <label for="steak">Steak</label><br>
                         <input type="checkbox" name="panini" id="panini"> <label for="panini">Panini</label><br>
                         <input type="checkbox" name="salade" id="salade"> <label for="salade">Salade</label>
                 </p>
                 <p><!--Radio-->
-                    Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
+                  <!--  Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
                     <input type="radio" name="age" value="moins15" id="moins15"> <label for="moins15">Moins de 15 ans</label><br>
                     <input type="radio" name="age" value="medium15-25" id="medium15-25"> <label for="medium15-25">15-25 ans</label><br>
                     <input type="radio" name="age" value="medium25-40" id="medium25-40"> <label for="medium25-40">25-40 ans</label><br>
@@ -195,11 +195,11 @@
                 </p>
                 <fieldset>
                     <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
-                    <label for="nom">Quel est votre nom ?</label>
+                   <!--- <label for="nom">Quel est votre nom ?</label>
                     <input type="text" name="nom" id="nom">
                     <label for="prenom">Quel est votre prénom ?</label>
                     <input type="text" name="prenom" id="prenom" required><!--required rend le champ obligatoire-->
-                    <label for="email">Quel est votre e-mail ?</label>
+                  <!-- <label for="email">Quel est votre e-mail ?</label>
                     <input type="email" name="email" id="email">
                 </fieldset>
                 <p>Quel somptueux formulaire</p>
@@ -207,7 +207,7 @@
             </form>
         </section>
         <section class="funnyContainerOne"><!--DU FUN EN CSS ET OUI-->
-            <p class="funnyOne">Imane</p><br>
+           <!-- <p class="funnyOne">Imane</p><br>
             <p class="funnyOne">Mathias</p><br>
             <p class="funnyOne">Alexandre</p><br>
             <p class="funnyOne">Tyfaine</p><br>
@@ -227,20 +227,413 @@
             </div>
         </section>
         <section><!--JAVASCRIPT-->
-            <p id="demo"></p>
+           <p id="demo"></p>
                 <script>
                 let carName = "Vous allez tout déchirer les p'tits devs";
                 document.getElementById("demo").innerHTML = carName;
                 </script>
         </section>
         <section>
-     <script>
+            <!--Boucle numero de 1 a 100-->
+     <!--<script>
         for (let nbr=1; nbr <=100; nbr++) {
-            console.log(nbr);
+            console.log(nbr); 
         }
-     </script>
-        </section>
-    </main> 
+     </script>-->
+            <!--Exercice 3 Javascript-->
+        <!--<script>
+            for (var i = 1; i <= 199; i++) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    console.log('FizzBuzz');
+                } else if (i % 3 === 0) {
+                    console.log('Fizz');
+                } else if (i % 5 === 0) {
+                    console.log('Buzz');
+                } else {
+                    console.log(i);
+                }
+            }
+        </script>-->
+         <!--Exercice 3 Javascript suite-->
+        <!--<script>
+            function guessingGame() {
+                // Initialiser le nombre aléatoire
+                let secretNumber = Math.floor(Math.random() * 101);
+                /*console.log('Le nombre secret est :', secretNumber); affiche le resultat dans la console*/
+
+                // Permettre au joueur de tenter de deviner le nombre
+                for (let i = 0; i < 10; i++) {
+                    let guess = parseInt(prompt("Entrez un nombre entre 0 et 100:"));
+
+                // Vérifier si le joueur a réussi à deviner le bon nombre
+                if (guess === secretNumber) {
+                    alert("Bravo ! Vous avez deviné le bon nombre !");
+                    return;
+                }
+
+                // Informer le joueur s'il doit saisir un nombre plus grand ou plus petit
+                else if (guess < secretNumber) {
+                    alert("Plus grand");
+                } else {
+                    alert("Plus petit");
+                }
+            }
+
+            // Si le joueur a épuisé toutes ses tentatives, afficher le nombre secret
+            alert("Dommage, vous avez épuisé toutes vos tentatives ! Le nombre secret était " + secretNumber + ".");
+        }
+        guessingGame();
+        </script> --> 
+        <!--Exercice 4-->
+        <!--<script>
+            function chatBot() {
+            // Inviter l'utilisateur à saisir une phrase
+            let userInput = prompt("Dis-moi quelque chose : (Deux réponses possible, Bonjour ou tu vas bien ?)");
+
+            // Comparer la saisie de l'utilisateur avec différentes réponses attendues
+            if (userInput.toLowerCase() === "bonjour") {
+                alert("Bonjour à toi !");
+            } else if (userInput.toLowerCase() === "tu vas bien ?") {
+                alert("Bien, et toi ?");
+            } else {
+                alert("Désolé, je n'ai pas compris....");
+            }
+            }
+
+            chatBot();
+        </script>-->
+        <!--Exercice 4 suite-->
+        <!--<script>
+            function chatBot() {
+                // Inviter l'utilisateur à saisir une phrase
+                let userInput1 = prompt("Dis-moi quelque chose :");
+
+                // Comparer la saisie de l'utilisateur avec différentes réponses attendues
+                if (userInput1.toLowerCase() === "bonjour") {
+                    alert("Bonjour ! Ca va ?");
+
+                // Inviter l'utilisateur à saisir une deuxième réponse
+                let userInput2 = prompt("Et toi, comment ça va ? (oui/non) :");
+
+                // Comparer la deuxième saisie de l'utilisateur avec différentes réponses attendues
+                if (userInput2.toLowerCase() === "oui") {
+                    alert("Je suis content pour toi.");
+                } else {
+                    alert("Désolé, il faut que je file..");
+                }
+                } else {
+                    alert("Désolé, je n'ai pas compris....");
+                }
+            }
+
+            chatBot();
+        </script>-->
+        <!--Exercice 5-->
+        <!--<script>
+            function diviserParDeux(nombre) {
+                // Vérifier si le paramètre est un nombre
+                if (typeof nombre !== "number") {
+                    throw new Error("Le paramètre doit être un nombre.");
+                }
+
+                // Retourner la moitié de la valeur passée en paramètre
+                return nombre / 2;
+            }
+
+            console.log(diviserParDeux(2)); // 1
+            console.log(diviserParDeux(4)); // 2
+            console.log(diviserParDeux(Math.random())); // nombre / 2
+        </script>-->
+        <!--Exercice 5 suite (2)-->
+        <!--<script>
+            function somme(nombre1, nombre2) {
+                // Vérifier si les paramètres sont des nombres
+                if (typeof nombre1 !== "number" || typeof nombre2 !== "number") {
+                    throw new Error("Les paramètres doivent être des nombres.");
+                }
+
+                // Retourner la somme des deux nombres passés en paramètres
+                return nombre1 + nombre2;
+            }
+
+            console.log(somme(1, 1)); // 2
+            console.log(somme(1, 2)); // 3
+            console.log(somme(2, 1)); // 3
+            console.log(somme(Math.random(), 1)); // nombre + 1
+        </script>-->
+        <!--Exercice 5 suite (3)-->
+        <!--<script>
+            function signe(valeur) {
+                // Vérifier si la valeur est un nombre
+                if (typeof valeur !== "number") {
+                    throw new Error("La valeur doit être un nombre.");
+                }
+
+                // Retourner le signe de la valeur
+                if (valeur < 0) {
+                    return 'négatif';
+                } else if (valeur > 0) {
+                    return 'positif';
+                } else {
+                    return 'nul';
+                }
+            }
+
+            console.log(signe(-1)); // 'négatif'
+            console.log(signe(0)); // 'nul'
+            console.log(signe(Math.random())); // 'positif' 
+        </script>-->
+        <!--Exercice 5 suite (4)-->
+        <!--<script>
+            function factorielle(valeur) {
+                // Vérifier si la valeur est un nombre entier positif
+                if (typeof valeur !== "number" || valeur < 0 || !Number.isInteger(valeur)) {
+                    throw new Error("La valeur doit être un nombre entier positif.");
+                }
+
+                // Définir le produit initial à 1
+                let produit = 1;
+
+                // Calculer le produit de tous les entiers consécutifs entre 1 et la valeur
+                for (let i = 1; i <= valeur; i++) {
+                    produit *= i;
+                }
+
+                // Retourner le produit
+                return produit;
+            }
+
+            console.log(factorielle(0)); // 1
+            console.log(factorielle(1)); // 1
+            console.log(factorielle(3)); // 6
+            console.log(factorielle(4)); // 24
+        </script>-->
+        <!--Exercice 6 chi fou mi-->
+        <!--<script>
+            // Implémentation d'une manche
+            function comparer(choix1, choix2) {
+                if (choix1 === choix2) {
+                    return "égalité";
+                }
+
+                switch (choix1) {
+                    case "pierre":
+                        return choix2 === "ciseaux" ? "ordi" : "joueur";
+                    case "feuille":
+                        return choix2 === "pierre" ? "ordi" : "joueur";
+                    case "ciseaux":
+                        return choix2 === "feuille" ? "ordi" : "joueur";
+                    default:
+                        throw new Error("Choix invalide.");
+                }
+            }
+
+            // Implémentation d'une partie en 3 manches
+            function jouerPartie() {
+                let scoreOrdi = 0;
+                let scoreJoueur = 0;
+
+                for (let i = 0; i < 3; i++) {
+                    let choixOrdi = Math.random() < 0.33 ? "pierre" : Math.random() < 0.5 ? "feuille" : "ciseaux";
+                    let choixUtilisateur = prompt("Choisissez parmi pierre, feuille ou ciseaux : ").toLowerCase();
+
+                    let resultat = comparer(choixOrdi, choixUtilisateur);
+                    console.log("Le résultat de cette manche est :", resultat);
+
+                    if (resultat === "ordi") {
+                        scoreOrdi++;
+                    } else if (resultat === "joueur") {
+                        scoreJoueur++;
+                    }
+                }
+
+                if (scoreOrdi > scoreJoueur) {
+                    console.log("L'ordinateur a remporté la partie.");
+                } else if (scoreOrdi < scoreJoueur) {
+                    console.log("Le joueur a remporté la partie.");
+                } else {
+                    console.log("La partie est nulle.");
+                }
+            }
+
+            jouerPartie();
+        </script>-->
+        <!--Exercice 7 Les tableaux (Epicerie)-->
+        <!--<script>
+            var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
+
+            // Afficher la liste de fruits disponibles
+            console.log("Liste des fruits disponibles:", fruits);
+
+            // Demander au client quel fruit il désire acheter
+             var fruitChoisi = prompt("Veuillez choisir un fruit (Mangue, Raisin, Figue, Kiwi): ");
+
+            // Vérifier si le fruit est présent dans le tableau fruits
+            var index = fruits.indexOf(fruitChoisi);
+
+                if (index !== -1) {
+                    // Le retirer du tableau
+                    fruits.splice(index, 1);
+                    console.log('ok!');
+                } else {
+                    console.log('indisponible...');
+                }
+
+                // Afficher à nouveau la liste de fruits disponibles
+                console.log("Liste des fruits disponibles:", fruits);
+        </script>-->
+        <!--Exercice 7 Les tableaux suite (Jeu du pendu)-->
+        <!--<script>
+           // Initialisation des variables
+            var mauvaisesLettres = [];
+            var lettresAttendues = ['s', 'u', 'p', 'e', 'r'];
+            var lettresTrouvees = ''; // Pour stocker les lettres correctes devinées
+
+            // Boucle de jeu
+            while (mauvaisesLettres.length < 10 && lettresAttendues.length > 0) {
+            // Affichage du nombre de lettres à trouver, des lettres déjà trouvées et des tentatives restantes
+            alert('Lettres à trouver : ' + lettresAttendues.length + '\nLettres déjà trouvées : ' + lettresTrouvees + '\nTentatives restantes : ' + (10 - mauvaisesLettres.length));
+
+            // Demande d'une lettre au joueur
+            var lettreProposee = prompt('Entrez une lettre :').toLowerCase();
+
+            // Vérification si la lettre est présente dans lettresAttendues
+            if (lettresAttendues.indexOf(lettreProposee) !== -1) {
+                alert('Bonne lettre !');
+                // Retirer toutes les occurrences de cette lettre du tableau lettresAttendues
+                while (lettresAttendues.indexOf(lettreProposee) !== -1) {
+                var index = lettresAttendues.indexOf(lettreProposee);
+                lettresAttendues.splice(index, 1);
+                }
+                // Ajouter la lettre correcte à lettresTrouvees
+                lettresTrouvees += lettreProposee;
+            } else {
+                alert('Mauvaise lettre !');
+                // Ajout de la lettre au tableau mauvaisesLettres
+                mauvaisesLettres.push(lettreProposee);
+            }
+            }
+
+            // Vérification du résultat de la partie
+            if (mauvaisesLettres.length === 10) {
+            alert('Perdu ! Le mot était : ' + lettresAttendues.join(''));
+            } else {
+            alert('Bravo ! Vous avez trouvé le mot : ' + lettresTrouvees);
+         }
+
+        </script>-->
+        <!--Exercice 8 Les objets-->
+        <!--<script>
+        function annuaireAlert() {
+            let annuaire = {
+            'Pierre': '0612345678',
+            'Sophie': '0687654321',
+            'Mathilde': '0612987654'
+            };
+
+            let fonctionnalite = '';
+
+            while (fonctionnalite !== 'q') {
+            console.log("Entrez la première lettre de la fonctionnalité souhaitée ('r' pour rechercher, 'l' pour afficher la liste, 'a' pour ajouter, 's' pour supprimer, 'q' pour quitter) :");
+            fonctionnalite = prompt();
+
+            switch (fonctionnalite) {
+                case 'r':
+                    let nom = '';
+                    console.log("Entrez le nom à rechercher :");
+                    nom = prompt();
+                    if (annuaire[nom]) {
+                    alert("Numéro de téléphone de " + nom + " : " + annuaire[nom]);
+                    } else {
+                    alert("Contact introuvable.");
+                    }
+                    break;
+
+                case 'l':
+                    console.log("Liste des contacts :");
+                    for (let nom in annuaire) {
+                    console.log(nom + " : " + annuaire[nom]);
+                    }
+                    break;
+
+                case 'a':
+                    let nouveauNom = '';
+                    let nouveauNumero = '';
+                    console.log("Entrez le nom du nouveau contact :");
+                    nouveauNom = prompt();
+                    console.log("Entrez le numéro de téléphone du nouveau contact :");
+                    nouveauNumero = prompt();
+                    annuaire[nouveauNom] = nouveauNumero;
+                    alert("Contact ajouté avec succès.");
+                    break;
+
+                case 's':
+                    let nomASupprimer = '';
+                    console.log("Entrez le nom du contact à supprimer :");
+                    nomASupprimer = prompt();
+                    if (annuaire[nomASupprimer]) {
+                    delete annuaire[nomASupprimer];
+                    alert("Contact supprimé avec succès.");
+                    } else {
+                    alert("Contact introuvable.");
+                    }
+                    break;
+
+                case 'q':
+                    alert("Au revoir!");
+                    break;
+
+                default:
+                    alert("Fonctionnalité non reconnue.");
+            }
+            }
+        }
+
+        annuaireAlert();
+    </script>-->
+        <!--Exercice 9 Le DOM-->
+        <!-- <script>
+            document.body.onload = function() {
+                alert("Bonjour le monde !");
+            };
+        </script>-->
+        <!--Exercice 9 Le DOM (suite 1 récupération de valeur)-->
+        <!--<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Récupérer la valeur du premier champ (avec l'identifiant 'nom')
+                var nom = document.getElementById('nom').value;
+                // Récupérer la valeur du deuxième champ (avec l'identifiant 'prenom')
+                var prenom = document.getElementById('prenom').value;
+                // Afficher les valeurs dans des alertes
+                alert('Nom: ' + nom);
+                alert('Prénom: ' + prenom);
+            });
+        </script>-->
+        <!--Exercice 9 Le DOM (suite 2 Calculatrice)-->
+        <!--<script>
+            document.addEventListener('DOMContentLoaded', function() {
+                // Récupérer les éléments du formulaire
+                var premierNombre = document.getElementById('premier-nombre');
+                var deuxiemeNombre = document.getElementById('deuxieme-nombre');
+                var resultat = document.getElementById('resultat');
+                var bouton = document.getElementById('mon-bouton');
+
+                // Définir le gestionnaire d'événements du bouton
+                bouton.addEventListener('click', function() {
+                    // Récupérer les valeurs des champs et les convertir en nombres
+                    var nombre1 = parseInt(premierNombre.value);
+                    var nombre2 = parseInt(deuxiemeNombre.value);
+
+                    // Calculer la somme et l'afficher dans le champ resultat
+                    resultat.value = nombre1 + nombre2;
+                });
+            });
+        </script>-->
+        <script>
+            
+        </script>
+    </section>
+    </main>
 </body>
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 </html>

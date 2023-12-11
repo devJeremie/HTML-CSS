@@ -1,28 +1,29 @@
+/*
 *{ /*definit le style global(selecteur universel)*/
-    margin: 0;
+   /* margin: 0;
     padding: 0;
     box-sizing: border-box; /*Indique que l'on va inclure les marges internes et bordure dans la tailles des parents*/
-}
-body{
+/*}*/
+/*body{
     font-family: 'Hedvig Letters Serif', serif;
 }
 .parallax{
   background-image:url(image/africaParallax.jpg);/*definit mon image de fond*/
-  height: 100%;/*permet de dire de remplir 100% de son conteneur*/
-  background-attachment: fixed;/*fixe l'image de fond au scroll*/
-  background-position: center;/*positionne l'image de fond au centre*/
-  background-repeat: no-repeat;/*empeche la répétition de l'image*/
-  background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
-}
+  /*height: 100%;/*permet de dire de remplir 100% de son conteneur*/
+ /* background-attachment: fixed;/*fixe l'image de fond au scroll*/
+ /* background-position: center;/*positionne l'image de fond au centre*/
+ /* background-repeat: no-repeat;/*empeche la répétition de l'image*/
+  /*background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
+/*}
 main{
   padding-top: 80px;/*ajoute un padding top a tout mon contenu 
   donc du main pour ne pas etre en dessous de mon header fixed*/
-}
+/*}
 /*---------------Header------------*/
-.header {
+/*.header {
     display: flex;
     /*display: none;*/
-    justify-content:space-around;
+   /* justify-content:space-around;
     position: fixed;
     top: 0;
     width: 100%;
@@ -64,21 +65,21 @@ nav ul li a {
     background-color: aqua;
     color: blueviolet;
 }*/
-.linearSection{
+/*.linearSection{
     width: 500px;
     height: 300px;
     background: linear-gradient(90deg, #8360c3, #2ebf91);
     border-width: 3px #EB5353 dotted;
 }
 /*---------------Exercice Flexbox-----------------*/
-.containerContent{
+/*.containerContent{
     display: flex;
 }
 /*.bloc{
     width: 100px;
     height: 100px;
 }*/
-.purple{
+/*/.purple{
     background-color: #d119ce;
 }
 .yellow{
@@ -99,27 +100,27 @@ nav ul li a {
     margin-bottom: 20px;
     display: flex;
     flex-wrap: nowrap;/*Serre tout les elements sur la meme ligne*/
-    flex-wrap: wrap; /*Les elements retourne à la ligne s'ils ne rentrent pas sur la meme ligne*/
-    flex-wrap: wrap-reverse;/*Les elements retourne à la ligne mais sont reverse*/
-}
+   /* flex-wrap: wrap; /*Les elements retourne à la ligne s'ils ne rentrent pas sur la meme ligne*/
+   /* flex-wrap: wrap-reverse;/*Les elements retourne à la ligne mais sont reverse*/
+/*}
 /*----------------Exercice Grid similaire a flexbox----------------*/
-.gridSection{
+/*.gridSection{
     margin: 20px;
 }
 .containerGrid{
     display: grid;/*initialise le tableau grid*/
-    grid-template-columns: 150px 150px 150px;/*crée 3 colonnes, mettre la taille que lon veut*/
-    grid-template-rows: 100px 150px 200px;/*Penser a enlever la taille fixe de box sinon elle se chavauche*/
-    gap: 10px;/*permet de creer des espacement, plus facile car applique sur tout le container , pas de margin ni padding.*/
-}
+   /* grid-template-columns: 150px 150px 150px;/*crée 3 colonnes, mettre la taille que lon veut*/
+   /* grid-template-rows: 100px 150px 200px;/*Penser a enlever la taille fixe de box sinon elle se chavauche*/
+   /* gap: 10px;/*permet de creer des espacement, plus facile car applique sur tout le container , pas de margin ni padding.*/
+/*}
 .box{
     /*height: 100px;*/
-    border: 1px solid black;
+   /* border: 1px solid black;
     background-color: #2ebf91;
 }
 /*--------------------Suite grid mais plus touchy avec exercice---------------------*/
 /*----------------Exercice 1--------------*/
-.boite {
+/*.boite {
     background-color: #fff;
     border-radius: 10px;
     border: 3px solid black;
@@ -166,7 +167,7 @@ nav ul li a {
     grid-row: 5 / 5;
 }
  /*------------------Second exercice---------------*/
-.box {
+/*.box {
     background-color: #fff;
     border-radius: 10px;
     border: 3px solid black;
@@ -200,23 +201,23 @@ nav ul li a {
 }
 
 /*---------------Les tableaux---------------*/
-table {/*--------COLLAPSE-------------Bordure collée entre elles*/
-    border-collapse: collapse;
+/*table {/*--------COLLAPSE-------------Bordure collée entre elles*/
+   /* border-collapse: collapse;
     margin: auto; /*Permet de mettre une marge auto a l'intérieur du parent*/
-}
+/*}
 th, td {/*------On peut donc rassembler le th avec le td--------------*/
-    border: 1px solid black;
+   /* border: 1px solid black;
     padding: 10px;
 }
 /*------------Form--------------*/
-fieldset{
+/*fieldset{
     background-color: rgb(207, 107, 223);
 }
 :required{
     background-color:aquamarine;
 }
 /*---------------FUN EN CSS----------------*/
-@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+/*@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 
 .funnyOne {
   font-size: calc(20px + 18vh);
@@ -234,7 +235,7 @@ fieldset{
   justify-content: center;
   align-items: center;
   /*height: 100vh;*/
-  background: #222;
+ /* background: #222;
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 7px,
@@ -263,7 +264,7 @@ fieldset{
 /*     color: #fccaff;
     text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
       0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+ /* text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
   }
 }
@@ -286,12 +287,12 @@ fieldset{
 /*     color: #fccaff;
     text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
       0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  /*text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
   }
 }
 /*--------------Seconde boite---------*/
-.containerAnimationTwo{
+/*.containerAnimationTwo{
     height:100vh;
     width:100%;  
     display:flex;
@@ -388,7 +389,7 @@ fieldset{
   }
   }
   /*-------------MENU BURGER-------------*/
-  .menuBurger{
+  /*.menuBurger{
     width: 100%;
     height: 100%;
     font-family: "Trebuchet MS" , Arial;
@@ -486,7 +487,7 @@ a:hover{
     transform: rotate(-135deg);
     margin-top: 0;
 }/*Mise en  place appear dissapear*/
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
    .menuBurger{
         display: block;
     }
@@ -521,11 +522,11 @@ a:hover{
         @media all and (orientation: portrait)
         REGARDER le overflow : scroll ,pour un texte qui dépasse de sa boite parent*/
 
-@media screen and (max-width: 800px) {
+/*@media screen and (max-width: 800px) {
     .conteneur {
       display: none;
     }
     p{
         color: #ff0000;
     }
-  }
+  }*/
