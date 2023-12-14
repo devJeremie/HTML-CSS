@@ -630,10 +630,47 @@
             });
         </script>-->
         <script>
-            
+
         </script>
+       
     </section>
     </main>
+    <section>
+        
+    </section>
+    <!--Back to top apparition au scroll up-->
+    <a href="#content" id="up-button">Retour en haut</a>
+    <script>
+        window.addEventListener('scroll', function() {
+    var iCurScrollPos = window.pageYOffset;
+    var iScrollPos = 0;
+
+    if (iCurScrollPos > iScrollPos) {
+        document.getElementById('up-button').classList.remove('show');
+    } else {
+        document.getElementById('up-button').classList.add('show');
+    }
+    iScrollPos = iCurScrollPos;
+});
+
+document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(anchor) {
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        var targetElementId = this.hash.slice(1);
+        var targetElement = document.getElementById(targetElementId);
+
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            var targetElements = document.getElementsByName(targetElementId);
+            if (targetElements.length > 0) {
+                targetElements[0].scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    });
+});
+    </script>
 </body>
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 </html>
