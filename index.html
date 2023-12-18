@@ -17,7 +17,7 @@
             </div>
             <div>
                 <nav>
-                    <ul>
+                    <ul class="toto">
                         <li><a href="#">Accueil</a></li>
                         <li><a href="Link/services.html">Services</a></li>
                         <li><a href="#">Produits</a></li>
@@ -40,11 +40,15 @@
                 </nav>
             </div>
     </header>
-    <!--<main>
+    <main>
         <section>
             <div class="tchoupiImage">
-                <div><img class="imageTchoupi" src="image/thcoupi.jpg" alt="image tchoupi"></div>
-                <div><img class="imageTchoupi" src="image/tchoupi2.jpg" alt="image tchoupi"></div>
+                <div>
+                    <img class="imageTchoupi" src="image/thcoupi.jpg" alt="image tchoupi">
+                </div>
+                <div>
+                    <img class="imageTchoupi" src="image/tchoupi2.jpg" alt="image tchoupi">
+                </div>
             </div>
             <div class="describeImage">
                 <p class="textWhite">Image de tchoupi</p>
@@ -228,10 +232,10 @@
         </section>
         <section><!--JAVASCRIPT-->
            <p id="demo"></p>
-                <script>
+               <!-- <script>
                 let carName = "Vous allez tout déchirer les p'tits devs";
                 document.getElementById("demo").innerHTML = carName;
-                </script>
+                </script>-->
         </section>
         <section>
             <!--Boucle numero de 1 a 100-->
@@ -241,8 +245,8 @@
         }
      </script>-->
             <!--Exercice 3 Javascript-->
-        <!--<script>
-            for (var i = 1; i <= 199; i++) {
+        <script>
+            for (let i = 1; i <= 199; i++) {
                 if (i % 3 === 0 && i % 5 === 0) {
                     console.log('FizzBuzz');
                 } else if (i % 3 === 0) {
@@ -253,7 +257,7 @@
                     console.log(i);
                 }
             }
-        </script>-->
+        </script>
          <!--Exercice 3 Javascript suite-->
         <!--<script>
             function guessingGame() {

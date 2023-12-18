@@ -1,44 +1,46 @@
-/*
-*{ /*definit le style global(selecteur universel)*/
-   /* margin: 0;
+
+/*{ definit le style global(selecteur universel)*/
+  *{
+    margin: 0;
     padding: 0;
     box-sizing: border-box; /*Indique que l'on va inclure les marges internes et bordure dans la tailles des parents*/
-/*}*/
-/*body{
+}
+body{
     font-family: 'Hedvig Letters Serif', serif;
 }
 .parallax{
   background-image:url(image/africaParallax.jpg);/*definit mon image de fond*/
-  /*height: 100%;/*permet de dire de remplir 100% de son conteneur*/
- /* background-attachment: fixed;/*fixe l'image de fond au scroll*/
- /* background-position: center;/*positionne l'image de fond au centre*/
- /* background-repeat: no-repeat;/*empeche la répétition de l'image*/
-  /*background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
-/*}
+  height: 100%;/*permet de dire de remplir 100% de son conteneur*/
+  background-attachment: fixed;/*fixe l'image de fond au scroll*/
+  background-position: center;/*positionne l'image de fond au centre*/
+  background-repeat: no-repeat;/*empeche la répétition de l'image*/
+  background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
+}
 main{
   padding-top: 80px;/*ajoute un padding top a tout mon contenu 
   donc du main pour ne pas etre en dessous de mon header fixed*/
-/*}
+}
 /*---------------Header------------*/
-/*.header {
+.menuBurger{
+  display: none;
+}
+.header {
     display: flex;
     /*display: none;*/
-   /* justify-content:space-around;
+    justify-content:space-between;
     position: fixed;
     top: 0;
     width: 100%;
 }
-nav ul {
-    list-style: none;
-    padding: 0;
+.toto{
+  display: flex;
 }
-nav ul li {
-    display: inline;
-    margin-right: 20px;
+ul li{
+  padding: 10px;
+  list-style-type: none;
 }
-nav ul li a {
-    color: whitesmoke;
-    text-decoration: none;
+ul li a{
+  text-decoration: none;
 }
 .tchoupiImage{
     display: flex;
@@ -47,13 +49,15 @@ nav ul li a {
 .imageTchoupi{
     width: 100px;
 }
+
 .describeImage{
     display: flex;
     justify-content: space-evenly;
 }
-.textWhite{
+/*.textWhite{
   color: whitesmoke;
-}
+}*/
+
 /*----------Header end-----------*/
 
   /*ANcre
@@ -65,11 +69,12 @@ nav ul li a {
     background-color: aqua;
     color: blueviolet;
 }*/
-/*.linearSection{
+.linearSection{
     width: 500px;
     height: 300px;
     background: linear-gradient(90deg, #8360c3, #2ebf91);
-    border-width: 3px #EB5353 dotted;
+    border: 3px solid black;
+    border-radius: 100px 0px 100px 0px;
 }
 /*---------------Exercice Flexbox-----------------*/
 /*.containerContent{
