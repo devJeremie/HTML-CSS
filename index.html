@@ -62,10 +62,11 @@
         <p class="welcome textWhite">Bienvenue à l'initiation html</p>
         <ol>
             <li class=" textWhite">Ceci est un liste numérotée</li><!--Liste numeroté-->
-      <!--  </ol>
+            <li class=" textWhite">Ceci est la deuxieme ligne de ma liste</li>
+        </ol>
         <ul>
             <li class="textWhite">Ceci est une liste à points</li><!--Liste a points-->
-       <!-- </ul>
+        </ul>
         <br><!--Saute une ligne mais tres mauvaise pratique-->
        <!-- <div class="divMark"><!--La boite magique type block--> class="textWhite"
             <h2><mark>Ceci est une div</mark></h2><!--à utilser avec parcimonie car influence le SEO-->
@@ -100,10 +101,9 @@
                 <div class="bloc red">Rouge</div>
             </div>
             <article class="purple"></article>
-        </section>
+        </section>-->
         <section class="gridSection"><!--Exercice grid-->
-            <!---->
-           <!-- <div class="containerGrid">
+            <div class="containerGrid">
                 <div class="box">Boite 1</div>
                 <div class="box">Boite 2</div>
                 <div class="box">Boite 3</div>
@@ -112,10 +112,11 @@
                 <div class="box">Boite 6</div>
                 <div class="box">Boite 7</div>
                 <div class="box">Boite 8</div>
+                <div class="box">Boite 9</div>
             </div>
         </section>
         <section><!--Exercice grid touchy-->
-           <!-- <div class="containeurGridTouchy">
+            <div class="containeurGridTouchy">
                 <div class="boite one">Boite 1</div>
                 <div class="boite two">Boite 2</div>
                 <div class="boite three">Boite 3</div>
@@ -137,11 +138,11 @@
             </div>
         </section>
         <div><!--Les ANCRES-->
-           <!--- <a href="#ancre">Aller vers l'ancre</a>
+            <a href="#ancre">Back to top</a>
             <a href="Link/services.html#servicesPage">Ancre sur autre page</a>
         </div>
         <section><!--Les tableaux-->
-           <!-- <table>
+            <table>
                 <caption>Apprenants 2023/2024</caption>
                 <tr>
                     <th>Nom</th>
@@ -152,7 +153,7 @@
                     <td>Bassekou</td>
                     <td>30 ans</td>
                     <td>Sénégal</td> <!--Fusion de deux lignes (rowspan="2") se met comme une classe-->
-              <!--  </tr>
+                </tr>
                 <tr>
                     <td>Joseph</td>
                     <td>23 ans</td>
@@ -161,23 +162,27 @@
                 <tr>
                     <td>Patrick</td>
                     <td>31 ans</td><!--Fusion de deux colonnes (colspan="2")-->
-                  <!-- <td>France</td>
+                    <td>France</td>
                 </tr>
             </table>
         </section>
         <section><!-----------Les Formulaires------------>
-           <!-- <p>Création formulaire</p>
+            <p>Création formulaire</p>
             <form method="get" action="">
                 <p>
                     <label for="prenom">Votre prénom :</label>
                     <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" size="30" maxlength="20">
                 </p>
                 <p><!--Checkbox-->
-                      <!--  Cochez les aliments que vous préféré :<br>
-                        <input type="checkbox" name="frites" id="frites"> <label for="frites">Frites</label><br>
-                        <input type="checkbox" name="steak" id="steak"> <label for="steak">Steak</label><br>
-                        <input type="checkbox" name="panini" id="panini"> <label for="panini">Panini</label><br>
-                        <input type="checkbox" name="salade" id="salade"> <label for="salade">Salade</label>
+                        Cochez les aliments que vous préféré :<br>
+                        <input type="checkbox" name="frites" id="frites"> 
+                        <label for="frites">Frites</label><br>
+                        <input type="checkbox" name="steak" id="steak"> 
+                        <label for="steak">Steak</label><br>
+                        <input type="checkbox" name="panini" id="panini"> 
+                        <label for="panini">Panini</label><br>
+                        <input type="checkbox" name="salade" id="salade"> 
+                        <label for="salade">Salade</label>
                 </p>
                 <p><!--Radio-->
                   <!--  Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
@@ -231,7 +236,7 @@
             </div>
         </section>
         <section><!--JAVASCRIPT-->
-           <p id="demo"></p>
+           <!--<p id="demo"></p>
                <!-- <script>
                 let carName = "Vous allez tout déchirer les p'tits devs";
                 document.getElementById("demo").innerHTML = carName;
@@ -245,7 +250,7 @@
         }
      </script>-->
             <!--Exercice 3 Javascript-->
-        <script>
+        <!--<script>
             for (let i = 1; i <= 199; i++) {
                 if (i % 3 === 0 && i % 5 === 0) {
                     console.log('FizzBuzz');
@@ -257,7 +262,7 @@
                     console.log(i);
                 }
             }
-        </script>
+        </script>-->
          <!--Exercice 3 Javascript suite-->
         <!--<script>
             function guessingGame() {
@@ -310,7 +315,7 @@
         <!--<script>
             function chatBot() {
                 // Inviter l'utilisateur à saisir une phrase
-                let userInput1 = prompt("Dis-moi quelque chose :");
+                let userInput1 = prompt("Dis-moi quelque chose :  (Une réponse possible, Bonjour )");
 
                 // Comparer la saisie de l'utilisateur avec différentes réponses attendues
                 if (userInput1.toLowerCase() === "bonjour") {
@@ -323,14 +328,13 @@
                 if (userInput2.toLowerCase() === "oui") {
                     alert("Je suis content pour toi.");
                 } else {
-                    alert("Désolé, il faut que je file..");
+                    alert("Pas de bol, noies ton chagrin dans l'alcool...");
                 }
-                } else {
-                    alert("Désolé, je n'ai pas compris....");
-                }
+               
             }
+        }
 
-            chatBot();
+        chatBot();
         </script>-->
         <!--Exercice 5-->
         <!--<script>
@@ -431,6 +435,7 @@
                         throw new Error("Choix invalide.");
                 }
             }
+            
 
             // Implémentation d'une partie en 3 manches
             function jouerPartie() {
@@ -643,7 +648,7 @@
         
     </section>
     <!--Back to top apparition au scroll up-->
-    <a href="#content" id="up-button">Retour en haut</a>
+    <!--<a href="#content" id="up-button">Retour en haut</a>-->
     <script>
         window.addEventListener('scroll', function() {
     var iCurScrollPos = window.pageYOffset;
