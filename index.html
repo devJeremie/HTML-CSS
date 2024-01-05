@@ -16,7 +16,7 @@
                 <img src="image/disney_logo.png" alt="Logo">
             </div>
             <div>
-                <nav>
+                <nav class="navBar">
                     <ul class="toto">
                         <li><a href="#">Accueil</a></li>
                         <li><a href="Link/services.html">Services</a></li>
@@ -27,6 +27,9 @@
             </div>
         </div>
         <div class="menuBurger"><!---Menu burger-->
+            <div>
+                <img src="image/disney_logo.png" alt="Logo">
+            </div>
             <nav>
                 <div class="navigation">
                     <ul class="navLien">
@@ -37,8 +40,8 @@
                     </ul>
                     <div class="basculant"></div>
                 </div>
-                </nav>
-            </div>
+            </nav>
+        </div>
     </header>
     <main>
         <section>
@@ -185,11 +188,15 @@
                         <label for="salade">Salade</label>
                 </p>
                 <p><!--Radio-->
-                  <!--  Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
-                    <input type="radio" name="age" value="moins15" id="moins15"> <label for="moins15">Moins de 15 ans</label><br>
-                    <input type="radio" name="age" value="medium15-25" id="medium15-25"> <label for="medium15-25">15-25 ans</label><br>
-                    <input type="radio" name="age" value="medium25-40" id="medium25-40"> <label for="medium25-40">25-40 ans</label><br>
-                    <input type="radio" name="age" value="plus40" id="plus40"> <label for="plus40">Plus de 40 ans</label>
+                    Veuillez indiquer la tranche d'âge dans laquelle vous vous situez :<br>
+                    <input type="radio" name="age" value="moins15" id="moins15">
+                    <label for="moins15">Moins de 15 ans</label><br>
+                    <input type="radio" name="age" value="medium15-25" id="medium15-25">
+                    <label for="medium15-25">15-25 ans</label><br>
+                    <input type="radio" name="age" value="medium25-40" id="medium25-40">
+                    <label for="medium25-40">25-40 ans</label><br>
+                    <input type="radio" name="age" value="plus40" id="plus40">
+                    <label for="plus40">Plus de 40 ans</label>
                 </p>
             </form>
             <form method="get" action="">
@@ -204,11 +211,11 @@
                 </p>
                 <fieldset>
                     <legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
-                   <!--- <label for="nom">Quel est votre nom ?</label>
+                    <label for="nom">Quel est votre nom ?</label>
                     <input type="text" name="nom" id="nom">
                     <label for="prenom">Quel est votre prénom ?</label>
                     <input type="text" name="prenom" id="prenom" required><!--required rend le champ obligatoire-->
-                  <!-- <label for="email">Quel est votre e-mail ?</label>
+                    <label for="email">Quel est votre e-mail ?</label>
                     <input type="email" name="email" id="email">
                 </fieldset>
                 <p>Quel somptueux formulaire</p>
@@ -216,7 +223,7 @@
             </form>
         </section>
         <section class="funnyContainerOne"><!--DU FUN EN CSS ET OUI-->
-           <!-- <p class="funnyOne">Imane</p><br>
+            <p class="funnyOne">Imane</p><br>
             <p class="funnyOne">Mathias</p><br>
             <p class="funnyOne">Alexandre</p><br>
             <p class="funnyOne">Tyfaine</p><br>
@@ -262,10 +269,24 @@
                     console.log(i);
                 }
             }
+            /*Avec des ternaires*/
+            for (let i = 1; i <= 199; i++) {
+                let result = '';
+                if (i % 3 === 0) result += 'Fizz';
+                if (i % 5 === 0) result += 'Buzz';
+                
+                console.log(result ? result : i);
+            }
+            /*encore plus poussé*/
+            /*for (let i = 1; i <= 199; i++) {
+                console.log(i % 3 === 0 ? 'Fizz' + (i % 5 === 0 ? 'Buzz' : '') : i % 5 === 0 ? 'Buzz' : i);
+            }
+            Dans ce code, il a remplacé les conditions if par des opérateurs ternaires imbriqués.
+            Maintenant, pour chaque itération de la boucle, on vérifie si i est divisible par 3 ou 5. Si c'est le cas, nous ajoutons le texte approprié ("Fizz" ou "Buzz") au résultat. Sinon, nous affichons simplement i.</s 
         </script>-->
          <!--Exercice 3 Javascript suite-->
         <!--<script>
-            function guessingGame() {
+           function guessingGame() {
                 // Initialiser le nombre aléatoire
                 let secretNumber = Math.floor(Math.random() * 101);
                 /*console.log('Le nombre secret est :', secretNumber); affiche le resultat dans la console*/
@@ -292,7 +313,7 @@
             alert("Dommage, vous avez épuisé toutes vos tentatives ! Le nombre secret était " + secretNumber + ".");
         }
         guessingGame();
-        </script> --> 
+        </script>-->
         <!--Exercice 4-->
         <!--<script>
             function chatBot() {
@@ -347,6 +368,7 @@
                 // Retourner la moitié de la valeur passée en paramètre
                 return nombre / 2;
             }
+    
 
             console.log(diviserParDeux(2)); // 1
             console.log(diviserParDeux(4)); // 2
@@ -417,7 +439,7 @@
             console.log(factorielle(4)); // 24
         </script>-->
         <!--Exercice 6 chi fou mi-->
-        <!--<script>
+        <script>
             // Implémentation d'une manche
             function comparer(choix1, choix2) {
                 if (choix1 === choix2) {
@@ -438,7 +460,7 @@
             
 
             // Implémentation d'une partie en 3 manches
-            function jouerPartie() {
+           function jouerPartie() {
                 let scoreOrdi = 0;
                 let scoreJoueur = 0;
 
@@ -466,7 +488,7 @@
             }
 
             jouerPartie();
-        </script>-->
+        </script>
         <!--Exercice 7 Les tableaux (Epicerie)-->
         <!--<script>
             var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
@@ -638,15 +660,16 @@
                 });
             });
         </script>-->
-        <script>
-
-        </script>
+        <!--<script>
+            for (let i = 0; i < 1000; i++) {
+                let commande = prompt('entrez une commande');
+                if (commande === 'quitter') 
+                break;}
+        </script>-->
        
     </section>
+    
     </main>
-    <section>
-        
-    </section>
     <!--Back to top apparition au scroll up-->
     <!--<a href="#content" id="up-button">Retour en haut</a>-->
     <script>

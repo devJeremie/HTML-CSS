@@ -215,14 +215,14 @@ th, td {/*------On peut donc rassembler le th avec le td--------------*/
     padding: 10px;
 }
 /*------------Form--------------*/
-/*fieldset{
+fieldset{
     background-color: rgb(207, 107, 223);
 }
 :required{
     background-color:aquamarine;
 }
 /*---------------FUN EN CSS----------------*/
-/*@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 
 .funnyOne {
   font-size: calc(20px + 18vh);
@@ -239,8 +239,8 @@ th, td {/*------On peut donc rassembler le th avec le td--------------*/
   padding: 2vw;
   justify-content: center;
   align-items: center;
-  /*height: 100vh;*/
- /* background: #222;
+  height: 100vh;
+  background: #222;
   background-image: repeating-linear-gradient(
     to bottom,
     transparent 7px,
@@ -266,10 +266,10 @@ th, td {/*------On peut donc rassembler le th avec le td--------------*/
   54%,
   56%,
   100% {
-/*     color: #fccaff;
+    color: #fccaff;
     text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
- /* text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
   }
 }
@@ -289,15 +289,15 @@ th, td {/*------On peut donc rassembler le th avec le td--------------*/
   54%,
   56%,
   100% {
-/*     color: #fccaff;
+     color: #fccaff;
     text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
-      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
-  /*text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; 
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
   }
 }
 /*--------------Seconde boite---------*/
-/*.containerAnimationTwo{
+.containerAnimationTwo{
     height:100vh;
     width:100%;  
     display:flex;
@@ -394,7 +394,7 @@ th, td {/*------On peut donc rassembler le th avec le td--------------*/
   }
   }
   /*-------------MENU BURGER-------------*/
-  /*.menuBurger{
+  .menuBurger{
     width: 100%;
     height: 100%;
     font-family: "Trebuchet MS" , Arial;
@@ -492,28 +492,16 @@ a:hover{
     transform: rotate(-135deg);
     margin-top: 0;
 }/*Mise en  place appear dissapear*/
-/*@media screen and (max-width: 800px) {
-   .menuBurger{
-        display: block;
-    }
-    .navBar{
-        display: none;
-    }
-    .top{
-        display: flex;
-        justify-content: flex-start;
-    }
-    .header{
-      display: none;
-    }
+@media screen and (max-width: 800px) {
+  .header{
+    display: none;
+  }
+  .menuBurger{
+    display: block;
+  }
 }
 @media screen and (min-width:800px){
-    .menuBurger{
-        display: none;
-    }
-    a{
-        color: white;
-    }
+    
        
 }
   /*------------------media Query-----------------*/
@@ -527,14 +515,18 @@ a:hover{
         @media all and (orientation: portrait)
         REGARDER le overflow : scroll ,pour un texte qui dépasse de sa boite parent*/
 
-/*@media screen and (max-width: 800px) {
+@media screen and (max-width: 800px) {
     .conteneur {
       display: none;
     }
     p{
         color: #ff0000;
     }
-  }*/
+    .linearSection{
+      width: 250px;
+      height: 150px;
+    }
+  }
   #up-button{
     display: none;
     /* éléments de style, vous pouvez mettre ce que vous voulez, ils ne sont là que pour l'exemple */
