@@ -333,7 +333,7 @@
             chatBot();
         </script>-->
         <!--Exercice 4 suite-->
-        <!--<script>
+        <script>
             function chatBot() {
                 // Inviter l'utilisateur à saisir une phrase
                 let userInput1 = prompt("Dis-moi quelque chose :  (Une réponse possible, Bonjour )");
@@ -341,7 +341,7 @@
                 // Comparer la saisie de l'utilisateur avec différentes réponses attendues
                 if (userInput1.toLowerCase() === "bonjour") {
                     alert("Bonjour ! Ca va ?");
-
+                
                 // Inviter l'utilisateur à saisir une deuxième réponse
                 let userInput2 = prompt("Et toi, comment ça va ? (oui/non) :");
 
@@ -349,7 +349,7 @@
                 if (userInput2.toLowerCase() === "oui") {
                     alert("Je suis content pour toi.");
                 } else {
-                    alert("Pas de bol, noies ton chagrin dans l'alcool...");
+                    alert ("Pas de bol, noies ton chagrin dans l'alcool...");
                 }
                
             }
@@ -439,7 +439,7 @@
             console.log(factorielle(4)); // 24
         </script>-->
         <!--Exercice 6 chi fou mi-->
-        <script>
+        <!--<script>
             // Implémentation d'une manche
             function comparer(choix1, choix2) {
                 if (choix1 === choix2) {
@@ -488,7 +488,7 @@
             }
 
             jouerPartie();
-        </script>
+        </script>-->
         <!--Exercice 7 Les tableaux (Epicerie)-->
         <!--<script>
             var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
@@ -516,24 +516,24 @@
         <!--Exercice 7 Les tableaux suite (Jeu du pendu)-->
         <!--<script>
            // Initialisation des variables
-            var mauvaisesLettres = [];
-            var lettresAttendues = ['s', 'u', 'p', 'e', 'r'];
-            var lettresTrouvees = ''; // Pour stocker les lettres correctes devinées
+            let mauvaisesLettres = [];
+            let lettresAttendues = ['s', 'u', 'p', 'e', 'r'];
+            let lettresTrouvees = ''; // Pour stocker les lettres correctes devinées
 
             // Boucle de jeu
             while (mauvaisesLettres.length < 10 && lettresAttendues.length > 0) {
             // Affichage du nombre de lettres à trouver, des lettres déjà trouvées et des tentatives restantes
-            alert('Lettres à trouver : ' + lettresAttendues.length + '\nLettres déjà trouvées : ' + lettresTrouvees + '\nTentatives restantes : ' + (10 - mauvaisesLettres.length));
+            alert('Lettres à trouver pour le pendu : ' + lettresAttendues.length + '\nLettres déjà trouvées : ' + lettresTrouvees + '\nTentatives restantes : ' + (10 - mauvaisesLettres.length));
 
             // Demande d'une lettre au joueur
-            var lettreProposee = prompt('Entrez une lettre :').toLowerCase();
+            let lettreProposee = prompt('Entrez une lettre minuscule:').toLowerCase();
 
             // Vérification si la lettre est présente dans lettresAttendues
             if (lettresAttendues.indexOf(lettreProposee) !== -1) {
                 alert('Bonne lettre !');
                 // Retirer toutes les occurrences de cette lettre du tableau lettresAttendues
                 while (lettresAttendues.indexOf(lettreProposee) !== -1) {
-                var index = lettresAttendues.indexOf(lettreProposee);
+                let index = lettresAttendues.indexOf(lettreProposee);
                 lettresAttendues.splice(index, 1);
                 }
                 // Ajouter la lettre correcte à lettresTrouvees
@@ -668,6 +668,16 @@
         </script>-->
        
     </section>
+    <!--<script>Instanciation de fonction/ Class
+        function Etudiant (age){
+            this.age = age;
+            alert('Etudiant instancié');
+            }
+            let etudiant1 = new Etudiant(17);
+            let etudiant2 = new Etudiant(19);
+            //afficher l'age de etudiant1
+            alert('etudiant1 a ' + etudiant1.age); // etudiant1 a 17
+    </script>-->
     
     </main>
     <!--Back to top apparition au scroll up-->
@@ -703,6 +713,7 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
     });
 });
     </script>
+
 </body>
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 </html>
