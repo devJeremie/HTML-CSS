@@ -252,7 +252,7 @@
         <section>
             <!--Boucle numero de 1 a 100-->
      <!--<script>
-        for (let nbr=1; nbr <=100; nbr++) {
+        for (let nbr=1; nbr <=199; nbr++) {
             console.log(nbr); 
         }
      </script>-->
@@ -439,7 +439,7 @@
             console.log(factorielle(4)); // 24
         </script>-->
         <!--Exercice 6 chi fou mi-->
-    <script>
+        <!--<script>
             // Implémentation d'une manche
             function comparer(choix1, choix2) {
                 if (choix1 === choix2) {
@@ -488,7 +488,7 @@
             }
 
             jouerPartie();
-        </script>
+        </script>-->
         <!--Exercice 7 Les tableaux (Epicerie)-->
         <!--<script>
             var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
@@ -666,8 +666,38 @@
                 if (commande === 'quitter') 
                 break;}
         </script>-->
-       
+       <!--<section>
+        <div id="toto">
+            <h2 class="Text">Alors Javascript </h2>
+           <p class="changeText">java ou pas ?</p>
+        </div>
+          
+          <button onclick="myFunction()">Modifier le texte</button>
+          
+          <script>
+            function myFunction() {
+              let tata = document.getElementById('toto');
+              tata.querySelector(".changeText").innerHTML = `Non c’est easy!`;
+            }
+          </script>
+          
+       </section>-->
     </section>
+    <!--EXEMPLE EVENTCURRENTTARGET-->
+    <!--<section>
+        <button>Mon 1er Bouton</button>
+        <button>Mon 2ème Bouton</button>
+        <button>Mon 3ème Bouton</button>
+        <script>
+             var boutons = document.getElementsByTagName('button');
+        for (var i = 0; i < boutons.length; i++) {
+        boutons[i].onclick = function(event) {
+            alert('bouton clické: ' + event.currentTarget.innerHTML);
+            // => le contenu du bouton clické va être affiché dans l'alert
+            };
+        }
+        </script>
+    </section>-->
     <!--<script>Instanciation de fonction/ Class
         function Etudiant (age){
             this.age = age;
@@ -681,7 +711,7 @@
     </main>
     <!--Back to top apparition au scroll up-->
     <!--<a href="#content" id="up-button">Retour en haut</a>-->
-    <script>
+    <!--<script>
         window.addEventListener('scroll', function() {
     var iCurScrollPos = window.pageYOffset;
     var iScrollPos = 0;
@@ -711,7 +741,7 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
         }
     });
 });
-    </script>
+    </script>-->
 
 </body>
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
