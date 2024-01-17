@@ -512,7 +512,7 @@
 
                 // Afficher à nouveau la liste de fruits disponibles
                 console.log("Liste des fruits disponibles:", fruits);
-        </script>-->
+        </script>->
         <!--Exercice 7 Les tableaux suite (Jeu du pendu)-->
         <!--<script>
            // Initialisation des variables
@@ -683,6 +683,52 @@
           
        </section>-->
     </section>
+    <!--PENDU OUSMANE-->
+    <!--<script>
+       function PENDU(lettresAttendues) {
+            let mauvaisesLettres = [];
+            let lettreTentes = [];
+            const motATrouver = ['a', 's', 's', 'a', 's', 's', 'i', 'n'];
+            alert("Bienvenue dans mon jeu du pendu le reuf.\nLe mot à trouver contient " + lettresAttendues.length + " lettres")
+            while (lettresAttendues.length !== 0 && mauvaisesLettres.length !== 10) {
+                let lettre = prompt("Il te reste " + (10-mauvaisesLettres.length) + " chances.\nPlus que " + lettresAttendues.length + " lettres à trouver.\nEntre une lettre:");
+                while(lettreTentes.includes(lettre)) {
+                alert("T'as déjà utilisé cette lettre tkt cet essai ne compteras pas");
+                lettre = prompt("Il te reste " + (10-mauvaisesLettres.length) + " chances.\nPlus que " + lettresAttendues.length + " lettres à trouver.\nEntre une lettre:");
+                }
+                if (!lettresAttendues.includes(lettre)) {
+                mauvaisesLettres.push(lettre);
+                lettreTentes.push(lettre);
+                alert("Cette lettre ne figure pas dans le mot mystère")
+                console.log("Liste des lettres ne figurant pas dans le mot mystère:  " + mauvaisesLettres);
+                console.log("Liste des lettres tentés: " + lettreTentes);
+                } else {
+                lettresAttendues = lettresAttendues.filter(l => l !== lettre);
+                lettreTentes.push(lettre);
+                alert("Yes cette lettre figure bien dans le mot mystère.")
+                console.log("Lettres restantes du mot mystère: " + lettresAttendues);
+                console.log("Liste des lettres tentés: " + lettreTentes);
+                }
+                alert("Il te reste " + (10-mauvaisesLettres.length) + " chances.\nPlus que " + lettresAttendues.length + " lettres à trouver.");
+            }
+            if (mauvaisesLettres.length === 10) {
+                alert("Dommage tu as perdu ! Le mot était : " + motATrouver.join(""));
+            } else {
+                let motTrouve = "";
+                for (let i = 0; i < lettreTentes.length; i++) {
+                if (motATrouver.includes(lettreTentes[i])) {
+                    motTrouve += lettreTentes[i];
+                } else {
+                    motTrouve += "_";
+                }
+                }
+                alert("GG tu as trouvé toutes les lettres le mot était: " + motATrouver.join(""));
+            }
+            }
+
+        PENDU(['a', 's', 's', 'a', 's', 's', 'i', 'n']);
+    </script>-->
+ 
     <!--EXEMPLE EVENTCURRENTTARGET-->
     <!--<section>
         <button>Mon 1er Bouton</button>
