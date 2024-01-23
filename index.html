@@ -270,6 +270,7 @@
                     console.log(i);
                 }
             }
+
             /*Avec des ternaires*/
             for (let i = 1; i <= 199; i++) {
                 let result = '';
@@ -281,10 +282,11 @@
             /*encore plus poussé*/
             for (let i = 1; i <= 199; i++) {
                 console.log(i % 3 === 0 ? 'Fizz' + (i % 5 === 0 ? 'Buzz' : '') : i % 5 === 0 ? 'Buzz' : i);
-            }
-            Dans ce code, il a remplacé les conditions if par des opérateurs ternaires imbriqués.
-            Maintenant, pour chaque itération de la boucle, on vérifie si i est divisible par 3 ou 5. Si c'est le cas, nous ajoutons le texte approprié ("Fizz" ou "Buzz") au résultat. Sinon, nous affichons simplement i.</s 
-        </script>-->
+            }-->
+            <!--Dans ce code, il a remplacé les conditions if par des opérateurs ternaires imbriqués.
+            Maintenant, pour chaque itération de la boucle, on vérifie si i est divisible par 3 ou 5. Si c'est le cas, nous ajoutons le texte approprié ("Fizz" ou "Buzz") au résultat. Sinon, nous affichons simplement i.-->
+            
+        </script>
          <!--Exercice 3 Javascript suite-->
         <!--<script>
            function guessingGame() {
@@ -294,21 +296,21 @@
 
                 // Permettre au joueur de tenter de deviner le nombre
                 for (let i = 0; i < 10; i++) {
-                    let guess = parseInt(prompt("Entrez un nombre entre 0 et 100:"));
+                    let guess = prompt("Entrez un nombre entre 0 et 100:");
 
-                // Vérifier si le joueur a réussi à deviner le bon nombre
-                if (guess === secretNumber) {
-                    alert("Bravo ! Vous avez deviné le bon nombre !");
-                    return;
-                }
+                    // Vérifier si le joueur a réussi à deviner le bon nombre
+                    if (guess === secretNumber) {
+                        alert("Bravo ! Vous avez deviné le bon nombre !");
+                        return;
+                    }
 
-                // Informer le joueur s'il doit saisir un nombre plus grand ou plus petit
-                else if (guess < secretNumber) {
-                    alert("Plus grand");
-                } else {
-                    alert("Plus petit");
+                    // Informer le joueur s'il doit saisir un nombre plus grand ou plus petit
+                    else if (guess < secretNumber) {
+                        alert("Plus grand");
+                    } else {
+                        alert("Plus petit");
+                    }
                 }
-            }
 
             // Si le joueur a épuisé toutes ses tentatives, afficher le nombre secret
             alert("Dommage, vous avez épuisé toutes vos tentatives ! Le nombre secret était " + secretNumber + ".");
