@@ -4,18 +4,25 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box; /*Indique que l'on va inclure les marges internes et bordure dans la tailles des parents*/
+  }
+p{
+  color: white;
 }
+table{
+  color: white;
+}
+
 body{
     font-family: 'Hedvig Letters Serif', serif;
 }
-/*.parallax{
+.parallax{
   background-image:url(image/africaParallax.jpg);/*definit mon image de fond*/
- /* height: 100%;/*permet de dire de remplir 100% de son conteneur*/
- /* background-attachment: fixed;/*fixe l'image de fond au scroll*/
- /* background-position: center;/*positionne l'image de fond au centre*/
- /* background-repeat: no-repeat;/*empeche la répétition de l'image*/
-/* background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
-/*}*/
+  height: 100%;/*permet de dire de remplir 100% de son conteneur*/
+  background-attachment: fixed;/*fixe l'image de fond au scroll*/
+  background-position: center;/*positionne l'image de fond au centre*/
+  background-repeat: no-repeat;/*empeche la répétition de l'image*/
+ background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
+}
 main{
   padding-top: 80px;/*ajoute un padding top a tout mon contenu 
   donc du main pour ne pas etre en dessous de mon header fixed*/
@@ -55,7 +62,7 @@ ul li a{
     justify-content: space-evenly;
 }
 .textWhite{
-  color: black;
+  color: white;
 }
 
 /*----------Header end-----------*/
@@ -537,4 +544,6 @@ a:hover{
   #up-button.show{
     display: block;
   }
+  /*--------------Anim JS---------------*/
+  
  
