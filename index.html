@@ -223,6 +223,32 @@
                 <input type="submit" value="Envoyer mon form">
             </form>
         </section>
+        <!--A proposer au designer afin d'apprehender le javascript-->
+        <section>
+            <button id="monBouton">Afficher l'image Javascript</button>
+            <img id="monImage" src="image/Javascript.png" alt="Une image">
+            <script>
+                // Récupère l'élément bouton avec l'ID 'monBouton'
+                const bouton = document.getElementById('monBouton');
+                // Récupère l'élément image avec l'ID 'monImage'
+                const image = document.getElementById('monImage');
+                // Ajoute un écouteur d'événement 'click' au bouton
+                bouton.addEventListener('click', function() {
+                    // Vérifie si l'image est actuellement cachée
+                    if (image.style.display === 'none') {
+                        // Si l'image est cachée, on l'affiche
+                        image.style.display = 'block';
+                        // On change le texte du bouton
+                        bouton.textContent = "Cacher l'image";
+                    } else {
+                        // Si l'image est visible, on la cache
+                        image.style.display = 'none';
+                        // On change le texte du bouton
+                        bouton.textContent = "Afficher l'image javascript";
+                    }
+                });
+            </script>
+        </section>
         <section class="funnyContainerOne"><!--DU FUN EN CSS ET OUI-->
              <p class="funnyOne">Imane</p><br>
             <p class="funnyOne">Mathias</p><br>
@@ -244,9 +270,6 @@
             </div>
             
         </section>
-       
-        
-        #region Javascript 
         <section><!--JAVASCRIPT-->
            <p id="demo"></p>
                <!-- <script>
@@ -803,7 +826,6 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
     <!--<script>
          swal ( "Oops" ,  "Something went wrong!" ,  "error" )
     </script>-->
-    #endregion Javascript 
 </body>
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 </html>
