@@ -244,6 +244,7 @@
             </div>
             
         </section>
+        #region Javascript 
         <section><!--JAVASCRIPT-->
            <!--<p id="demo"></p>
                <!-- <script>
@@ -735,20 +736,20 @@
     </script>-->
  
     <!--EXEMPLE EVENTCURRENTTARGET-->
-    <!--<section>
+   <section>
         <button>Mon 1er Bouton</button>
         <button>Mon 2ème Bouton</button>
         <button>Mon 3ème Bouton</button>
         <script>
              var boutons = document.getElementsByTagName('button');
         for (var i = 0; i < boutons.length; i++) {
-        boutons[i].onclick = function(event) {
+            boutons[i].onclick = function(event) {
             alert('bouton clické: ' + event.currentTarget.innerHTML);
             // => le contenu du bouton clické va être affiché dans l'alert
             };
         }
         </script>
-    </section>-->
+    </section>
     <!--Instanciation de fonction/ Class-->
     <!--<script>
         function Etudiant (age){
@@ -798,7 +799,7 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
     <!--<script>
          swal ( "Oops" ,  "Something went wrong!" ,  "error" )
     </script>-->
-
+    #endregion Javascript 
 </body>
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 </html>
