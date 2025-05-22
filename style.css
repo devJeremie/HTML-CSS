@@ -1,3 +1,9 @@
+/*Variable en CSS*/
+:root {
+  --primary: #f3f4f5;
+  --secondary: #f6f5;
+  /*--stylePrimary: display: flex, justify-content: center;*/
+}
 
 /*{ definit le style global(selecteur universel)*/
   *{
@@ -6,12 +12,11 @@
     box-sizing: border-box; /*Indique que l'on va inclure les marges internes et bordure dans la tailles des parents*/
   }
 p{
-  color: white;
+   color: var(--primary);
 }
 table{
-  color: white;
+  color: var(--primary);
 }
-
 body{
     font-family: 'Hedvig Letters Serif', serif;
 }
@@ -21,7 +26,7 @@ body{
   background-attachment: fixed;/*fixe l'image de fond au scroll*/
   background-position: center;/*positionne l'image de fond au centre*/
   background-repeat: no-repeat;/*empeche la répétition de l'image*/
- background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
+  background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
 }
 main{
   padding-top: 80px;/*ajoute un padding top a tout mon contenu 
@@ -71,7 +76,7 @@ ul li a{
   .divMark {
     margin-top: 800px;
   } */
-/*------------DYnamisme en CSS-------------*/
+/*------------Dynamisme en CSS-------------*/
 a:hover {
     background-color: aqua;
     color: blueviolet;
@@ -178,6 +183,7 @@ a:hover {
     grid-column: 1 / 4;
     grid-row: 5 / 5;
 }
+ #region   TEST AGAIN 
  /*------------------Second exercice---------------*/
 .box {
     background-color: #fff;
@@ -187,6 +193,7 @@ a:hover {
     align-items: center;
     justify-content: center;
   }
+
 .conteneur {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
