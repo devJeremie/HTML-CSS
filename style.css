@@ -536,15 +536,6 @@ a:hover{
   border-radius: 5px;
 }
 
-button {
-  padding: 10px 20px;
-  background: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin: 10px 0;
-}
 
 .petit-texte {
   font-size: 14px;
