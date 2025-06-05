@@ -584,6 +584,60 @@ a:hover{
 
 }
 
+/*--------------POP UP----------------*/
+/* Fond semi-transparent couvrant tout l'écran */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popUpText{
+  color: black;
+}
+
+/* Affichage de la pop-up */
+.popup-overlay.active {
+  display: flex;
+}
+
+/* Contenu de la pop-up avec animation */
+.popup-content {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  position: relative;
+  min-width: 300px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+/* Animation d'apparition */
+.popup-overlay.active .popup-content {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Bouton de fermeture */
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 28px;
+  cursor: pointer;
+  color: #888;
+}
+.close-btn:hover {
+  color: #e74c3c;
+}
+
+
 
 
   /*------------------media Query-----------------*/

@@ -7,17 +7,30 @@ basculant =  document.querySelector('.basculant')
 basculant.addEventListener('click', function (event) {
 // 4. Toggle the 'active' class on the '.menuBurger' element.
 menuBurger.classList.toggle('active')
-})
+});
+
+// POP UP // 
+// Affiche la pop-up automatiquement au chargement de la page
+window.onload = function() {
+  document.getElementById('popup').classList.add('active');
+};
+
+// Ferme la pop-up au clic sur la croix
+document.getElementById('closeBtn').onclick = function() {
+  document.getElementById('popup').classList.remove('active');
+};
+
 
 class Etudiant {
     constructor(age) {
         this.age = age;
     }
-}
+};
 
 // instanciation d'objets Etudiant
 var etudiant1 = new Etudiant(17);
 
 // afficher l'age de etudiant1 dans la balise <div>
 document.getElementById("resultat").innerHTML = "etudiant1 a " + etudiant1.age;
+
 
