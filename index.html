@@ -329,13 +329,13 @@
                 if (i % 3 === 0) result += 'Fizz';
                 if (i % 5 === 0) result += 'Buzz';
                 
-                console.log(result ? result : i);
+                console.log(result?  result : i);
             }
             /*encore plus poussé*/
             for (let i = 1; i <= 199; i++) {
                 console.log(i % 3 === 0 ? 'Fizz' + (i % 5 === 0 ? 'Buzz' : '') : i % 5 === 0 ? 'Buzz' : i);
             }-->
-                
+
                 <!-- Décodage de la logique ternaire :
             Si i est divisible par 3 (i % 3 === 0)
             On affiche 'Fizz' et, si en plus i est divisible par 5 (i % 5 === 0), on ajoute 'Buzz' à la suite.
