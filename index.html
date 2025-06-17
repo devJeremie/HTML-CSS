@@ -155,7 +155,7 @@
             <a href="Link/services.html#servicesPage">Ancre sur autre page</a>
         </div>
          <!--<section><!--Les tableaux-->
-             <table>
+            <table>
                 <caption>Apprenants 2023/2024</caption>
                 <tr>
                     <th>Nom</th>
@@ -335,6 +335,20 @@
             for (let i = 1; i <= 199; i++) {
                 console.log(i % 3 === 0 ? 'Fizz' + (i % 5 === 0 ? 'Buzz' : '') : i % 5 === 0 ? 'Buzz' : i);
             }-->
+                
+                <!-- Décodage de la logique ternaire :
+            Si i est divisible par 3 (i % 3 === 0)
+            On affiche 'Fizz' et, si en plus i est divisible par 5 (i % 5 === 0), on ajoute 'Buzz' à la suite.
+            Sinon, si i est divisible par 5 (i % 5 === 0)
+                On affiche 'Buzz'.
+            Sinon
+                On affiche simplement le nombre i.
+            Ce que ça affiche : 
+            Pour les multiples de 3 : "Fizz"
+            Pour les multiples de 5 : "Buzz"
+            Pour les multiples de 3 et 5 : "FizzBuzz"
+            Sinon : le nombre lui-même -->
+
             <!--Dans ce code, il a remplacé les conditions if par des opérateurs ternaires imbriqués.
             Maintenant, pour chaque itération de la boucle, on vérifie si i est divisible par 3 ou 5. Si c'est le cas, nous ajoutons le texte approprié ("Fizz" ou "Buzz") au résultat. Sinon, nous affichons simplement i.-->
             
@@ -413,7 +427,7 @@
         chatBot();
         </script>-->
         <!--SCRIPT JULEN-->
-        <script>
+        <!--<script>
              //exo 4 votre propre bot-chat
                 const dormirPasBien = "J'espère que tu dormiras mieux la prochaine fois. Tu as cauchemardé ?";
                 let dormirBien = "Oh génial ! tu as révé ?";
@@ -444,7 +458,7 @@
                 } else {
                     alert("Désolé, je n'ai pas compris...");
                 }
-        </script>
+        </script>-->
         <!--Exercice 5-->
         <!--<script>
             function diviserParDeux(nombre) {
