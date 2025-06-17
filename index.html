@@ -82,7 +82,7 @@
         </ul>
         <br><!--Saute une ligne mais mauvaise pratique-->
        <!-- <div class="divMark"><!--La boite magique type block--> class="textWhite"
-            <h2><mark>Ceci est une div</mark></h2><!--à utilser avec parcimonie car influence le SEO-->
+            <h2><mark>Ceci est une div</mark></sectionh2><!--à utilser avec parcimonie car influence le SEO-->
             <p class="textWhite">hello</p>
             <p class="textWhite"><em>BLue</em></p>
             <p class="textWhite"><strong>Green</strong></p>
@@ -396,7 +396,7 @@
                 // Comparer la saisie de l'utilisateur avec différentes réponses attendues
                 if (userInput1.toLowerCase() === "bonjour") {
                     alert("Bonjour ! Ca va ?");
-                
+            
                 // Inviter l'utilisateur à saisir une deuxième réponse
                 let userInput2 = prompt("Et toi, comment ça va ? (oui/non) :");
 
@@ -412,6 +412,39 @@
 
         chatBot();
         </script>-->
+        <!--SCRIPT JULEN-->
+        <script>
+             //exo 4 votre propre bot-chat
+                const dormirPasBien = "J'espère que tu dormiras mieux la prochaine fois. Tu as cauchemardé ?";
+                let dormirBien = "Oh génial ! tu as révé ?";
+                let bonjour = prompt("Dis moi quelque chose (Bonjour)")
+                if (bonjour.toLowerCase() === "bonjour" ) {
+                    let cava = prompt("Bonjour ! Ca va ? (Oui ou Non)");
+                        if (cava.toLowerCase() === "oui"){
+                            let cavaOui = prompt("Je suis content pour toi. Tu as bien dormi ? (Oui ou Non)");
+                                if (cavaOui.toLowerCase() === "oui"){
+                                    let dormirBien = prompt("Oh génial ! tu as révé ?");
+                                } else if (cavaOui.toLowerCase() === "non"){
+                                     dormirPasBien = prompt("J'espère que tu dormiras mieux la prochaine fois. Tu as cauchemardé ?");
+                                } else {
+                                    alert("Désolé, je n'ai pas compris...");
+                                }
+                        } else if (cava.toLowerCase() === "non"){
+                            let cavaNon = prompt ("Je suis désolé pour toi. Tu as mal dormi ?");
+                                if (cavaNon.toLowerCase() === "oui"){
+                                    alert(dormirPasBien);
+                                } else if (cavaNon.toLowerCase() === "non") {
+                                   alert(dormirBien);
+                                } else {
+                                    alert("Désolé, je n'ai pas compris...");
+                                }
+                        } else {
+                            alert("Désolé, je n'ai pas compris...");
+                        }
+                } else {
+                    alert("Désolé, je n'ai pas compris...");
+                }
+        </script>
         <!--Exercice 5-->
         <!--<script>
             function diviserParDeux(nombre) {
