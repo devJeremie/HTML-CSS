@@ -354,18 +354,20 @@
             
         </script>
          <!--Exercice 3 Javascript suite-->
-        <!--<script>
+        <script>
            function guessingGame() {
                 // Initialiser le nombre aléatoire
                 let secretNumber = Math.floor(Math.random() * 101);
-                /*console.log('Le nombre secret est :', secretNumber); affiche le resultat dans la console*/
+                console.log('Le nombre secret est :', secretNumber); //affiche le resultat dans la console*/
 
                 // Permettre au joueur de tenter de deviner le nombre
                 for (let i = 0; i < 10; i++) {
                     let guess = prompt("Entrez un nombre entre 0 et 100:");
+                    //let guess = Number(prompt("Entrez un nombre entre 0 et 100:")); si on veut mettre le 
+                    //=== Number() pour convertir la saisie en nombre
 
                     // Vérifier si le joueur a réussi à deviner le bon nombre
-                    if (guess === secretNumber) {
+                    if (guess == secretNumber) { //si on met le ===
                         alert("Bravo ! Vous avez deviné le bon nombre !");
                         return;
                     }
@@ -382,7 +384,7 @@
             alert("Dommage, vous avez épuisé toutes vos tentatives ! Le nombre secret était " + secretNumber + ".");
         }
         guessingGame();
-        </script>-->
+        </script>
         <!--Exercice 4-->
         <!--<script>
             function chatBot() {
