@@ -655,8 +655,44 @@
             } else {
             alert('Bravo ! Vous avez trouvé le mot : ' + lettresTrouvees);
          }
-
+ 
         </script>-->
+        <!-- <script>
+            let mot = ['s', 'u', 'p', 'e', 'r'], mauvaises = [], trouvees = '';
+            for (let i = 0; i < 10 && mot.length > 0; i++) {
+            let l = prompt(`Lettres à trouver : ${mot.length}\nTrouvées : ${trouvees}\nTentatives restantes : ${10 - i}`).toLowerCase();
+            if (mot.includes(l)) {
+                alert('Bonne lettre !');
+                mot = mot.filter(x => x !== l);
+                trouvees += l;
+                i--; // Ne pas compter la tentative si bonne lettre
+            } else {
+                alert('Mauvaise lettre !');
+                mauvaises.push(l);
+            }
+            }
+            alert(mot.length === 0 ? `Bravo ! Mot trouvé : ${trouvees}` : `Perdu !`);
+        </script> -->
+        <!--Jeu du pendu-->
+        <!-- <script>
+            // Initialisation du mot à deviner, des mauvaises lettres et des lettres trouvées 
+            let mot = ['s','u','p','e','r'], mauvaises = [], trouvees = '';
+            // Boucle principale : maximum 10 tentatives ou jusqu'à ce que le mot soit trouvé
+            for(let i=0; i<10 && mot.length; i++)
+            // On demande une lettre à l'utilisateur et on vérifie si elle est dans le mot
+            mot.includes(l=prompt(`À trouver:${mot.length}\nTrouvées:${trouvees}\nRestantes:${10-i}`).toLowerCase()) ?
+                // Si la lettre est bonne :
+                // - on retire toutes ses occurrences du mot
+                // - on l'ajoute à la liste des lettres trouvées
+                // - on ne compte pas la tentative (i--)
+                (mot=mot.filter(x=>x!==l), trouvees+=l, i--) :
+                // Si la lettre est mauvaise :
+                // - on affiche une alerte
+                // - on ajoute la lettre à la liste des mauvaises lettres
+                (alert('Mauvaise lettre !'), mauvaises.push(l));
+            // Fin du jeu : on affiche si le joueur a gagné ou perdu
+            alert(mot.length ? 'Perdu ! ahaha' : `Bravo !  Le mot était : ${trouvees}`);
+        </script> -->
         <!--Exercice 8 Les objets-->
         <!--<script>
         function annuaireAlert() {
