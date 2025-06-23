@@ -629,24 +629,24 @@
             // Affichage du nombre de lettres à trouver, des lettres déjà trouvées et des tentatives restantes
             alert('Lettres à trouver pour le pendu : ' + lettresAttendues.length + '\nLettres déjà trouvées : ' + lettresTrouvees + '\nTentatives restantes : ' + (10 - mauvaisesLettres.length));
 
-            // Demande d'une lettre au joueur
-            let lettreProposee = prompt('Entrez une lettre minuscule:').toLowerCase();
+                // Demande d'une lettre au joueur
+                let lettreProposee = prompt('Entrez une lettre minuscule:').toLowerCase();
 
-            // Vérification si la lettre est présente dans lettresAttendues
-            if (lettresAttendues.indexOf(lettreProposee) !== -1) {
-                alert('Bonne lettre !');
-                // Retirer toutes les occurrences de cette lettre du tableau lettresAttendues
-                while (lettresAttendues.indexOf(lettreProposee) !== -1) {
-                let index = lettresAttendues.indexOf(lettreProposee);
-                lettresAttendues.splice(index, 1);
+                // Vérification si la lettre est présente dans lettresAttendues
+                if (lettresAttendues.indexOf(lettreProposee) !== -1) {
+                    alert('Bonne lettre !');
+                    // Retirer toutes les occurrences de cette lettre du tableau lettresAttendues
+                    while (lettresAttendues.indexOf(lettreProposee) !== -1) {
+                    let index = lettresAttendues.indexOf(lettreProposee);
+                    lettresAttendues.splice(index, 1);
+                    }
+                    // Ajouter la lettre correcte à lettresTrouvees
+                    lettresTrouvees += lettreProposee;
+                } else {
+                    alert('Mauvaise lettre !');
+                    // Ajout de la lettre au tableau mauvaisesLettres
+                    mauvaisesLettres.push(lettreProposee);
                 }
-                // Ajouter la lettre correcte à lettresTrouvees
-                lettresTrouvees += lettreProposee;
-            } else {
-                alert('Mauvaise lettre !');
-                // Ajout de la lettre au tableau mauvaisesLettres
-                mauvaisesLettres.push(lettreProposee);
-            }
             }
 
             // Vérification du résultat de la partie
