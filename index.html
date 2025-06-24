@@ -750,74 +750,66 @@
             console.log(nbVoyelles)
         </script> -->
         <!--Exercice 8 Les objets-->
-        <!--<script>
+        <script>
         function annuaireAlert() {
             let annuaire = {
             'Pierre': '0612345678',
             'Sophie': '0687654321',
-            'Mathilde': '0612987654'
+            'Mathilde': '0612987654',
             };
 
             let fonctionnalite = '';
 
             while (fonctionnalite !== 'q') {
-            console.log("Entrez la première lettre de la fonctionnalité souhaitée ('r' pour rechercher, 'l' pour afficher la liste, 'a' pour ajouter, 's' pour supprimer, 'q' pour quitter) :");
-            fonctionnalite = prompt();
+            fonctionnalite = prompt("Entrez la première lettre de la fonctionnalité souhaitée ('r' pour rechercher, 'l' pour afficher la liste, 'a' pour ajouter, 's' pour supprimer, 'q' pour quitter) :");
+            
+                switch (fonctionnalite) {
+                    case 'r':
+                        let nom = prompt("Entrez le nom à rechercher :");
+                        if (annuaire[nom]) {
+                            alert("Numéro de téléphone de " + nom + " : " + annuaire[nom]);
+                        } else {
+                            alert("Contact introuvable.");
+                        }
+                        break;
 
-            switch (fonctionnalite) {
-                case 'r':
-                    let nom = '';
-                    console.log("Entrez le nom à rechercher :");
-                    nom = prompt();
-                    if (annuaire[nom]) {
-                    alert("Numéro de téléphone de " + nom + " : " + annuaire[nom]);
-                    } else {
-                    alert("Contact introuvable.");
-                    }
-                    break;
+                    case 'l':
+                        let liste = "Liste des contacts :\n";
+                        for (let nom in annuaire) {
+                            liste += nom + " : " + annuaire[nom] + "\n";
+                        }
+                        alert(liste);
+                        break;
 
-                case 'l':
-                    console.log("Liste des contacts :");
-                    for (let nom in annuaire) {
-                    console.log(nom + " : " + annuaire[nom]);
-                    }
-                    break;
+                    case 'a':
+                        let nouveauNom = prompt("Entrez le nom du nouveau contact :");
+                        let nouveauNumero = prompt("Entrez le numéro de téléphone du nouveau contact :");
+                        annuaire[nouveauNom] = nouveauNumero;
+                        alert("Contact ajouté avec succès.");
+                        break;
 
-                case 'a':
-                    let nouveauNom = '';
-                    let nouveauNumero = '';
-                    console.log("Entrez le nom du nouveau contact :");
-                    nouveauNom = prompt();
-                    console.log("Entrez le numéro de téléphone du nouveau contact :");
-                    nouveauNumero = prompt();
-                    annuaire[nouveauNom] = nouveauNumero;
-                    alert("Contact ajouté avec succès.");
-                    break;
+                    case 's':
+                        let nomASupprimer = prompt("Entrez le nom du contact à supprimer :");
+                        if (annuaire[nomASupprimer]) {
+                        delete annuaire[nomASupprimer];
+                        alert("Contact supprimé avec succès.");
+                        } else {
+                        alert("Contact introuvable.");
+                        }
+                        break;
 
-                case 's':
-                    let nomASupprimer = '';
-                    console.log("Entrez le nom du contact à supprimer :");
-                    nomASupprimer = prompt();
-                    if (annuaire[nomASupprimer]) {
-                    delete annuaire[nomASupprimer];
-                    alert("Contact supprimé avec succès.");
-                    } else {
-                    alert("Contact introuvable.");
-                    }
-                    break;
+                    case 'q':
+                        alert("Au revoir!");
+                        break;
 
-                case 'q':
-                    alert("Au revoir!");
-                    break;
-
-                default:
-                    alert("Fonctionnalité non reconnue.");
-            }
+                    default:
+                        alert("Fonctionnalité non reconnue.");
+                }
             }
         }
 
         annuaireAlert();
-    </script>-->
+    </script>
         <!--Exercice 9 Le DOM-->
         <!-- <script>
             document.body.onload = function() {
