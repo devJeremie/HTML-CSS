@@ -657,6 +657,36 @@
          }
  
         </script>-->
+        <!--Boucle for sans ternaire -->
+        <script>
+            // Initialisation du mot à deviner, du tableau des mauvaises lettres et des lettres trouvées
+            let mot = ['s', 'u', 'p', 'e', 'r'], mauvaises = [], trouvees = '';
+            // Boucle principale : maximum 10 tentatives ou jusqu'à ce que le mot soit trouvé
+            for (let i = 0; i < 10 && mot.length > 0; i++) {
+                // Demande une lettre à l'utilisateur
+                let l = prompt(`Lettres à trouver : ${mot.length}\nTrouvées : ${trouvees}\nTentatives restantes : ${10 - i}`).toLowerCase();
+                // Si la lettre est dans le mot
+                if (mot.includes(l)) {
+                    alert('Bonne lettre !');
+                    // On retire toutes les occurrences de la lettre trouvée
+                    mot = mot.filter(x => x !== l);
+                    // On ajoute la lettre à la liste des lettres trouvées
+                    trouvees += l;
+                    i--; // Ne pas compter la tentative si bonne lettre
+                } else {
+                    // Si la lettre n'est pas dans le mot
+                    alert('Mauvaise lettre !');
+                     // On ajoute la lettre à la liste des mauvaises lettres
+                    mauvaises.push(l);
+                }
+            }
+            //Fin du jeu : on affiche si le joueur a gagné ou perdu
+            if (mot.length === 0) {
+                alert(`Bravo ! Mot trouvé : ${trouvees}`);
+            } else {
+                alert('Perdu !');
+            }
+        </script>
         <!-- <script>
             let mot = ['s', 'u', 'p', 'e', 'r'], mauvaises = [], trouvees = '';
             for (let i = 0; i < 10 && mot.length > 0; i++) {
