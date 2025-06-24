@@ -618,7 +618,7 @@
                 console.log("Liste des fruits disponibles:", fruits);
         </script>-->
         <!--Exercice 7 Les tableaux suite (Jeu du pendu)-->
-        <!--<script>
+        <!-- <script>
            // Initialisation des variables
             let mauvaisesLettres = [];
             let lettresAttendues = ['s', 'u', 'p', 'e', 'r'];
@@ -656,9 +656,9 @@
             alert('Bravo ! Vous avez trouvé le mot : ' + lettresTrouvees);
          }
  
-        </script>-->
+        </script> -->
         <!--Boucle for sans ternaire -->
-        <script>
+        <!-- <script>
             // Initialisation du mot à deviner, du tableau des mauvaises lettres et des lettres trouvées
             let mot = ['s', 'u', 'p', 'e', 'r'], mauvaises = [], trouvees = '';
             // Boucle principale : maximum 10 tentatives ou jusqu'à ce que le mot soit trouvé
@@ -686,7 +686,7 @@
             } else {
                 alert('Perdu !');
             }
-        </script>
+        </script> -->
         <!-- <script>
             let mot = ['s', 'u', 'p', 'e', 'r'], mauvaises = [], trouvees = '';
             for (let i = 0; i < 10 && mot.length > 0; i++) {
@@ -722,6 +722,32 @@
                 (alert('Mauvaise lettre !'), mauvaises.push(l));
             // Fin du jeu : on affiche si le joueur a gagné ou perdu
             alert(mot.length ? 'Perdu ! ahaha' : `Bravo !  Le mot était : ${trouvees}`);
+        </script> -->
+        <!--Melissa Exercice 11 ternaire -->
+        <!-- <script>//test site web 
+            const mot = "exemple";
+            const voyelles = ["a", "e", "i", "o", "u"];
+
+            const nombreVoyelles = mot.split('').reduce((count, char) => {
+            return count + (voyelles.includes(char) ? 1 : 0);
+            }, 0);
+
+            console.log(nombreVoyelles); // Affiche le nombre de voyelles dans le mot
+        </script> -->
+        <!-- <script>//version Melissa
+            let mot1 = prompt('Entrez un mot');
+            const voyelles1 = ['a', 'e', 'i', 'o', 'u', "y"];
+
+            console.log(mot1)
+
+            const nbVoyelles = mot1.split('').reduce((count, char) => {
+
+                console.log(mot1)
+
+                return (voyelles1.includes(char) ? count +1 : count); 
+                }, 0);
+
+            console.log(nbVoyelles)
         </script> -->
         <!--Exercice 8 Les objets-->
         <!--<script>
