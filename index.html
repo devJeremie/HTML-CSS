@@ -750,7 +750,7 @@
             console.log(nbVoyelles)
         </script> -->
         <!--Exercice 8 Les objets-->
-        <script>
+        <!-- <script>
         function annuaireAlert() {
             let annuaire = {
             'Pierre': '0612345678',
@@ -797,7 +797,6 @@
                         alert("Contact introuvable.");
                         }
                         break;
-
                     case 'q':
                         alert("Au revoir!");
                         break;
@@ -809,7 +808,23 @@
         }
 
         annuaireAlert();
-    </script>
+        </script> -->
+        <!--Exercice Poo-->
+        <script>
+            class Etudiant {
+                constructor(age) {
+                    this.age = age; // On stocke l'âge dans l'objet instancié
+                    alert('Etudiant instancié');
+                }
+            }
+
+            // Création de deux étudiants avec des âges différents
+            let etudiant1 = new Etudiant(17);
+            let etudiant2 = new Etudiant(19);
+
+            // Affichage du nom (variable) et de l'âge de l'étudiant 1
+            alert('etudiant1 a ' + etudiant1.age + ' ans');
+        </script>
         <!--Exercice 9 Le DOM-->
         <!-- <script>
             document.body.onload = function() {
