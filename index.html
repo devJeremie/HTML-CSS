@@ -812,18 +812,20 @@
         <!--Exercice Poo-->
         <script>
             class Etudiant {
-                constructor(age) {
-                    this.age = age; // On stocke l'âge dans l'objet instancié
+                constructor(age, poids, sexe) {
+                    this.age = age; 
+                    this.poids = poids;// On stocke l'âge dans l'objet instancié
+                    this.sexe = sexe;
                     alert('Etudiant instancié');
                 }
             }
 
             // Création de deux étudiants avec des âges différents
-            let etudiant1 = new Etudiant(17);
+            let etudiant1 = new Etudiant(17, 80, 'Maculin');
             let etudiant2 = new Etudiant(19);
 
             // Affichage du nom (variable) et de l'âge de l'étudiant 1
-            alert('etudiant1 a ' + etudiant1.age + ' ans');
+            alert('etudiant1 a ' + etudiant1.age + ' ans' + ' et pèse ' + etudiant1.poids + ' kg' + ' et est de sexe ' + etudiant1.sexe);
         </script>
         <!--Exercice 9 Le DOM-->
         <!-- <script>
