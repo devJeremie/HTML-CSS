@@ -46,6 +46,7 @@
         </div>
     </header>
     <main>
+        <h1 id="titre">Bonjour les CDA</h1>
          <!-- Pop-up -->
         <div id="popup" class="popup-overlay">
             <div class="popup-content">
@@ -184,7 +185,7 @@
             <form method="get" action="">
                 <p>
                     <label for="prenom">Votre prénom :</label>
-                    <input type="text" name="prenom" id="prenom" placeholder="Votre prénom" size="30" maxlength="20">
+                    <input type="text" name="prenom"  placeholder="Votre prénom" size="30" maxlength="20">
                 </p>
                 <p><!--Checkbox-->
                     Cochez les aliments que vous préféré :<br>
@@ -810,7 +811,7 @@
         annuaireAlert();
         </script> -->
         <!--Exercice Poo-->
-        <script>
+        <!-- <script>
             class Etudiant {
                 constructor(age, poids, sexe) {
                     this.age = age; 
@@ -826,15 +827,15 @@
 
             // Affichage du nom (variable) et de l'âge de l'étudiant 1
             alert('etudiant1 a ' + etudiant1.age + ' ans et pèse ' + etudiant1.poids + ' kg' + ' et est de sexe ' + etudiant1.sexe);
-        </script>
+        </script> -->
         <!--Exercice 9 Le DOM-->
-        <!-- <script>
+         <!-- <script>
             document.body.onload = function() {
                 alert("Bonjour le monde !");
             };
-        </script>-->
+        </script> -->
         <!--Exercice 9 Le DOM (suite 1 récupération de valeur)-->
-        <!--<script>
+        <!-- <script>
             document.addEventListener('DOMContentLoaded', function() {
                 // Récupérer la valeur du premier champ (avec l'identifiant 'nom')
                 var nom = document.getElementById('nom').value;
@@ -844,7 +845,7 @@
                 alert('Nom: ' + nom);
                 alert('Prénom: ' + prenom);
             });
-        </script>-->
+        </script> -->
         <!--Exercice 9 Le DOM (suite 2 Calculatrice)-->
           
         <!--<script>
@@ -864,6 +865,27 @@
                     // Calculer la somme et l'afficher dans le champ resultat
                     resultat.value = nombre1 + nombre2;
                 });
+
+
+                Pour Arnaud avec on click
+                <button onclick="addition()">Additionner</button>
+                <script>
+                    // Fonction appelée par le onclick du bouton
+                    function addition() {
+                        var nombre1 = parseInt(document.getElementById('premier-nombre').value);
+                        var nombre2 = parseInt(document.getElementById('deuxieme-nombre').value);
+                        document.getElementById('resultat').value = nombre1 + nombre2;
+                    }
+                </script>
+                <script>
+                    // Fonction addition qui prend deux paramètres
+                    function addition(a, b) {
+                        // Convertit les paramètres en nombres
+                        var nombre1 = parseInt(a);
+                        var nombre2 = parseInt(b);
+                        document.getElementById('resultat').value = nombre1 + nombre2;
+                    }
+                </script>
             });
         </script>-->
         <!--<script>
