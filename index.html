@@ -892,13 +892,46 @@
         <!-- <script>
             function cacherSpoilers() {
                 // Récupère tous les éléments avec la classe "spoiler"
-                var spoilers = document.getElementsByClassName('spoiler');
+                let spoilers = document.getElementsByClassName('spoiler');
                 // Parcourt la collection et ajoute la classe "hidden" à chacun
                 for (var i = 0; i < spoilers.length; i++) {
                     spoilers[i].classList.add('hidden');
                 }
             } 
         </script> -->
+        <script>
+            //fond jaune
+            document.getElementById('second').style.backgroundColor = 'yellow';
+            //au click
+            document.getElementById('second').onclick = function() {
+                this.style.backgroundColor = 'yellow';
+            };
+            //n'importe quel paragraphe au click sur le paragraphe
+            // Sélectionne tous les éléments <p> de la page et les
+            // place dans la variable paragraphs
+            let paragraphs = document.getElementsByTagName('p');
+                // Parcourt chaque paragraphe
+                for (let i = 0; i < paragraphs.length; i++) {
+                    // Pour chaque paragraphe, on ajoute un 'onclick'
+                    paragraphs[i].onclick = function(event) {
+                        // Quand le paragraphe est cliqué, on change sa couleur de fond en jaune
+                        // event.target représente le paragraphe cliqué
+                        event.target.style.backgroundColor = 'yellow';
+                    };
+                }
+
+        </script>
+        <script> //la meme chose mais avec un bouton qui colore tous
+            // les paragraphes d'un coup
+            // Fonction appelée au clic sur le bouton
+            function colorierParagraphes() {
+                let paragraphs = document.getElementsByTagName('p');
+                for (let i = 0; i < paragraphs.length; i++) {
+                    paragraphs[i].style.backgroundColor = 'yellow';
+                }
+            };
+            colorierParagraphes();
+        </script>
         <!--Exercice 11-->
         <!-- <script>
             // Sélectionne tous les boutons de la page
