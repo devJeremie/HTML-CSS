@@ -855,7 +855,7 @@
                 var deuxiemeNombre = document.getElementById('deuxieme-nombre');
                 var resultat = document.getElementById('resultat');
                 var bouton = document.getElementById('mon-bouton');
-
++
                 // Définir le gestionnaire d'événements du bouton
                 bouton.addEventListener('click', function() {
                     // Récupérer les valeurs des champs et les convertir en nombres
@@ -888,6 +888,35 @@
                 </script>
             });
         </script>-->
+        <!--Exercice 10 getElementBYClassName-->
+        <!-- <script>
+            function cacherSpoilers() {
+                // Récupère tous les éléments avec la classe "spoiler"
+                var spoilers = document.getElementsByClassName('spoiler');
+                // Parcourt la collection et ajoute la classe "hidden" à chacun
+                for (var i = 0; i < spoilers.length; i++) {
+                    spoilers[i].classList.add('hidden');
+                }
+            } 
+        </script> -->
+        <!--Exercice 11-->
+        <!-- <script>
+            // Sélectionne tous les boutons de la page
+            var boutons = document.getElementsByTagName('button');
+            // Parcourt chaque bouton
+            for (var i = 0; i < boutons.length; i++) {
+                boutons[i].onclick = function(event) {
+                    // event.target est le bouton cliqué
+                    // parentNode est le <div> parent du bouton
+                    event.target.parentNode.style.backgroundColor = 'yellow';
+                };
+            }
+        </script> -->
+        <!--On sélectionne tous les <button>.
+    Pour chaque bouton, on ajoute un onclick.
+    Quand on clique, on colore le parentNode (le <div>)
+    en jaune grâce à style.backgroundColor = 'yellow'.-->
+       
         <!--<script>
             for (let i = 0; i < 1000; i++) {
                 let commande = prompt('entrez une commande');
