@@ -28,10 +28,10 @@ body{
   background-repeat: no-repeat;/*empeche la répétition de l'image*/
   background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
 }
-main{
+ main{
   padding-top: 80px;/*ajoute un padding top a tout mon contenu 
   donc du main pour ne pas etre en dessous de mon header fixed*/
-}
+ }  
 /*---------------Header------------*/
 .menuBurger{
   display: none;
@@ -675,7 +675,7 @@ a:hover{
   }
   /*--------------Anim JS---------------*/
   /*---------------fade-in effect-----------------*/
-/* Animation fade-in */
+/* Animation fade-in
 .fade-in {
   width: 500px;
   margin-top: 10em;
@@ -693,11 +693,11 @@ a:hover{
     opacity: 1;
     transform: translateY(0);
   }
-}
+} */
 
 /*-------------fin fade-in effect-----------------*/
 /*-----------Zoom rotate in ------------------*/
-.zoom-rotate-in {
+/* .zoom-rotate-in {
   opacity: 0;
   transform: scale(0.5) rotate(-30deg);
   animation: zoomRotateIn 1s cubic-bezier(.68,-0.55,.27,1.55) forwards;
@@ -708,7 +708,7 @@ a:hover{
     opacity: 1;
     transform: scale(1) rotate(0deg);
   }
-}
+} */
 /*-----------End Zoom rotate in ------------------*/
 /*----------------Effet bounce -----------------------*/
 .bounce {
@@ -734,7 +734,7 @@ a:hover{
   }
 }
 /*-----------------Effet Shake---------------*/
-.shake {
+/* .shake {
   display: inline-block;
   animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) infinite;
 }
@@ -745,4 +745,4 @@ a:hover{
   30%, 50%, 70% { transform: translateX(-20px); }
   40%, 60% { transform: translateX(20px); }
 }
- 
+  */

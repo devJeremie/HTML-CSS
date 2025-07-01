@@ -1,6 +1,6 @@
-// Récupère le texte du h1 avec l'id "titre"
+// // Récupère le texte du h1 avec l'id "titre"
 let hello = document.getElementById('titre').textContent;
-// Affiche une alerte avec ce texte
+// // Affiche une alerte avec ce texte
 alert(hello);
 
 
@@ -10,7 +10,7 @@ let menuBurger = document.querySelector('.menuBurger'),
 basculant =  document.querySelector('.basculant')
 
 // 3. Add a 'click' event listener to the '.basculant' element.
-basculant.addEventListener('click', function (event) {
+basculant.addEventListener('click', function () {
 // 4. Toggle the 'active' class on the '.menuBurger' element.
 menuBurger.classList.toggle('active')
 });
