@@ -316,6 +316,82 @@
             </div>
             
         </section>
+        <!--Exercice filtrage par categorie-->
+        <!-- <section>
+            <label for="categorie-select">Filtrer par catégorie :</label>
+            <select id="categorie-select" onchange="filtrer(this.value)">
+                <option value="all">Tous</option>
+                <option value="ludique">Ludique</option>
+                <option value="pratique">Pratique</option>
+                <option value="sportif">Sportif</option>
+            </select>
+
+            <section id="produits">
+                <article class="ludique pratique">iPad</article>
+                <article class="ludique sportif">Batte de baseball</article>
+                <article class="pratique">Ventilateur</article>
+                <article class="ludique">Jeu d'échecs</article>
+                <article class="sportif">Ballon de foot</article>
+                <article class="pratique">Aspirateur</article>
+                <article class="ludique">Console de jeux</article>
+                <article class="pratique sportif">Vélo</article>
+                <article class="ludique">Puzzle</article>
+                <article class="pratique">Cafetière</article>
+            </section> -->
+            <section class="filtrage-categorie">
+                <div class="filtre-bar">
+                    <label for="categorie-select">Filtrer par catégorie :</label>
+                    <select id="categorie-select" onchange="filtrer(this.value)">
+                        <option value="all">Tous</option>
+                        <option value="ludique">Ludique</option>
+                        <option value="pratique">Pratique</option>
+                        <option value="sportif">Sportif</option>
+                    </select>
+                </div>
+                <section id="produits" class="produits-grid">
+                    <article class="ludique pratique">
+                        <span class="prod-nom">iPad</span>
+                        <span class="prod-cat">Ludique, Pratique</span>
+                    </article>
+                    <article class="ludique sportif">
+                        <span class="prod-nom">Batte de baseball</span>
+                        <span class="prod-cat">Ludique, Sportif</span>
+                    </article>
+                    <article class="pratique">
+                        <span class="prod-nom">Ventilateur</span>
+                        <span class="prod-cat">Pratique</span>
+                    </article>
+                    <article class="ludique">
+                        <span class="prod-nom">Jeu d'échecs</span>
+                        <span class="prod-cat">Ludique</span>
+                    </article>
+                    <article class="sportif">
+                        <span class="prod-nom">Ballon de foot</span>
+                        <span class="prod-cat">Sportif</span>
+                    </article>
+                    <article class="pratique">
+                        <span class="prod-nom">Aspirateur</span>
+                        <span class="prod-cat">Pratique</span>
+                    </article>
+                    <article class="ludique">
+                        <span class="prod-nom">Console de jeux</span>
+                        <span class="prod-cat">Ludique</span>
+                    </article>
+                    <article class="pratique sportif">
+                        <span class="prod-nom">Vélo</span>
+                        <span class="prod-cat">Pratique, Sportif</span>
+                    </article>
+                    <article class="ludique">
+                        <span class="prod-nom">Puzzle</span>
+                        <span class="prod-cat">Ludique</span>
+                    </article>
+                    <article class="pratique">
+                        <span class="prod-nom">Cafetière</span>
+                        <span class="prod-cat">Pratique</span>
+                    </article>
+                </section>
+            </section>
+        </section>
         <section><!--JAVASCRIPT-->
            <p id="demo"></p>
                <!-- <script>
@@ -953,6 +1029,75 @@
             colorierParagraphes();
         </script>
         <button onclick="colorierParagraphes()" class="toto" id="tata">click</button> -->
+        <!--Exercice filtrage-->
+        <script>
+            function filtrer(categorie) {
+                // Sélectionne tous les éléments <article> dans la section #produits
+                const produits = document.querySelectorAll('#produits article');
+                
+                // Parcourt chaque produit de la liste
+                produits.forEach(produit => {
+                    // Si la catégorie est "all" OU si le produit possède la classe de la catégorie sélectionnée
+                    if (categorie === 'all' || produit.classList.contains(categorie)) {
+                        // On affiche le produit (on enlève la classe 'hide')
+                        produit.classList.remove('hide');
+                    } else {
+                        // Sinon, on masque le produit (on ajoute la classe 'hide')
+                        produit.classList.add('hide');
+                    }
+                });
+            }
+        </script>
+        <!--Avec une boucle for-->
+        <!-- <script>
+           function filtrer(categorie) {
+                // Sélectionne tous les éléments <article> dans la section #produits
+                var produits = document.querySelectorAll('#produits article');
+                // Parcourt chaque produit de la liste
+                for (var i = 0; i < produits.length; i++) {
+                    // Si la catégorie est "all" OU si le produit possède la classe de la catégorie sélectionnée
+                    if (categorie === 'all' || produits[i].classList.contains(categorie)) {
+                        // On affiche le produit (on enlève la classe 'hide')
+                        produits[i].classList.remove('hide');
+                    } else {
+                        // Sinon, on masque le produit (on ajoute la classe 'hide')
+                        produits[i].classList.add('hide');
+                    }
+                }
+            }
+        </script> -->
+        <!--Avec un switch case-->
+        <!-- <script>
+            function filtrer(categorie) {
+                // Sélectionne tous les éléments <article> dans la section #produits
+                var produits = document.querySelectorAll('#produits article');
+                // Parcourt chaque produit de la liste
+                for (var i = 0; i < produits.length; i++) {
+                    // Utilise un switch pour gérer les différentes catégories
+                    switch (categorie) {
+                        case 'all':
+                            // Si "all" est sélectionné, on affiche tous les produits
+                            produits[i].classList.remove('hide');
+                            break;
+                        case 'ludique':
+                        case 'pratique':
+                        case 'sportif':
+                            // Si la catégorie correspond à celle du produit, on l'affiche
+                            if (produits[i].classList.contains(categorie)) {
+                                produits[i].classList.remove('hide');
+                            } else {
+                                // Sinon, on masque le produit
+                                produits[i].classList.add('hide');
+                            }
+                            break;
+                        default:
+                            // Si la catégorie n'est pas reconnue, on masque le produit
+                            produits[i].classList.add('hide');
+                    }
+                }
+            }
+        </script> -->
+    
         <!--Exercice 11-->
         <!-- <script>
             // Sélectionne tous les boutons de la page
