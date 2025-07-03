@@ -46,6 +46,13 @@
         </div>
     </header>
     <main>
+        <button id="mon-bouton">Mon Beau Bouton</button>
+        <script>
+            document.getElementById('mon-bouton').onclick = function(event) {
+                console.log(event);
+            };
+
+        </script>
         <h1 id="titre">Bonjour les CDA</h1>
          <!-- Pop-up -->
         <!-- <div id="popup" class="popup-overlay">
@@ -1030,7 +1037,7 @@
         </script>
         <button onclick="colorierParagraphes()" class="toto" id="tata">click</button> -->
         <!--Exercice filtrage-->
-        <script>
+        <!-- <script>
             function filtrer(categorie) {
                 // Sélectionne tous les éléments <article> dans la section #produits
                 const produits = document.querySelectorAll('#produits article');
@@ -1047,7 +1054,7 @@
                     }
                 });
             }
-        </script>
+        </script> -->
         <!--Avec une boucle for-->
         <!-- <script>
            function filtrer(categorie) {
@@ -1111,18 +1118,7 @@
             };
         </script> -->
         <!--Exercice 11-->
-        <!-- <script>
-            // Sélectionne tous les boutons de la page
-            var boutons = document.getElementsByTagName('button');
-            // Parcourt chaque bouton
-            for (var i = 0; i < boutons.length; i++) {
-                boutons[i].onclick = function(event) {
-                    // event.target est le bouton cliqué
-                    // parentNode est le <div> parent du bouton
-                    event.target.parentNode.style.backgroundColor = 'yellow';
-                };
-            }
-        </script> -->
+        
         <!--On sélectionne tous les <button>.
     Pour chaque bouton, on ajoute un onclick.
     Quand on clique, on colore le parentNode (le <div>)
@@ -1199,10 +1195,67 @@
  
     <!--EXEMPLE EVENTCURRENTTARGET-->
    <section>
-        <button>Mon 1er Bouton</button>
-        <button>Mon 2ème Bouton</button>
-        <button>Mon 3ème Bouton</button>
-        <script>
+    <div style="padding: 20px;">
+        <p>Voici le test parent</p>
+        <div style="padding: 10px;">
+            <button>Mon 1er Bouton</button>
+            <p>Voici le test enfant</p>
+        </div>
+    </div>    
+        <div style="padding: 10px;">
+            <button>Mon 2ème Bouton</button>
+        </div>
+        <div style="padding: 10px;">
+            <button>Mon 3ème Bouton</button>
+        </div>
+        <script> //colore parent en bleu
+            // Sélectionne tous les boutons de la page
+            var boutons = document.getElementsByTagName('button');
+            // Parcourt chaque bouton
+            for (var i = 0; i < boutons.length; i++) {
+                boutons[i].onclick = function(event) {
+                    // event.target est le bouton cliqué
+                    // parentNode est le <div> parent du bouton
+                    event.target.parentNode.style.backgroundColor = 'yellow';
+                    event.target.parentNode.parentNode.style.backgroundColor = 'blue';
+                };
+            } 
+        </script>
+        <!-- <script>//colore parent en jaune et enleve la couleur au click ensuite
+            // Sélectionne tous les boutons de la page
+            var boutons = document.getElementsByTagName('button');
+            // Parcourt chaque bouton
+            for (var i = 0; i < boutons.length; i++) {
+                boutons[i].onclick = function(event) {
+                    // On cible le parent direct du bouton
+                    var parentDiv = event.target.parentNode;
+                    // Si le fond est déjà jaune, on l'enlève (remet à la couleur initiale)
+                    if (parentDiv.style.backgroundColor === 'yellow') {
+                        parentDiv.style.backgroundColor = '';
+                    } else {
+                        parentDiv.style.backgroundColor = 'yellow';
+                    }
+                };
+            }
+        </script> -->
+        <!-- <script>//colore parent en jaune et grand parent en bleu et enleve couleur au click 
+            var boutons = document.getElementsByTagName('button');
+            for (var i = 0; i < boutons.length; i++) {
+                boutons[i].onclick = function(event) {
+                    var parentDiv = event.target.parentNode;
+                    var grandParentDiv = parentDiv.parentNode;
+                    // Si déjà coloré, on enlève les couleurs
+                    if (parentDiv.style.backgroundColor === 'yellow' && grandParentDiv.style.backgroundColor === 'blue') {
+                        parentDiv.style.backgroundColor = '';
+                        grandParentDiv.style.backgroundColor = '';
+                    } else {
+                        parentDiv.style.backgroundColor = 'yellow';
+                        grandParentDiv.style.backgroundColor = 'blue';
+                    }
+                };
+            }
+        </script> -->
+        <!-- <script>
              var boutons = document.getElementsByTagName('button');
         for (var i = 0; i < boutons.length; i++) {
             boutons[i].onclick = function(event) {
@@ -1210,7 +1263,7 @@
             // => le contenu du bouton clické va être affiché dans l'alert
             };
         }
-        </script>
+        </script> -->
     </section>
     <!--Instanciation de fonction/ Class-->
     <!--<script>
