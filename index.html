@@ -1208,7 +1208,33 @@
         <div style="padding: 10px;">
             <button>Mon 3ème Bouton</button>
         </div>
-        <script> //colore parent en bleu
+        <!-- <script>//premier click jaune et bleu, deuxieme rouge, troisieme ca enleve la couleur
+            var boutons = document.getElementsByTagName('button');
+                for (var i = 0; i < boutons.length; i++) {
+                    // On stocke l'état du clic sur chaque bouton
+                    boutons[i].clickCount = 0;
+                    boutons[i].onclick = function(event) {
+                        var parentDiv = event.target.parentNode;
+                        var grandParentDiv = parentDiv.parentNode;
+                        // Incrémente le compteur de clics %3 pour remise a zero a la fin
+                        this.clickCount = (this.clickCount + 1) % 3;
+                        if (this.clickCount === 1) {
+                            // Premier clic : jaune et bleu
+                            parentDiv.style.backgroundColor = 'yellow';
+                            grandParentDiv.style.backgroundColor = 'blue';
+                        } else if (this.clickCount === 2) {
+                            // Deuxième clic : rouge partout
+                            parentDiv.style.backgroundColor = 'red';
+                            grandParentDiv.style.backgroundColor = 'red';
+                        } else {
+                            // Troisième clic : reset
+                            parentDiv.style.backgroundColor = '';
+                            grandParentDiv.style.backgroundColor = '';
+                        }
+                    };
+                }
+        </script> -->
+        <script> //colore parent en jaune
             // Sélectionne tous les boutons de la page
             var boutons = document.getElementsByTagName('button');
             // Parcourt chaque bouton
