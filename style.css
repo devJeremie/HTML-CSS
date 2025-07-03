@@ -511,7 +511,14 @@ fieldset{
 #produits article.hide {
   display: none;
 }
-
+/*------------Exercie 11 suite-------------*/
+.sectionbuttonJs{
+  width: 80%;
+  height: 150px;
+  margin: 0 auto;
+  background-color: #8360c3;
+}
+/*------------Exercie 11 suite Fin-------------*/
   /*-------------MENU BURGER-------------*/
   .menuBurger{
     width: 100%;

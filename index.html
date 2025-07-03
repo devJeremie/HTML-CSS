@@ -277,7 +277,7 @@
         </section>
         
         <!--A proposer au designer afin d'apprehender le javascript-->
-        <section>
+        <!-- <section>
             <button id="monBouton">Afficher l'image Javascript</button>
             <img id="monImage" src="image/Javascript.png" alt="Une image">
             <script>
@@ -301,7 +301,7 @@
                     }
                 });
             </script>
-        </section>
+        </section> -->
         <section class="funnyContainerOne"><!--DU FUN EN CSS ET OUI-->
              <p class="funnyOne">Imane</p><br>
             <p class="funnyOne">Mathias</p><br>
@@ -1208,6 +1208,7 @@
         <div style="padding: 10px;">
             <button>Mon 3ème Bouton</button>
         </div>
+        <!--Exercice 11-->
         <!-- <script>//premier click jaune et bleu, deuxieme rouge, troisieme ca enleve la couleur
             var boutons = document.getElementsByTagName('button');
                 for (var i = 0; i < boutons.length; i++) {
@@ -1234,7 +1235,7 @@
                     };
                 }
         </script> -->
-        <script> //colore parent en jaune
+        <!-- <script> //colore parent en jaune
             // Sélectionne tous les boutons de la page
             var boutons = document.getElementsByTagName('button');
             // Parcourt chaque bouton
@@ -1246,7 +1247,7 @@
                     event.target.parentNode.parentNode.style.backgroundColor = 'blue';
                 };
             } 
-        </script>
+        </script> -->
         <!-- <script>//colore parent en jaune et enleve la couleur au click ensuite
             // Sélectionne tous les boutons de la page
             var boutons = document.getElementsByTagName('button');
@@ -1290,6 +1291,28 @@
             };
         }
         </script> -->
+        <!--Exercice 11 suite-->
+        <section id="ma-section" class="sectionbuttonJs" ></section>
+            <script>
+                // Crée un champ input
+                var input = document.createElement('input');
+
+                // Crée un bouton
+                var boutonSection = document.createElement('button');
+
+                // Ajoute le texte "Vider" sur le bouton
+                var texteBouton = document.createTextNode('Vider');
+                boutonSection.appendChild(texteBouton);
+
+                // Ajoute le champ et le bouton à la section
+                document.getElementById('ma-section').appendChild(input);
+                document.getElementById('ma-section').appendChild(boutonSection);
+
+                // Ajoute l'événement onclick pour vider le champ input
+                boutonSection.onclick = function() {
+                    input.value = '';
+                };
+            </script>
     </section>
     <!--Instanciation de fonction/ Class-->
     <!--<script>
