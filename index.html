@@ -318,7 +318,7 @@
         </section>
         <!--Exercice filtrage par categorie-->
         <!-- <section>
-            <label for="categorie-select">Filtrer par catégorie :</label>
+            <label class="labelCate" for="categorie-select">Filtrer par catégorie :</label>
             <select id="categorie-select" onchange="filtrer(this.value)">
                 <option value="all">Tous</option>
                 <option value="ludique">Ludique</option>
@@ -1097,7 +1097,19 @@
                 }
             }
         </script> -->
-    
+        <!-- Optimiser a fond
+        <script>
+            // Optimisation de la fonction de filtrage des produits
+            const filtrer = categorie => {
+                const produits = document.querySelectorAll('#produits article');
+                if (!produits.length) return; // Si aucun produit, on arrête la fonction
+
+                produits.forEach(produit => {
+                    // Affiche tous les produits si "all" ou si la classe correspond
+                    produit.classList.toggle('hide', !(categorie === 'all' || produit.classList.contains(categorie)));
+                });
+            };
+        </script> -->
         <!--Exercice 11-->
         <!-- <script>
             // Sélectionne tous les boutons de la page
