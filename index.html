@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet"> 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 </head>
 <body class="parallax"><!--EFFET PARALLAX-->
 
@@ -1362,9 +1363,51 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
 });
     </script>
     <!--ALERT PAR API SWEETALERT-->
-    <!--<script>
-         swal ( "Oops" ,  "Something went wrong!" ,  "error" )
-    </script>-->
+    <script>
+         swal ( "Ouah" ,  "Première connexion API!" ,  "error" )
+    </script>
+    <!-- <script>
+        Swal.fire({
+            title: "Good job!",
+            text: "SweetAlert2 Le retour!",
+            icon: "success"
+            });
+    </script> -->
 </body>
+<!--Exercice 12 caroussel-->
+<!-- Carousel HTML -->
+<section class="carouselSec" id="carousel-section" style="text-align:center; ">
+    <img id="carousel-img" src="" alt="Image du carousel" style="width:300px; height:200px; object-fit:cover; border-radius:10px; box-shadow:0 2px 8px #888;">
+    <br>
+    <button id="next-btn" style="margin-top:15px; padding:8px 20px; background:#6c3cff; color:#fff; border:none; border-radius:5px; cursor:pointer;">Image suivante</button>
+</section>
+<!--Script caroussel-->
+<script>
+// 1. Tableau d'URLs d'images
+    const pictures = [
+        "image/R1.jpg",
+        "image/ArriereMoto.jpg",
+        "image/motoBlackRed.jpg",
+        "image/floride-moto-accueil-00002.jpeg"
+    ];
+
+    // 2. Sélection des éléments du DOM
+    const img = document.getElementById('carousel-img');
+    const btn = document.getElementById('next-btn');
+
+    // 3. Affiche la première image
+    let index = 0;
+    img.src = pictures[index];
+
+    // 4. Affiche l'image suivante au clic
+    btn.onclick = function() {
+        index = (index + 1) % pictures.length; // modulo pour boucler
+        img.style.opacity = 0.5;
+        setTimeout(() => {
+            img.src = pictures[index];
+            img.style.opacity = 1;
+        }, 200);
+    };
+</script>
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 </html>

@@ -630,7 +630,26 @@ a:hover{
     
        
 }
+/*-------------Ex 12 Carousel-----------*/
+#carousel-section {
+    background: #f5e6ff;
+    padding: 30px 0;
+    border-radius: 15px;
+    width: 350px;
+    margin: 40px auto;
+    box-shadow: 0 4px 16px #ccc;
+}
+#carousel-img {
+    transition: opacity 0.5s;
+}
+#next-btn:hover {
+    background: #4b2ca0;
+}
+.carouselSec{
+  margin: 0 auto;
+}
 
+/*-------------Ex 12 Carousel Fin-----------*
 /*--------------SEction test pour sabrina, karim, melissa--------------*/ 
 .imagSectionTest{
   width: 150px;
