@@ -314,7 +314,7 @@ fieldset{
   }
 }
 /*--------------Seconde boite---------*/
-.containerAnimationTwo{
+/* .containerAnimationTwo{
     height:100vh;
     width:100%;  
     display:flex;
@@ -409,7 +409,7 @@ fieldset{
       top: -6.375rem;
     }
   }
-  }
+  } */
   /*------------Exercice Filtrage par categorie--------------*/
 /* .labelCate{
   color: #fff;
@@ -436,7 +436,7 @@ fieldset{
 #produits article.hide {
   display: none;
 } */
-.filtrage-categorie {
+/* .filtrage-categorie {
   background: #f4f8fb;
   border-radius: 12px;
   padding: 2em 1em;
@@ -510,7 +510,7 @@ fieldset{
 
 #produits article.hide {
   display: none;
-}
+} */
 /*------------Exercie 11 suite-------------*/
 .sectionbuttonJs{
   width: 80%;
@@ -520,7 +520,7 @@ fieldset{
 }
 /*------------Exercie 11 suite Fin-------------*/
   /*-------------MENU BURGER-------------*/
-  .menuBurger{
+  /* .menuBurger{
     width: 100%;
     height: 100%;
     font-family: "Trebuchet MS" , Arial;
@@ -618,7 +618,7 @@ a:hover{
     transform: rotate(-135deg);
     margin-top: 0;
 }/*Mise en  place appear dissapear*/
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .header{
     display: none;
   }
@@ -629,7 +629,7 @@ a:hover{
 @media screen and (min-width:800px){
     
        
-}
+} */ 
 /*-------------Ex 12 Carousel-----------*/
 #carousel-section {
     background: #f5e6ff;
@@ -649,9 +649,67 @@ a:hover{
   margin: 0 auto;
 }
 
-/*-------------Ex 12 Carousel Fin-----------*
+/*-------------Ex 12 Carousel Fin-----------*/
+/*-------------Ex 12 Accordeon--------------*/
+.accordion-content {
+  display: none;
+  padding: 10px;
+  background: #f3f3f3;
+  border: 1px solid #ccc;
+}
+.accordion-title {
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: #6c3cff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  font-size: 1.1em;
+}
+.accordion-item + .accordion-item {
+  margin-top: 5px;
+}
+.accordion-content.active {
+  display: block;
+}
+.accordionDescribe{
+  color: #111;
+}
+/*-------------Ex 12 Accordeon fin--------------*/
+/*-------------Ex 12 Galerie Vidéo--------------*/
+ .gallery {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+    .thumbnail {
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s;
+      width: 160px;
+      height: 90px;
+      object-fit: cover;
+    }
+    .thumbnail:hover {
+      border-color: #007BFF;
+    }
+    .video-container {
+      width: 640px;
+      height: 360px;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.2);
+    }
+/*-------------Ex 12 Galerie Vidéo Fin--------------*/
 /*--------------SEction test pour sabrina, karim, melissa--------------*/ 
-.imagSectionTest{
+/* .imagSectionTest{
   width: 150px;
 }
 .section {
@@ -705,20 +763,20 @@ a:hover{
 }
 
 /* Quand le checkbox est coché */
-.toggle-desc:checked ~ .description-box {
+/* .toggle-desc:checked ~ .description-box {
   max-height: 500px; /* Ajuste selon le contenu */
-  padding: 15px;
+  /* padding: 15px;
 }
 
 .toggle-desc:checked ~ .arrow-container .arrow-down {
  /* transform: rotate(180deg);*/
- transform: scale(1.5); /*agrandit la fleche et le texte*/
+ /* transform: scale(1.5); agrandit la fleche et le texte */
 
-}
+/* } */
 
 /*--------------POP UP----------------*/
 /* Fond semi-transparent couvrant tout l'écran */
-.popup-overlay {
+/* .popup-overlay {
   display: none;
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
@@ -733,12 +791,12 @@ a:hover{
 }
 
 /* Affichage de la pop-up */
-.popup-overlay.active {
+/* .popup-overlay.active {
   display: flex;
-}
+} */
 
 /* Contenu de la pop-up avec animation */
-.popup-content {
+/* .popup-content {
   background: #fff;
   padding: 30px 40px;
   border-radius: 10px;
@@ -749,16 +807,16 @@ a:hover{
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0.4s, transform 0.4s;
-}
+} */
 
-/* Animation d'apparition */
+/* Animation d'apparition
 .popup-overlay.active .popup-content {
   opacity: 1;
   transform: scale(1);
-}
+} */
 
 /* Bouton de fermeture */
-.close-btn {
+/* .close-btn {
   position: absolute;
   top: 10px; right: 15px;
   font-size: 28px;
@@ -767,7 +825,7 @@ a:hover{
 }
 .close-btn:hover {
   color: #e74c3c;
-}
+} */ */
   /*------------------media Query-----------------*/
   /*On peut ecrire min-width ou max-width personnellement je prefere le max*/
   /*EXEMPLE*/
@@ -779,7 +837,7 @@ a:hover{
         @media all and (orientation: portrait)
         REGARDER le overflow : scroll ,pour un texte qui dépasse de sa boite parent*/
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
     .conteneur {
       display: none;
     }
@@ -794,13 +852,13 @@ a:hover{
   #up-button{
     display: none;
     /* éléments de style, vous pouvez mettre ce que vous voulez, ils ne sont là que pour l'exemple */
-    position: fixed;
+    /* position: fixed;
     bottom: 50px;
     left: 50px;
-  }
-  #up-button.show{
+  } */
+  /* #up-button.show{
     display: block;
-  }
+  } */ */
   /*--------------Anim JS---------------*/
   /*---------------fade-in effect-----------------*/
 /* Animation fade-in

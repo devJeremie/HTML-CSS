@@ -1294,7 +1294,7 @@
         </script> -->
         <!--Exercice 11 suite-->
         <section id="ma-section" class="sectionbuttonJs" ></section>
-            <script>
+            <!-- <script>
                 // Crée un champ input
                 var input = document.createElement('input');
 
@@ -1313,7 +1313,7 @@
                 boutonSection.onclick = function() {
                     input.value = '';
                 };
-            </script>
+            </script> -->
     </section>
     <!--Instanciation de fonction/ Class-->
     <!--<script>
@@ -1363,9 +1363,9 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
 });
     </script>
     <!--ALERT PAR API SWEETALERT-->
-    <script>
+    <!-- <script>
          swal ( "Ouah" ,  "Première connexion API!" ,  "error" )
-    </script>
+    </script> -->
     <!-- <script>
         Swal.fire({
             title: "Good job!",
@@ -1399,15 +1399,110 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
     let index = 0;
     img.src = pictures[index];
 
-    // 4. Affiche l'image suivante au clic
-    btn.onclick = function() {
-        index = (index + 1) % pictures.length; // modulo pour boucler
-        img.style.opacity = 0.5;
-        setTimeout(() => {
-            img.src = pictures[index];
-            img.style.opacity = 1;
-        }, 200);
-    };
+   // 4. Affiche l'image suivante au clic
+btn.onclick = function() {
+    // Incrémente l'index et revient à 0 si on dépasse la longueur du tableau (boucle)
+    index = (index + 1) % pictures.length; // modulo pour boucler
+
+    // Baisse l'opacité de l'image pour créer un effet de transition
+    img.style.opacity = 0.5;
+
+    // Après 200 millisecondes, change l'image et remet l'opacité à 1
+    setTimeout(() => {
+        img.src = pictures[index];      // Change la source de l'image
+        img.style.opacity = 1;          // Remet l'opacité à 1 (effet fondu)
+    }, 200);
+};
 </script>
+<!--Exercice 12 Accordeon-->
+<section class="accordion">
+  <div class="accordion-item">
+    <button class="accordion-title">Supermotard</button>
+    <div class="accordion-content">
+      <p class="accordionDescribe">Un supermotard est une moto polyvalente conçue pour offrir d’excellentes performances aussi bien sur route que sur circuit. Elle se distingue par son look sportif, ses roues de 17 pouces équipées de pneus routiers, ses suspensions hautes et son poids léger. Issue à l’origine du motocross, elle est adaptée pour la glisse, les virages serrés et les freinages puissants. Le supermotard est apprécié pour sa maniabilité, sa réactivité et le plaisir de conduite qu’il procure, que ce soit en ville ou sur piste.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-title">Motocross</button>
+    <div class="accordion-content">
+      <p class="accordionDescribe">Une moto cross est une moto spécialement conçue pour la pratique du motocross, une discipline de course sur terrain accidenté et pistes en terre. Elle se caractérise par sa légèreté, ses suspensions à grand débattement, ses pneus à crampons et sa grande maniabilité. La moto cross est idéale pour franchir des obstacles, sauter et rouler sur des terrains difficiles, offrant sensations fortes et agilité au pilote.</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <button class="accordion-title">Moto de course</button>
+    <div class="accordion-content">
+      <p class="accordionDescribe">Une moto de course est spécialement conçue pour la vitesse et la performance sur circuit. Elle se distingue par son moteur puissant, son aérodynamisme, son châssis léger et ses freins haut de gamme. La position de conduite est sportive, penchée vers l’avant, pour optimiser la stabilité et la maniabilité à haute vitesse. Les motos de course sont utilisées en compétition, comme le MotoGP ou le Superbike, et offrent des sensations fortes aux pilotes grâce à leur accélération et leur tenue de route exceptionnelles.</p>
+    </div>
+  </div>
+</section>
+<script>
+    // Accordéon JS
+const titles = document.getElementsByClassName('accordion-title');
+const contents = document.getElementsByClassName('accordion-content');
+
+for (let i = 0; i < titles.length; i++) {
+    titles[i].onclick = function() {
+        // Si déjà ouvert, on referme
+        if (contents[i].classList.contains('active')) {
+            contents[i].classList.remove('active');
+        } else {
+            // Ferme tous les contenus
+            for (let j = 0; j < contents.length; j++) {
+                contents[j].classList.remove('active');
+            }
+            // Ouvre le contenu correspondant
+            contents[i].classList.add('active');
+        }
+    };
+}
+</script>
+<!--Exercice 12 Galerie Vidéo-->
+<h2>Galerie Vidéo</h2>
+  <div id="gallery" class="gallery"></div>
+  <div id="videoContainer" class="video-container"></div>
+    <script>
+        const videos = [
+            {
+                titre: "Simple man",
+                vignette: "https://img.youtube.com/vi/LaiKvU6KYzA/mqdefault.jpg",
+                url: "https://www.youtube.com/watch?v=LaiKvU6KYzA&list=RDLaiKvU6KYzA&start_radio=1"
+            },
+            {
+                titre: "Patience",
+                vignette: "https://img.youtube.com/vi/YuInaaGj_qI/mqdefault.jpg",
+                url: "https://www.youtube.com/watch?v=YuInaaGj_qI&list=RDYuInaaGj_qI&start_radio=1"
+            },
+            {
+                titre: "Don't be Afraid",
+                vignette: "https://img.youtube.com/vi/HsdjUNqbL5M/mqdefault.jpg",
+                url: "https://www.youtube.com/watch?v=HsdjUNqbL5M&list=RDHsdjUNqbL5M&start_radio=1"
+            }
+        ];
+
+            // Sélection des éléments du DOM
+            const gallery = document.getElementById('gallery');
+            const videoContainer = document.getElementById('videoContainer');
+
+            // Génération dynamique des miniatures à partir du tableau
+            videos.forEach((video, index) => {
+                const img = document.createElement('img');
+                img.src = video.vignette;
+                img.alt = video.titre;
+                img.className = 'thumbnail';
+                img.onclick = function() {
+                    showVideo(index);
+                };
+                gallery.appendChild(img);
+            });
+
+            // Fonction pour afficher la vidéo sélectionnée
+            function showVideo(index) {
+            videoContainer.innerHTML =
+                `<iframe width="100%" height="100%" src="${videos[index].url}" frameborder="0" allowfullscreen></iframe>`;
+            }
+
+            // Afficher la première vidéo par défaut
+            showVideo(0);
+    </script>
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 </html>
