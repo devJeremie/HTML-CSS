@@ -1414,6 +1414,63 @@ btn.onclick = function() {
     }, 200);
 };
 </script>
+<!--Et donc en composant réutilisable cela donne cela-->
+<!-- <script>
+function createCarousel(containerId, pictures) {
+    const container = document.getElementById(containerId);
+
+    // Nettoie le conteneur
+    container.innerHTML = '';
+
+    // Crée l'image
+    const img = document.createElement('img');
+    img.src = pictures[0];
+    img.alt = "Image du carousel";
+    img.style.width = "300px";
+    img.style.height = "200px";
+    img.style.objectFit = "cover";
+    img.style.borderRadius = "10px";
+    img.style.boxShadow = "0 2px 8px #888";
+
+    // Crée le bouton
+    const btn = document.createElement('button');
+    btn.textContent = "Image suivante";
+    btn.style.marginTop = "15px";
+    btn.style.padding = "8px 20px";
+    btn.style.background = "#6c3cff";
+    btn.style.color = "#fff";
+    btn.style.border = "none";
+    btn.style.borderRadius = "5px";
+    btn.style.cursor = "pointer";
+
+    // Ajoute les éléments au conteneur
+    container.appendChild(img);
+    container.appendChild(document.createElement('br'));
+    container.appendChild(btn);
+
+    // Logique du carrousel
+    let index = 0;
+    btn.onclick = function() {
+        index = (index + 1) % pictures.length;
+        img.style.opacity = 0.5;
+        setTimeout(() => {
+            img.src = pictures[index];
+            img.style.opacity = 1;
+        }, 200);
+    };
+}
+
+// Utilisation :
+const pictures = [
+    "image/R1.jpg",
+    "image/ArriereMoto.jpg",
+    "image/motoBlackRed.jpg",
+    "image/floride-moto-accueil-00002.jpeg"
+];
+createCarousel("carousel-section", pictures);
+</script> -->
+<!--FIn du carousel en composant réutilisable-->
+
 <!--Exercice 12 Accordeon-->
 <section class="accordion">
   <div class="accordion-item">
