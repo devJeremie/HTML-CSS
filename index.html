@@ -1500,24 +1500,25 @@ const contents = document.getElementsByClassName('accordion-content');
 for (let i = 0; i < titles.length; i++) {
     titles[i].onclick = function() {
         // Si déjà ouvert, on referme
-        if (contents[i].classList.contains('active')) {
-            contents[i].classList.remove('active');
+        if (contents[i].classList.contains("active")) {
+            contents[i].classList.remove("active");
         } else {
             // Ferme tous les contenus
             for (let j = 0; j < contents.length; j++) {
-                contents[j].classList.remove('active');
+                contents[j].classList.remove("active");
             }
             // Ouvre le contenu correspondant
-            contents[i].classList.add('active');
+            contents[i].classList.add("active");
         }
     };
 }
 </script>
 <!--Exercice 12 Galerie Vidéo-->
 <h2>Galerie Vidéo</h2>
+    <button id="showGalleryBtn">Afficher la galerie</button>
   <div id="gallery" class="gallery"></div>
   <div id="videoContainer" class="video-container"></div>
-    <script>
+    <!-- <script>
         const videos = [
             {
                 titre: "Simple man",
@@ -1559,52 +1560,19 @@ for (let i = 0; i < titles.length; i++) {
             gallery.appendChild(img);
         });
 
-            // Fonction pour afficher la vidéo sélectionnée
-            function showVideo(index) {
-            videoContainer.innerHTML =
-                `<iframe width="100%" height="100%" src="${videos[index].url}" frameborder="0" allowfullscreen></iframe>`;
-            }
+            // // Fonction pour afficher la vidéo sélectionnée
+            // function showVideo(index) {
+            // videoContainer.innerHTML =
+            //     `<iframe width="100%" height="100%" src="${videos[index].url}" frameborder="0" allowfullscreen></iframe>`;
+            // }
 
-            // Afficher la première vidéo par défaut
-            showVideo(0);
-    </script>
-    <!--Avec Boucle For-->
-    <!-- <script> 
-        // Sélection des éléments du DOM
-        const gallery = document.getElementById('gallery');
-        const videoContainer = document.getElementById('videoContainer');
-
-        // Génération dynamique des miniatures à partir du tableau avec une boucle for
-        for (let i = 0; i < videos.length; i++) {
-            // 1. Création d'un élément <img> pour chaque vidéo
-            const img = document.createElement('img');
-
-            // 2. Définition de la source de l'image (URL de la vignette)
-            img.src = videos[i].vignette;
-
-            // 3. Définition du texte alternatif (accessibilité)
-            img.alt = videos[i].titre;
-
-            // 4. Ajout d'une classe CSS pour le style des miniatures
-            img.className = 'thumbnail';
-
-            // 5. Ajout d'un gestionnaire d'événement : au clic sur la miniature, on affiche la vidéo correspondante
-            img.onclick = function() {
-                showVideo(i);
-            };
-
-            // 6. Ajout de l'image dans la galerie (élément parent)
-            gallery.appendChild(img);
-        }
-
-        // Fonction pour afficher la vidéo sélectionnée
-        function showVideo(index) {
-            videoContainer.innerHTML =
-                `<iframe width="100%" height="100%" src="${videos[index].url}" frameborder="0" allowfullscreen></iframe>`;
-        }
-
-        // Afficher la première vidéo par défaut
-        showVideo(0);
+            // // Afficher la première vidéo par défaut
+            // showVideo(0);
     </script> -->
+    <!--Avec Boucle For-->
+    <!--Exercice Intermédiaire-->
+    <!--Feu tricolore-->
+    
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
+<script src="Javascript/gallery.js"></script>
 </html>
