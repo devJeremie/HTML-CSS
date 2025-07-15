@@ -48,7 +48,7 @@
     </header>
     <main>
         <button id="mon-bouton">Mon Beau Bouton</button>
-        <script>
+        <!--<script>
             document.getElementById('mon-bouton').onclick = function(event) {
                 console.log(event);
             };
@@ -1382,7 +1382,7 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
     <button id="next-btn" style="margin-top:15px; padding:8px 20px; background:#6c3cff; color:#fff; border:none; border-radius:5px; cursor:pointer;">Image suivante</button>
 </section>
 <!--Script caroussel-->
-<script>
+<!--<script>
 // 1. Tableau d'URLs d'images
     const pictures = [
         "image/R1.jpg",
@@ -1492,7 +1492,7 @@ createCarousel("carousel-section", pictures);
     </div>
   </div>
 </section>
-<script>
+<!--<script>
     // Accordéon JS
 const titles = document.getElementsByClassName('accordion-title');
 const contents = document.getElementsByClassName('accordion-content');
@@ -1571,8 +1571,49 @@ for (let i = 0; i < titles.length; i++) {
     </script> -->
     <!--Avec Boucle For-->
     <!--Exercice Intermédiaire-->
-    <!--Feu tricolore-->
-    
+    <!-- Horloge TP-->
+    <section>
+    <div class="clock">
+        <div class="hand hour-hand"></div>
+        <div class="hand minute-hand"></div>
+        <div class="hand second-hand"></div>
+        <div class="center-dot"></div>
+    </div>
+        <!-- Réglage de l'alarme -->
+        <div class="alarm-set">
+            <label for="alarmTime">Définir l’alarme :</label>
+            <input type="time" id="alarmTime" />
+            <button onclick="setAlarm()">Régler</button>
+            <span id="alarm-status"></span>
+        </div>
+        <!-- Sons -->
+        <audio id="hourly-chime" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12d12eae7d.mp3"></audio>
+        <audio id="alarm-sound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124b0ba2b0.mp3"></audio>
+        
+    </section>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const seconds = now.getSeconds();
+            const minutes = now.getMinutes();
+            const hours = now.getHours();
+
+            const secondsDeg = (seconds / 60) * 360 + 90;
+            const minutesDeg = (minutes / 60) * 360 + (seconds / 60) * 6 + 90;
+            const hoursDeg = ((hours % 12) / 12) * 360 + (minutes / 60) * 30 + 90;
+
+            document.querySelector('.second-hand').style.transform = `rotate(${secondsDeg}deg)`;
+            document.querySelector('.minute-hand').style.transform = `rotate(${minutesDeg}deg)`;
+            document.querySelector('.hour-hand').style.transform = `rotate(${hoursDeg}deg)`;
+        }
+
+            // Mise à jour toutes les secondes
+            setInterval(updateClock, 1000);
+            updateClock();
+
+    </script>
+
+ 
 <script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 <script src="Javascript/gallery.js"></script>
 </html>

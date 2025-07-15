@@ -20,26 +20,26 @@ table{
 body{
     font-family: 'Hedvig Letters Serif', serif;
 }
-.parallax{
+/* .parallax{
   background-image:url(image/africaParallax.jpg);/*definit mon image de fond*/
-  height: 100%;/*permet de dire de remplir 100% de son conteneur*/
-  background-attachment: fixed;/*fixe l'image de fond au scroll*/
-  background-position: center;/*positionne l'image de fond au centre*/
-  background-repeat: no-repeat;/*empeche la répétition de l'image*/
-  background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
-}
- main{
-  padding-top: 80px;/*ajoute un padding top a tout mon contenu 
-  donc du main pour ne pas etre en dessous de mon header fixed*/
- }  
+  /* height: 100%;/*permet de dire de remplir 100% de son conteneur*/
+  /* background-attachment: fixed;/*fixe l'image de fond au scroll*/
+  /* background-position: center;positionne l'image de fond au centre */
+  /*background-repeat: no-repeat;/*empeche la répétition de l'image*/
+  /*background-size: cover;/*redimensionne l'image pour couvrir l'intégralité de l'element*/
+/*}//**/
+ /*main{
+  padding-top: 80px;/*ajoute un padding top a tout mon contenu  */
+  /*donc du main pour ne pas etre en dessous de mon header fixed*/
+ /*}   */
 /*---------------Header------------*/
-.menuBurger{
+/*.menuBurger{
   display: none;
 }
 .header {
     display: flex;
     /*display: none;*/
-    justify-content:space-between;
+    /*justify-content:space-between;
     position: fixed;
     top: 0;
     width: 100%;
@@ -80,7 +80,7 @@ ul li a{
     margin-top: 800px;
   } */
 /*------------Dynamisme en CSS-------------*/
-a:hover {
+/*a:hover {
     background-color: aqua;
     color: blueviolet;
 }
@@ -127,20 +127,20 @@ a:hover {
 /*.gridSection{
     margin: 20px;
 }*/
-.containerGrid{
+/*.containerGrid{
     display: grid;/*initialise le tableau grid*/
-    grid-template-columns: 150px 150px 150px;/*crée 3 colonnes, mettre la taille que lon veut*/
-    grid-template-rows: 100px 150px 200px;/*Penser a enlever la taille fixe de box sinon elle se chavauche*/
-    gap: 10px;/*permet de creer des espacement, plus facile car applique sur tout le container , pas de margin ni padding.*/
-}
-.box{
+   /* grid-template-columns: 150px 150px 150px;/*crée 3 colonnes, mettre la taille que lon veut*/
+    /*grid-template-rows: 100px 150px 200px;/*Penser a enlever la taille fixe de box sinon elle se chavauche*/
+   /* gap: 10px;/*permet de creer des espacement, plus facile car applique sur tout le container , pas de margin ni padding.*/
+/*}
+/*.box{
     /*height: 100px;*/
-    border: 1px solid black;
+   /* border: 1px solid black;
     background-color: #2ebf91;
 }
 /*--------------------Suite grid mais plus touchy avec exercice---------------------*/
 /*----------------Exercice 1--------------*/
-.boite {
+/*.boite {
     background-color: #fff;
     border-radius: 10px;
     border: 3px solid black;
@@ -188,7 +188,7 @@ a:hover {
 }
  #region   TEST AGAIN 
  /*------------------Second exercice---------------*/
-.box {
+/*.box {
     background-color: #fff;
     border-radius: 10px;
     border: 3px solid black;
@@ -223,23 +223,23 @@ a:hover {
 }
 
 /*---------------Les tableaux---------------*/
-table {/*--------COLLAPSE-------------Bordure collée entre elles*/
-    border-collapse: collapse;
+/*table {/*--------COLLAPSE-------------Bordure collée entre elles*/
+    /*border-collapse: collapse;
     margin: auto; /*Permet de mettre une marge auto a l'intérieur du parent*/
-}
+/*}
 th, td {/*------On peut donc rassembler le th avec le td--------------*/
-    border: 1px solid black;
+   /* border: 1px solid black;
     padding: 10px;
 }
 /*------------Form--------------*/
-fieldset{
+/*fieldset{
     background-color: rgb(207, 107, 223);
 }
 :required{
     background-color:aquamarine;
 }
 /*---------------FUN EN CSS----------------*/
-@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+/*@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
 
 .funnyOne {
   font-size: calc(20px + 18vh);
@@ -512,7 +512,7 @@ fieldset{
   display: none;
 } */
 /*------------Exercie 11 suite-------------*/
-.sectionbuttonJs{
+/*.sectionbuttonJs{
   width: 80%;
   height: 150px;
   margin: 0 auto;
@@ -631,7 +631,7 @@ a:hover{
        
 } */ 
 /*-------------Ex 12 Carousel-----------*/
-#carousel-section {
+/*#carousel-section {
     background: #f5e6ff;
     padding: 30px 0;
     border-radius: 15px;
@@ -651,7 +651,7 @@ a:hover{
 
 /*-------------Ex 12 Carousel Fin-----------*/
 /*-------------Ex 12 Accordeon--------------*/
-.accordion-content {
+/*.accordion-content {
   display: none;
   padding: 10px;
   background: #f3f3f3;
@@ -679,7 +679,7 @@ a:hover{
 }
 /*-------------Ex 12 Accordeon fin--------------*/
 /*-------------Ex 12 Galerie Vidéo--------------*/
- .gallery {
+ /*.gallery {
       display: flex;
       gap: 20px;
       margin-bottom: 30px;
@@ -706,8 +706,60 @@ a:hover{
       justify-content: center;
       border-radius: 10px;
       box-shadow: 0 4px 18px rgba(0,0,0,0.2);
-    }
+    } */
 /*-------------Ex 12 Galerie Vidéo Fin--------------*/
+/*------------------Horloge Tp-----------------*/
+.clock {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border: 8px solid #333;
+  border-radius: 50%;
+  background: #fff;
+  margin: 40px auto;
+}
+
+.hand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: bottom center;
+  /* Pas de transform initial */
+}
+
+.hour-hand {
+  width: 8px;
+  height: 70px;
+  background: #222;
+  z-index: 3;
+}
+
+.minute-hand {
+  width: 4px;
+  height: 110px;
+  background: #555;
+  z-index: 2;
+}
+
+.second-hand {
+  width: 2px;
+  height: 130px;
+  background: #c00;
+  z-index: 1;
+}
+
+.center-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #333;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}
+/*------------------Horloge Tp Fin-----------------*/
 /*--------------SEction test pour sabrina, karim, melissa--------------*/ 
 /* .imagSectionTest{
   width: 150px;
