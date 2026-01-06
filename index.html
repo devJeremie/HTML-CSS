@@ -48,7 +48,7 @@
     </header>
     <main>
         <button id="mon-bouton">Mon Beau Bouton</button>
-        <!--<script>
+        <script>
             document.getElementById('mon-bouton').onclick = function(event) {
                 console.log(event);
             };
@@ -78,23 +78,23 @@
             </div>
         </section>
         <!-- Nouvelle section avec fade-in -->
-        <!-- <section id="fadein-section" class="fade-in">
+        <section id="fadein-section" class="fade-in">
             <h2 class="fadeinColor">Section animée en fade-in</h2>
             <p class="fadeinColor">Ce contenu apparaît en fondu grâce à une animation CSS.</p>
         </section>
         <!-- Zoom Rotate in-->
-        <!-- <section class="zoom-rotate-in">
+        <section class="zoom-rotate-in">
             <h2 class="fadeinColor">Effet Zoom & Rotation</h2>
             <p class="fadeinColor">Ce contenu apparaît avec un effet de zoom et de rotation !</p>
         </section>
         <!--Effet bounce-->
-        <!-- <section>
+        <section>
             <button class="bounce">Clique-moi !</button>
-        </section>  -->
+        </section> 
         <!--Effet Shake-->
-         <!-- <section>
+         <section>
             <button class="shake">Shake moi !!</button>
-        </section> -->
+        </section> 
         
         <section class="linearSection">
             <button><a href="Link/services.html">Services</a></button>
@@ -115,21 +115,21 @@
             <p class="textWhite"><em>BLue</em></p>
             <p class="textWhite"><strong>Green</strong></p>
             <p class="textWhite">purple</p>
-       <!-- </div>
+       </div>
         <div>
             <img src="monimg.png" alt="C'est ma photo"><!--Mettre toute une ligner en comm ctrl K, ctrl C-->
-           <!-- <p class="textWhite">Justify-content: aligne les elements horizontalement</p>
+            <p class="textWhite">Justify-content: aligne les elements horizontalement</p>
             <p class="textWhite">Align-items: aligne les éléments verticalement</p>
         </div>
         <div>
             <a href="https://www.google.com/" target="_blank">Accédez à GOOGLE</a><!--Lien absolu car adresse complète-->
-          <!--  <a href="Link/services.html">Pages Services</a><!--Lien relatif indique ou trouver le fichier-->
+          <a href="Link/services.html">Pages Services</a><!--Lien relatif indique ou trouver le fichier-->
             <!--Si plus haut dans l'arborescence on mettra ../ -->
-       <!-- </div>
+       </div>
         <section class="containerContent"><!--Exercice flexbox et double class-->
             <!--1 : aligner les bloc,2 :  et aligner tout les bloc en ligne-->
             <!--Essayer le column, le row, ainsi que le flex-wrap-->
-            <!--<div class="container">
+            <div class="container">
                 <div class="bloc yellow">Jaune</div>
                 <div class="bloc blue">Bleu</div>
                 <div class="bloc red">Rouge</div>
@@ -142,9 +142,9 @@
                 <div class="bloc red">Rouge</div>
             </div>
             <article class="purple"></article>
-        </section>-->
-        <!--<section class="gridSection"><!--Exercice grid-->
-             <!--<div class="containerGrid">
+        </section>
+        <section class="gridSection"><!--Exercice grid-->
+             <div class="containerGrid">
                 <div class="box">Boite 1</div>
                 <div class="box">Boite 2</div>
                 <div class="box">Boite 3</div>
@@ -157,7 +157,7 @@
             </div>
         </section>
         <section><!--Exercice grid touchy-->
-             <!--<div class="containeurGridTouchy">
+            <div class="containeurGridTouchy">
                 <div class="boite one">Boite 1</div>
                 <div class="boite two">Boite 2</div>
                 <div class="boite three">Boite 3</div>
@@ -325,7 +325,7 @@
             
         </section>
         <!--Exercice filtrage par categorie-->
-        <!-- <section>
+        <section>
             <label class="labelCate" for="categorie-select">Filtrer par catégorie :</label>
             <select id="categorie-select" onchange="filtrer(this.value)">
                 <option value="all">Tous</option>
@@ -401,19 +401,19 @@
             </section>
         </section>
         <section><!--JAVASCRIPT-->
-           <p id="demo"></p>
-               <!-- <script>
+           <!-- <p id="demo"></p>
+               <script>
                 let carName = "Vous allez tout déchirer les p'tits devs";
                 document.getElementById("demo").innerHTML = carName;
-                </script>-->
+                </script>
         </section>
         <section>
             <!--Boucle numero de 1 a 100-->
-     <!--<script>
+     <!-- <script>
         for (let nbr=1; nbr <=199; nbr++) {
             console.log(nbr); 
         }
-     </script>-->
+     </script> -->
             <!--Exercice 3 Javascript-->
         <!--<script>
             for (let i = 1; i <= 199; i++) {
@@ -1294,7 +1294,7 @@
         </script> -->
         <!--Exercice 11 suite-->
         <section id="ma-section" class="sectionbuttonJs" ></section>
-            <!-- <script>
+            <script>
                 // Crée un champ input
                 var input = document.createElement('input');
 
@@ -1313,7 +1313,7 @@
                 boutonSection.onclick = function() {
                     input.value = '';
                 };
-            </script> -->
+            </script>
     </section>
     <!--Instanciation de fonction/ Class-->
     <!--<script>
@@ -1363,16 +1363,16 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
 });
     </script>
     <!--ALERT PAR API SWEETALERT-->
-    <!-- <script>
+    <script>
          swal ( "Ouah" ,  "Première connexion API!" ,  "error" )
-    </script> -->
-    <!-- <script>
+    </script>
+    <<script>
         Swal.fire({
             title: "Good job!",
             text: "SweetAlert2 Le retour!",
             icon: "success"
             });
-    </script> -->
+    </script>
 </body>
 <!--Exercice 12 caroussel-->
 <!-- Carousel HTML -->
@@ -1382,7 +1382,7 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
     <button id="next-btn" style="margin-top:15px; padding:8px 20px; background:#6c3cff; color:#fff; border:none; border-radius:5px; cursor:pointer;">Image suivante</button>
 </section>
 <!--Script caroussel-->
-<!--<script>
+<script>
 // 1. Tableau d'URLs d'images
     const pictures = [
         "image/R1.jpg",
@@ -1468,7 +1468,7 @@ const pictures = [
     "image/floride-moto-accueil-00002.jpeg"
 ];
 createCarousel("carousel-section", pictures);
-</script> -->
+</script>  -->
 <!--FIn du carousel en composant réutilisable-->
 
 <!--Exercice 12 Accordeon-->
@@ -1492,8 +1492,8 @@ createCarousel("carousel-section", pictures);
     </div>
   </div>
 </section>
-<!--<script>
-    // Accordéon JS
+<script>
+    //Accordéon JS
 const titles = document.getElementsByClassName('accordion-title');
 const contents = document.getElementsByClassName('accordion-content');
 
@@ -1518,7 +1518,7 @@ for (let i = 0; i < titles.length; i++) {
     <button id="showGalleryBtn">Afficher la galerie</button>
   <div id="gallery" class="gallery"></div>
   <div id="videoContainer" class="video-container"></div>
-    <!-- <script>
+    <script>
         const videos = [
             {
                 titre: "Simple man",
@@ -1568,7 +1568,7 @@ for (let i = 0; i < titles.length; i++) {
 
             // // Afficher la première vidéo par défaut
             // showVideo(0);
-    </script> -->
+    </script>
     <!--Avec Boucle For-->
     <!--Exercice Intermédiaire-->
     <!-- Horloge TP-->
