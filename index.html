@@ -6,6 +6,7 @@
     <link href="style.css" rel="stylesheet"> <!--Permet de linker son css a son fichier index.html-->
     <title>Html/CSS</title> <!--Titre de l'onglet-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet"> 
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
@@ -259,6 +260,7 @@
                 <input type="submit" value="Envoyer mon form">
             </form>
         </section>
+      
         <section>
             <div class="section">
                 <img class="imagSectionTest" src="image/floride-moto-accueil-00002.jpeg" alt="Description de l’image">
@@ -271,7 +273,13 @@
                 </label>
                 
                 <div class="description-box">
-                    <p class="textBoxBlack">Voici un long texte descriptif de la moto. Il peut contenir beaucoup de détails, d’informations, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    <p class="textBoxBlack">Voici un long texte descriptif de la moto.
+                        Il peut contenir beaucoup de détails, d’informations, etc. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                        commodo consequat.
+                    </p>
                 </div>
             </div>
         </section>
@@ -1590,6 +1598,30 @@ for (let i = 0; i < titles.length; i++) {
         <audio id="alarm-sound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124b0ba2b0.mp3"></audio>
         
     </section>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="image/disney_logo.png" alt="Logo Disney">
+            </div>
+    
+            <nav class="footer-nav">
+                <ul class="footer-links">
+                    <li><a href="#">Mentions Légales</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="Link/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    
+            <div class="footer-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">&copy; 2026 Disney - Tous droits réservés</p>
+        </div>
+    </footer>
     <script>
         function updateClock() {
             const now = new Date();
