@@ -789,7 +789,12 @@ a:hover{
 
 .arrow-down {
   font-size: 24px;
-  display: inline-block;
+  display: inline-block;  /*se comporte en inline a l'exterieur et block a l'intérieur*/
+  /*permet alignement horizontal, on peut lui donner une width et une height
+  et prend parfaitement le padding et margin sur les 4 cotés
+  difference block et inline 
+  block : prend toute la largeur dispo, div, h, p, section, form ... 
+  inline : prend la largeur de son contenu, span, a , img, button, input, label */
   transition: transform 0.3s;
 }
 
@@ -809,6 +814,10 @@ a:hover{
 
 /* Quand le checkbox est coché */
 .toggle-desc:checked ~ .description-box {
+  /* Le tild ~ cible un élément qui suit un autre élément,
+    à condition qu'ils partagent le même parent (ils sont "frères"), 
+    même s'il y a d' autres balises entre les deux, 
+    different du + qui cible uniquement le frère immédiat */
   max-height: 500px; /* Ajuste selon le contenu */
   padding: 15px;
 }
