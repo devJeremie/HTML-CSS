@@ -1,7 +1,7 @@
-// // // Récupère le texte du h1 avec l'id "titre"
-let hello = document.getElementById('titre').textContent;
-// // // Affiche une alerte avec ce texte
-alert(hello);
+// // // // Récupère le texte du h1 avec l'id "titre"
+// let hello = document.getElementById('titre').textContent;
+// // // // Affiche une alerte avec ce texte
+// alert(hello);
 
 
 // // 1. Select the '.menuBurger' element from the DOM.
@@ -17,16 +17,16 @@ menuBurger.classList.toggle('active')
 
 
 
-// // POP UP // 
-// // Affiche la pop-up automatiquement au chargement de la page
-window.onload = function() {
-    document.getElementById('popup').classList.add('active');
-};
+// // // POP UP // 
+// // // Affiche la pop-up automatiquement au chargement de la page
+// window.onload = function() {
+//     document.getElementById('popup').classList.add('active');
+// };
 
-// // Ferme la pop-up au clic sur la croix
-document.getElementById('closeBtn').onclick = function() {
-   document.getElementById('popup').classList.remove('active');
-};
+// // // Ferme la pop-up au clic sur la croix
+// document.getElementById('closeBtn').onclick = function() {
+//    document.getElementById('popup').classList.remove('active');
+// };
 
 
 // class Etudiant {
