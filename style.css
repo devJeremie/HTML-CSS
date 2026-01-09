@@ -1,5 +1,11 @@
 /*Variable en CSS*/
 :root {
+  /* Couleurs par défaut (Light Mode) */
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f9f9f9;
+  --accent-color: #6c3cff;
+
   --primary: #f3f4f5;
   --secondary: #f6f5;
   /*--stylePrimary: display: flex, justify-content: center;*/
@@ -24,6 +30,7 @@ body{
     min-height: 100vh;
     /* Toute la hauteur de l'écran */
     margin: 0;
+    
 }
 .parallax{
   background-image:url(image/africaParallax.jpg);/*definit mon image de fond*/
@@ -943,7 +950,112 @@ footer {
 .copyright {
   color: #222222;
 }
-
+/*---------Section hover et animation de base-----------*/
+/* Style de la section */
+.demo-section {
+  padding: 50px;
+  text-align: center;
+  background-color: var(--card-bg);
+  /* Utilise ma variable dark mode */
+}
+/* --- LE BOUTON : Animation légère (Fade + Slide) --- */
+.btn-intro {
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  background-color: #6c3cff;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+/* L'animation d'entrée */
+  animation: slideUpFade 1s ease-out;
+}
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Conteneur des liens */
+.links-container {
+  margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+.links-container a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  /* Transition pour tous les hovers */
+}
+/* --- LES DIFFERENTS HOVERS --- */
+/* 1. Classique : Changement de couleur et fond */
+.hover-color {
+  color: #3C9DFB;
+  padding: 5px 10px;
+}
+.hover-color:hover {
+  background-color: #3C9DFB;
+  color: white;
+  border-radius: 5px;
+}
+/* 2. Transformation : Grossissement (Scale) */
+.hover-grow {
+  color: #e74c3c;
+  display: inline-block;
+  /* Important pour le transform */
+}
+.hover-grow:hover {
+  transform: scale(1.2) rotate(5deg);
+}
+/* 3. Pseudo-élément : Soulignement qui part du centre */
+.hover-underline {
+  color: var(--text-color);
+  position: relative;
+}
+.hover-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -2px;
+  left: 50%;
+  background-color: #2ebf91;
+  transition: all 0.3s ease;
+}
+.hover-underline:hover::after {
+  width: 100%;
+  left: 0;
+}
+/* 4. Effet de lueur (Box-shadow) */
+.hover-glow {
+  color: #ffa500;
+  border: 1px solid #ffa500;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.hover-glow:hover {
+  box-shadow: 0 0 15px #ffa500;
+  background-color: rgba(255, 165, 0, 0.1);
+}
+/* 5. Reveal : Apparition d'un caractère (ou emoji) */
+.hover-reveal::before {
+  content: '🚀 ';
+  opacity: 0;
+  margin-left: -25px;
+  transition: 0.3s;
+}
+.hover-reveal:hover::before {
+  opacity: 1;
+  margin-left: 0;
+}
   /*------------------media Query-----------------*/
   /*On peut ecrire min-width ou max-width personnellement je prefere le max*/
   /*EXEMPLE*/
