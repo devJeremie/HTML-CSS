@@ -1,7 +1,7 @@
 /*Variable en CSS*/
 :root {
   /* Couleurs par défaut (Light Mode) */
-  --bg-color: #ffffff;
+  --bg-color: #f4eeee;
   --text-color: #333333;
   --card-bg: #f9f9f9;
   --accent-color: #6c3cff;
@@ -956,7 +956,6 @@ footer {
   padding: 50px;
   text-align: center;
   background-color: var(--card-bg);
-  /* Utilise ma variable dark mode */
 }
 /* --- LE BOUTON : Animation légère (Fade + Slide) --- */
 .btn-intro {
@@ -1003,7 +1002,7 @@ footer {
 }
 .hover-color:hover {
   background-color: #3C9DFB;
-  color: white;
+  color: #f3f3f3;
   border-radius: 5px;
 }
 /* 2. Transformation : Grossissement (Scale) */
@@ -1028,7 +1027,7 @@ footer {
   bottom: -2px;
   left: 50%;
   background-color: #2ebf91;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .hover-underline:hover::after {
   width: 100%;
