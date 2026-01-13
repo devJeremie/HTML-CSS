@@ -1167,6 +1167,9 @@ footer {
   transition: transform 0.3s ease !important;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
 }
+.modal-text{
+  color: #522ad8 ;
+}
 
 .modal:target .modal-box {
   transform: scale(1) !important;
