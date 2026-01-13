@@ -1376,7 +1376,7 @@
                 <strong>Attention !</strong> Première alerte personnalisée en HTML/CSS. 
             </div>
         </div>
-    </section>
+  
   <script>
         window.addEventListener('scroll', function() {
     var iCurScrollPos = window.pageYOffset;
@@ -1424,6 +1424,21 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous">
     </script>
+    <!------Modal en HTML/CSS------>
+    <section>
+        <a href="#modal1" class="btn-ouvrir">Ouvrir Modal</a>
+    
+        <div id="modal1" class="modal">
+            <a href="#" class="modal-overlay"></a>
+            <div class="modal-box">
+                <a href="#" class="close">×</a>
+                <div class="modal-content">
+                    <h3>Test Modal</h3>
+                    <p>Ça marche maintenant !</p>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 <!--Exercice 12 caroussel-->
 <!-- Carousel HTML -->

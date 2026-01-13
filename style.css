@@ -623,7 +623,7 @@ a:hover{
 .menuBurger.active .basculant::after {
     transform: rotate(-135deg);
     margin-top: 0;
-}/*Mise en  place appear dissapear
+}/*Mise en  place appear dissapear Media Query
 On va priviliégier des tailles relatives plutoit  que fixes pour le responsive
 donc les % et vh, vw, rem et em plutot que px
 */
@@ -1118,6 +1118,87 @@ footer {
    transform: translate(-50%, -50%) scale(1);
 }
 
+/*----------MODAL-----------*/
+/* Modal - cachée par défaut */
+.modal {
+  display: none !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: rgba(0, 0, 0, 0.8) !important;
+  z-index: 2147483647 !important;
+  /* MAX possible */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal:target {
+  display: flex !important;
+  opacity: 1 !important;
+}
+
+.modal-overlay,
+.modal-box,
+.modal-content,
+.close {
+  all: initial !important;
+  /* Reset tous conflits */
+}
+
+.modal-overlay {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.modal-box {
+  background: white !important;
+  margin: 2rem !important;
+  width: 90% !important;
+  max-width: 500px !important;
+  max-height: 90vh !important;
+  border-radius: 10px !important;
+  position: relative !important;
+  transform: scale(0.7) !important;
+  transition: transform 0.3s ease !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+.modal:target .modal-box {
+  transform: scale(1) !important;
+}
+
+.close {
+  position: absolute !important;
+  top: 15px !important;
+  right: 20px !important;
+  font-size: 30px !important;
+  font-weight: bold !important;
+  text-decoration: none !important;
+  color: #333 !important;
+  z-index: 1000000 !important;
+  line-height: 1 !important;
+}
+
+.modal-content {
+  padding: 50px 20px 20px !important;
+  height: calc(90vh - 4rem) !important;
+  overflow-y: auto !important;
+}
+
+.btn-ouvrir {
+  display: inline-block !important;
+  padding: 12px 24px !important;
+  background: #6c3cff !important;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+}
   /*------------------media Query-----------------*/
   /*On peut ecrire min-width ou max-width personnellement je prefere le max*/
   /*EXEMPLE*/
