@@ -46,7 +46,7 @@ main{
   flex: 1;
  }  
 /*---------------Header------------*/
-.menuBurger{
+.menuBurger{ /*responsive ligne 630*/
   display: none;
 }
 .header {
@@ -528,7 +528,7 @@ fieldset{
   margin: 0 auto;
   background-color: #8360c3;
 }
-/*------------Exercie 11 suite Fin-------------*/
+/*------------Exercice 11 suite Fin-------------*/
   /*-------------MENU BURGER-------------*/
 .menuBurger{
     width: 100%;
