@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&display=swap" rel="stylesheet"> 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+    <!-- <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!----BOOTSTRAP---->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -1369,7 +1369,6 @@
     <section>
         <input type="checkbox" id="alert-toggle">
         <label for="alert-toggle" class="alert-btn">Cliquer pour alerte</label>
-        
         <div class="alert-overlay">
             <div class="alert-box">
                 <label for="alert-toggle" class="close">&times;</label>
@@ -1409,16 +1408,16 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
 });
     </script>
     <!--ALERT PAR API SWEETALERT-->
-    <!-- <script>
+     <!-- <script>
          swal ( "Ouah" ,  "Première connexion API!" ,  "error" )
-    </script>
-    <<script>
+    </script> -->
+    <script>
         Swal.fire({
             title: "Good job!",
             text: "SweetAlert2 Le retour!",
             icon: "success"
             });
-    </script> -->
+    </script>
     <!-----SCRIPT BOOTSTRAP---->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
@@ -1427,7 +1426,6 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
     <!------Modal en HTML/CSS------>
     <section>
         <a href="#modal1" class="btn-ouvrir">Ouvrir Modal</a>
-    
         <div id="modal1" class="modal">
             <a href="#" class="modal-overlay"></a>
             <div class="modal-box">
