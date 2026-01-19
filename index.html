@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Permet de donner les instructions d'echelle de taille aux navigateur-->
     <link href="style.css" rel="stylesheet"> <!--Permet de linker son css a son fichier index.html-->
     <title>Html/CSS</title> <!--Titre de l'onglet-->
+    <script src="Javascript/index.js" defer></script><!--Pour importer du Javascript dans son Html-->
+    <!--Defer sert à télécharger le script en arrière plan sans blowuer l'analyse du Html, et de ne l'éxécuter 
+    qu'une fois que le DOM est complètement chargé.-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,7 +28,7 @@
                 <nav class="navBar">
                     <ul class="toto">
                         <li><a href="#">Accueil</a></li>
-                        <li><a href="Link/services.html">Services</a></li>
+                        <li><a href="Link/disney.html">Disney</a></li>
                         <li><a href="#">Produits</a></li>
                         <li><a href="Link/contact.html">Contact</a></li>
                     </ul>
@@ -1712,7 +1715,5 @@ for (let i = 0; i < titles.length; i++) {
 
     </script>
 
- 
-<script src="Javascript/index.js"></script><!--Pour importer du Javascript dans son Html-->
 <script src="Javascript/gallery.js"></script>
 </html>

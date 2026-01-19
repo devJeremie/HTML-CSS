@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.headerSection{
+    background-image: url('../image/percyJackson.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 80vh;
+    width: 80%;
+    margin: 0 auto;
+}
