@@ -496,7 +496,7 @@
             
         </script>
          <!--Exercice 3 Javascript suite-->
-        <script>
+        <!-- <script>
            function guessingGame() {
                 // Initialiser le nombre aléatoire
                 let secretNumber = Math.floor(Math.random() * 101);
@@ -526,7 +526,7 @@
             alert("Dommage, vous avez épuisé toutes vos tentatives ! Le nombre secret était " + secretNumber + ".");
         }
         guessingGame();
-        </script>
+        </script> -->
         <!--Exercice 4-->
         <!-- <script>
             function chatBot() {
@@ -660,7 +660,7 @@
             console.log(signe(Math.random())); // 'positif' 
         </script>-->
         <!--Exercice 5 suite (4)-->
-        <!--<script>
+        <!-- <script>
             function factorielle(valeur) {
                 // Vérifier si la valeur est un nombre entier positif
                 if (typeof valeur !== "number" || valeur < 0 || !Number.isInteger(valeur)) {
@@ -683,7 +683,24 @@
             console.log(factorielle(1)); // 1
             console.log(factorielle(3)); // 6
             console.log(factorielle(4)); // 24
-        </script>-->
+        </script> -->
+        <script>
+            function factorielle(valeur) {
+                // Initialise le produit à 1 (neutre pour la multiplication)
+                let produit = 1;
+                // Parcourt tous les entiers de 1 à valeur (inclus)
+                for (let i = 1; i <= valeur; i++) {
+                    // Multiplie le produit par l'entier courant
+                    produit *= i;
+                    //produit = produit *i
+                }
+                return produit;
+            }
+
+            console.log(factorielle(0)); // 1 
+            console.log(factorielle(4)); // 24
+
+        </script>
         <!--Exercice 6 chi fou mi-->
         <!--<script>
             // Implémentation d'une manche
