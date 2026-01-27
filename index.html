@@ -684,7 +684,7 @@
             console.log(factorielle(3)); // 6
             console.log(factorielle(4)); // 24
         </script> -->
-        <script>
+        <!-- <script>
             function factorielle(valeur) {
                 // Initialise le produit à 1 (neutre pour la multiplication)
                 let produit = 1;
@@ -692,7 +692,7 @@
                 for (let i = 1; i <= valeur; i++) {
                     // Multiplie le produit par l'entier courant
                     produit *= i;
-                    //produit = produit *i
+                    // produit = produit *i
                 }
                 return produit;
             }
@@ -700,47 +700,85 @@
             console.log(factorielle(0)); // 1 
             console.log(factorielle(4)); // 24
 
-        </script>
+        </script> -->
         <!--Exercice 6 chi fou mi-->
-        <!--<script>
-            // Implémentation d'une manche
+        <script> 
+             /* Implémentation d'une manche*/
             function comparer(choix1, choix2) {
                 if (choix1 === choix2) {
                     return "égalité";
                 }
-
-                switch (choix1) {
-                    case "pierre":
-                        return choix2 === "ciseaux" ? "ordi" : "joueur";
-                    case "feuille":
-                        return choix2 === "pierre" ? "ordi" : "joueur";
-                    case "ciseaux":
-                        return choix2 === "feuille" ? "ordi" : "joueur";
-                    default:
-                        throw new Error("Choix invalide.");
-                }
+            //en switch case
+                // switch (choix1) {
+                //     case "pierre":
+                //         return choix2 === "ciseaux" ? "ordi" : "joueur";
+                //     case "feuille":
+                //         return choix2 === "pierre" ? "ordi" : "joueur";
+                //     case "ciseaux":
+                //         return choix2 === "feuille" ? "ordi" : "joueur";
+                //     default:
+                //         throw new Error("Choix invalide.");
+                // }
+             
+            //en if else 
+            if (choix1 === "pierre") {
+                    if (choix2 === "ciseaux") {
+                        return "ordi";
+                    } else {
+                        return "joueur";
+                    }
+            } else if (choix1 === "feuille") {
+                    if (choix2 === "pierre") {
+                        return "ordi";
+                    } else {
+                        return "joueur";
+                    }
+            } else if (choix1 === "ciseaux") {
+                    if (choix2 === "feuille") {
+                        return "ordi";
+                    } else {
+                        return "joueur";
+                    }
+            } else {
+                    throw new Error("Choix invalide.");
             }
             
+            }
 
-            // Implémentation d'une partie en 3 manches
+
+
+
+
+
+
+
+
+            
+            //Implémentation d'une partie en 3 manches
            function jouerPartie() {
+                // Initialise les scores à zéro pour une nouvelle partie
                 let scoreOrdi = 0;
                 let scoreJoueur = 0;
 
+                // Boucle sur 3 manches
                 for (let i = 0; i < 3; i++) {
+                    // Génère aléatoirement le choix de l'ordinateur (1/3 pierre, 1/3 feuille, 1/3 ciseaux)
                     let choixOrdi = Math.random() < 0.33 ? "pierre" : Math.random() < 0.5 ? "feuille" : "ciseaux";
+                    // Demande le choix du joueur et le convertit en minuscules
                     let choixUtilisateur = prompt("Choisissez parmi pierre, feuille ou ciseaux : ").toLowerCase();
-
+                    // Compare les choix et détermine le gagnant de la manche
                     let resultat = comparer(choixOrdi, choixUtilisateur);
+                    // Affiche le résultat de la manche dans la console
                     console.log("Le résultat de cette manche est :", resultat);
-
+                    // Met à jour le score selon le résultat
                     if (resultat === "ordi") {
-                        scoreOrdi++;
+                        scoreOrdi++;   //ordi marque 1 point
                     } else if (resultat === "joueur") {
-                        scoreJoueur++;
+                        scoreJoueur++;  //joueur marque 1 point
                     }
+                    // Note : égalité → aucun point (resultat === "égalité")
                 }
-
+                // Détermine et affiche le gagnant final de la partie
                 if (scoreOrdi > scoreJoueur) {
                     console.log("L'ordinateur a remporté la partie.");
                 } else if (scoreOrdi < scoreJoueur) {
@@ -749,9 +787,10 @@
                     console.log("La partie est nulle.");
                 }
             }
-
+            // Lance la partie automatiquement
             jouerPartie();
-        </script>-->
+        </script>
+        <button onclick="jouerPartie()">Jeu du chifoumi</button>
         <!--Exercice 7 Les tableaux (Epicerie)-->
         <!--<script>
             var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
@@ -1431,13 +1470,13 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
      <!-- <script>
          swal ( "Ouah" ,  "Première connexion API!" ,  "error" )
     </script> -->
-    <script>
+    <!-- <script>
         Swal.fire({
             title: "Good job!",
             text: "SweetAlert2 Le retour!",
             icon: "success"
             });
-    </script>
+    </script> -->
     <!-----SCRIPT BOOTSTRAP---->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
