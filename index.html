@@ -702,7 +702,7 @@
 
         </script> -->
         <!--Exercice 6 chi fou mi-->
-        <script> 
+        <!-- <script> 
              /* Implémentation d'une manche*/
             function comparer(choix1, choix2) {
                 if (choix1 === choix2) {
@@ -745,14 +745,6 @@
             
             }
 
-
-
-
-
-
-
-
-
             
             //Implémentation d'une partie en 3 manches
            function jouerPartie() {
@@ -788,9 +780,41 @@
                 }
             }
             // Lance la partie automatiquement
-            jouerPartie();
+            jouerPartie();-->
+            <!-- <button onclick="jouerPartie()">Jeu du chifoumi</button> 
+        </script>-->
+        <!--Petit exercice rapide-->
+        <script>
+            let pairs = 0;
+            let impairs = 0;
+                for (let i = 1; i <= 20; i++) {
+                    if (i % 2 === 0) {
+                        pairs = pairs + 1;
+                    } else {
+                        impairs = impairs + 1;
+                    }
+                }
+
+            console.log(`Il y a ${pairs} nombres pairs et ${impairs} nombres impairs.`);
         </script>
-        <button onclick="jouerPartie()">Jeu du chifoumi</button>
+        <script>
+            for (let i = 1; i <= 5; i++) {
+                for (let j = 1; j <= 10; j++) {
+                    let resultat = i * j;
+
+                    if (resultat >= 30) {
+                            console.log(`GROS RESULTAT: ${i} x ${j} = ${resultat}`);
+                    }
+                    else if (resultat % 5 === 0) {
+                            console.log(`MULTIPLE DE 5: ${i} x ${j} = ${resultat}`);
+                    }
+                    else {
+                        console.log(`${i} x ${j} = ${resultat}`);
+                        }
+                }
+            }
+        </script>
+        
         <!--Exercice 7 Les tableaux (Epicerie)-->
         <!--<script>
             var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
@@ -931,21 +955,6 @@
             }, 0);
 
             console.log(nombreVoyelles); // Affiche le nombre de voyelles dans le mot
-        </script> -->
-        <!-- <script>//version Melissa
-            let mot1 = prompt('Entrez un mot');
-            const voyelles1 = ['a', 'e', 'i', 'o', 'u', "y"];
-
-            console.log(mot1)
-
-            const nbVoyelles = mot1.split('').reduce((count, char) => {
-
-                console.log(mot1)
-
-                return (voyelles1.includes(char) ? count +1 : count); 
-                }, 0);
-
-            console.log(nbVoyelles)
         </script> -->
         <!--Exercice 8 Les objets-->
         <!-- <script>
