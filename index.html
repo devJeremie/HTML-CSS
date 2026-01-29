@@ -798,7 +798,7 @@
             console.log(`Il y a ${pairs} nombres pairs et ${impairs} nombres impairs.`);
         </script>
     -->
-        <script>
+        <!-- <script>
             for (let i = 1; i <= 5; i++) {
                 for (let j = 1; j <= 10; j++) {
                     let resultat = i * j;
@@ -814,7 +814,7 @@
                         }
                 }
             }
-        </script>
+        </script> -->
         
         <!--Exercice 7 Les tableaux (Epicerie)-->
         <!-- <script>
@@ -847,7 +847,7 @@
              * MOT SECRET - Ne change JAMAIS pendant la partie
              * lettresAttendues = copie modifiée pour suivre progression
              */
-            let motSecret = 'voiture';                    // Mot original (intact)
+            let motSecret = 'joujou';                    // Mot original (intact)
             let lettresAttendues = motSecret.split(''); // ['v','o','i','t','u','r','e'] split decoupe ma chaine en tableau
             let mauvaisesLettres = [];                  // Erreurs du joueur
             let lettresTrouvees = '';                   // Lettres trouvées (ordre essais)
@@ -904,7 +904,70 @@
             console.log('Erreurs :', mauvaisesLettres.join(', '));
 
         </script>
+        <!--PENDU OPTIMISE AU MAX-->
+        <!-- <script>
+            // =========================================
+                // PENDU ULTRA-COMPACT (8 lignes)
+                // =========================================
+            let m = 'voiture',                    // Mot secret original (intact)
+                l = m.split(''),                 // Lettres à trouver (tableau manipulable)
+                e = [],                          // Erreurs du joueur
+                t = '';                          // Lettres trouvées (chaîne)
+
+                while (e.length < 10 && l.length) {      // Continue : <10 erreurs ET lettres restantes
+                    let p = prompt('Restantes : ' + l.length +     
+                        ' Trouvées : ' + t +              
+                        ' Erreur : ' + e.join(',') +  // E = Erreurs (join pour l'affichage)
+                        '  ').toLowerCase();// Proposition joueur → minuscule
+
+                    if (l.indexOf(p) !== -1) {           // Bonne lettre ?
+                        while (l.indexOf(p) !== -1) {      // Tant qu'il reste des p :
+                            l.splice(l.indexOf(p), 1);    // Supprime 1 occurrence
+                            t += p;                        // Archive (même si doublons)
+                        }
+                    } else e.push(p);                 // Erreur → stockée
+                }
+
+                alert(e.length === 10 ?              // Test rapide victoire/défaite
+                    'PERDU :'  + m :                 // 10 erreurs = perdu
+                    'GAGNE :'  + m);                // Sinon gagné
+        </script> -->
         <!---EXERCICE PRATIQUE BOUCLE IF ELSE-->
+        <!--Plyalist SPotify-->
+        <!-- Une playlist contient : ['Bohemian', 'Stairway', 'Imagine', 'Tenesse whisky', ]
+        
+        1. Afficher la playlist
+        2. Demander un morceau à ajouter
+        3. Si longueur >  → SUPPRIMER le 1er (shift manuel avec splice)
+        4. Remplacer le 2ème morceau si le joueur veut
+        5. Afficher longueur + dernier morceau -->
+        <script>
+            let playlist = ['Bohemian', 'Stairway', 'Imagine'];
+                console.log("🎵 PLAYLIST INITIALE");
+                for (let i = 0; i < playlist.length; i++) {
+                    console.log((i + 1) + ". " + playlist[i]);
+                }
+                // AJOUT morceau
+                let nouveau = prompt("➕ Nouveau morceau ?");
+                playlist.push(nouveau);  // push() ajoute à la fin
+                // VÉRIF LONGUEUR + SUPPRESSION 1er si > 5
+                if (playlist.length > 5) {
+                    console.log("📱 Limite atteinte ! Suppression du 1er...");
+                    playlist.splice(0, 1);  // splice(0,1) = supprime 1er élément
+                }
+                // REMPLACER 2ème ?
+                let remplacer = prompt("Remplacer 'Stairway' ? (o/n)");
+                if (remplacer === "o") {
+                    let choix = prompt("Nouveau 2ème morceau ?");
+                    playlist.splice(1, 1, choix);  // splice(1,1,"nouveau") = remplace
+                }
+                // STATS FINALES
+                console.log("\n📊 PLAYLIST FINALE (" + playlist.length + " chansons)");
+                for (let i = 0; i < playlist.length; i++) {
+                    console.log((i + 1) + ". " + playlist[i]);
+                }
+                console.log("🎯 Dernier: " + playlist[playlist.length - 1]);
+        </script>
         <!-- Objectif : Simuler une machine à laver qui compte le temps de lavage selon le type de linge.
         Demander le type de linge avec prompt() : "blanc", "coloré", "draps"
         Boucle for qui compte de 1 à 15 minutes
