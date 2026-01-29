@@ -797,6 +797,7 @@
 
             console.log(`Il y a ${pairs} nombres pairs et ${impairs} nombres impairs.`);
         </script>
+    -->
         <script>
             for (let i = 1; i <= 5; i++) {
                 for (let j = 1; j <= 10; j++) {
@@ -814,9 +815,9 @@
                 }
             }
         </script>
-         -->
+        
         <!--Exercice 7 Les tableaux (Epicerie)-->
-        <script>
+        <!-- <script>
             let fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
             // Afficher la liste de fruits disponibles
             console.log("Liste des fruits disponibles:", fruits);
@@ -833,47 +834,76 @@
                 }
                 // Afficher à nouveau la liste de fruits disponibles
                 console.log("Liste des fruits disponibles:", fruits);
-        </script>
+        </script> -->
         <!--Exercice 7 Les tableaux suite (Jeu du pendu)-->
-        <!-- <script>
-           // Initialisation des variables
-            let mauvaisesLettres = [];
-            let lettresAttendues = ['s', 'u', 'p', 'e', 'r'];
-            let lettresTrouvees = ''; // Pour stocker les lettres correctes devinées
+        <script>
+        // =========================================
+            // JEU DU PENDU 
+            // 1 SEUL PROMPT par tour (état + saisie)
+            // Avec push, splice, indexOf, join
+            // =========================================
 
-            // Boucle de jeu
+            /**
+             * MOT SECRET - Ne change JAMAIS pendant la partie
+             * lettresAttendues = copie modifiée pour suivre progression
+             */
+            let motSecret = 'voiture';                    // Mot original (intact)
+            let lettresAttendues = motSecret.split(''); // ['v','o','i','t','u','r','e'] split decoupe ma chaine en tableau
+            let mauvaisesLettres = [];                  // Erreurs du joueur
+            let lettresTrouvees = '';                   // Lettres trouvées (ordre essais)
+
+            // =========================================
+            // BOUCLE PRINCIPALE DE JEU
+            // Continue tant qu'il reste des lettres OU < 10 erreurs
+            // =========================================
             while (mauvaisesLettres.length < 10 && lettresAttendues.length > 0) {
-            // Affichage du nombre de lettres à trouver, des lettres déjà trouvées et des tentatives restantes
-            alert('Lettres à trouver pour le pendu : ' + lettresAttendues.length + '\nLettres déjà trouvées : ' + lettresTrouvees + '\nTentatives restantes : ' + (10 - mauvaisesLettres.length));
 
-                // Demande d'une lettre au joueur
-                let lettreProposee = prompt('Entrez une lettre minuscule:').toLowerCase();
-
-                // Vérification si la lettre est présente dans lettresAttendues
+                // 1. CONSTRUCTION PROMPT COMPLET (état du jeu + saisie)
+                let message =
+                    '📝 ÉTAT DU JEU :\n\n' +
+                    'Lettres restantes : ' + lettresAttendues.length + '\n' +
+                    '✅ Trouvées : ' + lettresTrouvees + '\n' +
+                    '❌ Erreurs : ' + mauvaisesLettres.join(', ') + '\n' +
+                    '⏳ Tentatives : ' + (10 - mauvaisesLettres.length) + '\n\n' +
+                    '🔤 Proposez une lettre minuscule :';
+                // 2. SAISIE JOUEUR dans le même prompt
+                let lettreProposee = prompt(message).toLowerCase();
+                // 3. VÉRIFICATION : lettre dans lettresAttendues ?
                 if (lettresAttendues.indexOf(lettreProposee) !== -1) {
-                    alert('Bonne lettre !');
-                    // Retirer toutes les occurrences de cette lettre du tableau lettresAttendues
+                    // 3.1 BONNE LETTRE : compter + supprimer TOUTES les occurrences
+                    let nombreOccurences = 0;
                     while (lettresAttendues.indexOf(lettreProposee) !== -1) {
-                    let index = lettresAttendues.indexOf(lettreProposee);
-                    lettresAttendues.splice(index, 1);
+                        let index = lettresAttendues.indexOf(lettreProposee);
+                        lettresAttendues.splice(index, 1);  // Supprime 1 occurrence
+                        nombreOccurences++;                 // Compte les doublons
                     }
-                    // Ajouter la lettre correcte à lettresTrouvees
-                    lettresTrouvees += lettreProposee;
+                    lettresTrouvees += lettreProposee;    // Archive lettre réussie
                 } else {
-                    alert('Mauvaise lettre !');
-                    // Ajout de la lettre au tableau mauvaisesLettres
+                    // 3.2 MAUVAISE LETTRE : ajouter aux erreurs
                     mauvaisesLettres.push(lettreProposee);
                 }
             }
 
-            // Vérification du résultat de la partie
+            // =========================================
+            // AFFICHAGE RÉSULTAT FINAL
+            // =========================================
             if (mauvaisesLettres.length === 10) {
-            alert('Perdu ! Le mot était : ' + lettresAttendues.join(''));
+                // PERDU : 10 erreurs maximum
+                alert('💀 PERDU !\nLe mot était : "' + motSecret + '"');
             } else {
-            alert('Bravo ! Vous avez trouvé le mot : ' + lettresTrouvees);
-         }
- 
-        </script> -->
+                // GAGNÉ : plus de lettres à trouver
+                alert('🎉 VICTOIRE !\nMot trouvé : "' + motSecret + '"');
+            }
+
+            // =========================================
+            // DEBUG CONSOLE (optionnel)
+            // =========================================
+            console.log('🎮 PARTIE TERMINÉE');
+            console.log('Mot secret :', motSecret);
+            console.log('Lettres trouvées :', lettresTrouvees);
+            console.log('Erreurs :', mauvaisesLettres.join(', '));
+
+        </script>
         <!---EXERCICE PRATIQUE BOUCLE IF ELSE-->
         <!-- Objectif : Simuler une machine à laver qui compte le temps de lavage selon le type de linge.
         Demander le type de linge avec prompt() : "blanc", "coloré", "draps"
