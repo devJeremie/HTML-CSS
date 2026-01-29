@@ -836,8 +836,8 @@
                 console.log("Liste des fruits disponibles:", fruits);
         </script> -->
         <!--Exercice 7 Les tableaux suite (Jeu du pendu)-->
-        <script>
-        // =========================================
+        <!-- <script>
+            // =========================================
             // JEU DU PENDU 
             // 1 SEUL PROMPT par tour (état + saisie)
             // Avec push, splice, indexOf, join
@@ -847,7 +847,7 @@
              * MOT SECRET - Ne change JAMAIS pendant la partie
              * lettresAttendues = copie modifiée pour suivre progression
              */
-            let motSecret = 'joujou';                    // Mot original (intact)
+            let motSecret = 'voiture'              // Mot original (intact)
             let lettresAttendues = motSecret.split(''); // ['v','o','i','t','u','r','e'] split decoupe ma chaine en tableau
             let mauvaisesLettres = [];                  // Erreurs du joueur
             let lettresTrouvees = '';                   // Lettres trouvées (ordre essais)
@@ -903,7 +903,7 @@
             console.log('Lettres trouvées :', lettresTrouvees);
             console.log('Erreurs :', mauvaisesLettres.join(', '));
 
-        </script>
+        </script> -->
         <!--PENDU OPTIMISE AU MAX-->
         <!-- <script>
             // =========================================
@@ -941,33 +941,46 @@
         3. Si longueur >  → SUPPRIMER le 1er (shift manuel avec splice)
         4. Remplacer le 2ème morceau si le joueur veut
         5. Afficher longueur + dernier morceau -->
-        <script>
-            let playlist = ['Bohemian', 'Stairway', 'Imagine'];
-                console.log("🎵 PLAYLIST INITIALE");
-                for (let i = 0; i < playlist.length; i++) {
-                    console.log((i + 1) + ". " + playlist[i]);
+        <!-- <script>
+            // =========================================
+            // GESTIONNAIRE PLAYLIST SPOTIFY
+            // Arrays + for + if/else + push/splice + alert
+            // =========================================
+
+            let playlist = ['Bohemian', 'Stairway', 'Imagine'];  // Stock initial chansons
+            // 1. AFFICHAGE PLAYLIST INITIALE (console seulement)
+            console.log("🎵 PLAYLIST INITIALE");
+            for (let i = 0; i < playlist.length; i++) {
+                console.log((i + 1) + ". " + playlist[i]);  // Numérote chaque chanson
+            }
+            // 2. BOUCLE PRINCIPALE - Continue tant que joueur veut ajouter
+            while (true) {
+                // 2.1 AJOUT NOUVEAU MORCEAU
+                let info = "🎵 PLAYLIST INITIALE "  +  playlist  + '\n' + "➕ Nouveau morceau ? (ou 'stop' pour finir)"; 
+                let nouveau = prompt(info);
+                if (nouveau.toLowerCase() === 'stop') break;  // Sortie contrôlée
+                    playlist.push(nouveau);  // ✅ push() ajoute à la FIN du tableau
+                // 2.2 VÉRIFICATION LIMITE 10 CHANSONS
+                if (playlist.length > 10){
+                    playlist.splice(0, 1);  // ✅ splice(0,1) supprime 1er élément (index 0)
+                    alert("📱 Limite 5 atteinte ! 1er morceau supprimé.");
                 }
-                // AJOUT morceau
-                let nouveau = prompt("➕ Nouveau morceau ?");
-                playlist.push(nouveau);  // push() ajoute à la fin
-                // VÉRIF LONGUEUR + SUPPRESSION 1er si > 5
-                if (playlist.length > 5) {
-                    console.log("📱 Limite atteinte ! Suppression du 1er...");
-                    playlist.splice(0, 1);  // splice(0,1) = supprime 1er élément
+                // 2.3 OPTION REMPLACEMENT 2ème CHANSON (non bloquant)
+                let remplacer = prompt("🔄 Remplacer 2ème ? (o/n)");
+                if (remplacer === "o") {                    // Seulement si "o"
+                    let choix = prompt("Nouveau 2ème ?");
+                    playlist.splice(1, 1, choix);            // ✅ splice(1,1,"nouveau") = REMPLACE
                 }
-                // REMPLACER 2ème ?
-                let remplacer = prompt("Remplacer 'Stairway' ? (o/n)");
-                if (remplacer === "o") {
-                    let choix = prompt("Nouveau 2ème morceau ?");
-                    playlist.splice(1, 1, choix);  // splice(1,1,"nouveau") = remplace
-                }
-                // STATS FINALES
-                console.log("\n📊 PLAYLIST FINALE (" + playlist.length + " chansons)");
-                for (let i = 0; i < playlist.length; i++) {
-                    console.log((i + 1) + ". " + playlist[i]);
-                }
-                console.log("🎯 Dernier: " + playlist[playlist.length - 1]);
-        </script>
+                // Si "n" → continue la boucle while (ajout suivant)
+            }
+            // 3. CONSTRUCTION MESSAGE FINAL (TOUT DANS 1 ALERT)
+            let messageFinal = "🎵 PLAYLIST FINALE (" + playlist.length + " chansons)\n\n";
+            for (let i = 0; i < playlist.length; i++) {
+                messageFinal += (i + 1) + ". " + playlist[i] + "\n";  // Construit ligne par ligne
+            }
+             messageFinal += "\n🎯 Dernier: " + playlist[playlist.length - 1];  // Dernier élément
+            alert(messageFinal);  // ✅ 1 SEULE POPUP avec tout !
+        </script> -->
         <!-- Objectif : Simuler une machine à laver qui compte le temps de lavage selon le type de linge.
         Demander le type de linge avec prompt() : "blanc", "coloré", "draps"
         Boucle for qui compte de 1 à 15 minutes
