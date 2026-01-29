@@ -880,6 +880,33 @@
  
         </script> -->
         <!---EXERCICE PRATIQUE BOUCLE IF ELSE-->
+        <!-- Objectif : Simuler une machine à laver qui compte le temps de lavage selon le type de linge.
+        Demander le type de linge avec prompt() : "blanc", "coloré", "draps"
+        Boucle for qui compte de 1 à 15 minutes
+        if/else qui affiche le statut selon le temps :
+        0-5 min : "Remplissage..."
+        6-10 min : "Lavage..."
+        11-15 min : "Rinçage..." + type de linge -->
+        <script>
+            let typeLinge = prompt("Type de linge ? (blanc/coloré/draps)");
+                for (let minute = 1; minute <= 15; minute++) {
+                    // BONUS : Détection cycle long pour DRAPS
+                    if (typeLinge === "draps") {
+                        console.log("🚨 ATTENTION : Cycle long pour " + typeLinge + " !");
+                    }
+                    if (minute <= 5) {
+                        console.log("Minute " + minute + " : Remplissage...");
+                    }
+                    else if (minute <= 10) {
+                        console.log("Minute " + minute + " : Lavage...");
+                    }
+                    else {
+                        console.log("Minute " + minute + " : Rinçage " + typeLinge + "...");
+                    }
+                }
+
+        </script>
+
         <!--Boucle for sans ternaire -->
         <!-- <script>
             // Initialisation du mot à deviner, du tableau des mauvaises lettres et des lettres trouvées
