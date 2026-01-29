@@ -817,17 +817,13 @@
          -->
         <!--Exercice 7 Les tableaux (Epicerie)-->
         <script>
-            var fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
-
+            let fruits = [ 'Mangue', 'Raisin', 'Figue', 'Kiwi' ];
             // Afficher la liste de fruits disponibles
             console.log("Liste des fruits disponibles:", fruits);
-
             // Demander au client quel fruit il désire acheter
-             var fruitChoisi = prompt("Veuillez choisir un fruit (Mangue, Raisin, Figue, Kiwi): ");
-
+            let fruitChoisi = prompt("Veuillez choisir un fruit (Mangue, Raisin, Figue, Kiwi): ");
             // Vérifier si le fruit est présent dans le tableau fruits
             var index = fruits.indexOf(fruitChoisi);
-
                 if (index !== -1) {
                     // Le retirer du tableau
                     fruits.splice(index, 1);
@@ -835,7 +831,6 @@
                 } else {
                     console.log('indisponible...');
                 }
-
                 // Afficher à nouveau la liste de fruits disponibles
                 console.log("Liste des fruits disponibles:", fruits);
         </script>
@@ -887,7 +882,7 @@
         0-5 min : "Remplissage..."
         6-10 min : "Lavage..."
         11-15 min : "Rinçage..." + type de linge -->
-        <script>
+        <!-- <script>
             let typeLinge = prompt("Type de linge ? (blanc/coloré/draps)");
                 for (let minute = 1; minute <= 15; minute++) {
                     // BONUS : Détection cycle long pour DRAPS
@@ -905,7 +900,7 @@
                     }
                 }
 
-        </script>
+        </script> -->
 
         <!--Boucle for sans ternaire -->
         <!-- <script>
