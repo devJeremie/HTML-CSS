@@ -941,7 +941,7 @@
         3. Si longueur >10  → SUPPRIMER le 1er (shift manuel avec splice)
         4. Remplacer le 2ème morceau si le joueur veut
         5. Afficher longueur + dernier morceau -->
-        <script>
+        <!-- <script>
             // =========================================
             // GESTIONNAIRE PLAYLIST SPOTIFY
             // Arrays + for + if/else + push/splice + alert
@@ -980,6 +980,59 @@
             }
              messageFinal += "\n🎯 Dernier: " + playlist[playlist.length - 1];  // Dernier élément
             alert(messageFinal);  // ✅ 1 SEULE POPUP avec tout !
+        </script> -->
+        <!--Avec boucle for vide -meme comportement que while-->
+        <script>
+        // =========================================
+        // GESTIONNAIRE PLAYLIST SPOTIFY (Version FOR)
+        // =========================================
+            let playlist = ['Bohemian', 'Stairway', 'Imagine'];
+                const MAX_CHANSONS = 10;
+                console.log("🎵 PLAYLIST INITIALE");
+            //FOR EACH : Imagine que vous avez une boîte de chocolats (votre tableau). Vous voulez vérifier
+            //  si chaque chocolat est au lait ou noir.
+            // Avec un for classique : Vous devez compter combien il y a de chocolats, prendre le chocolat n°0,
+            //  puis le n°1, etc.
+            //Avec un forEach: Vous dites simplement à JavaScript: "Pour chaque chocolat présent dans cette boîte, 
+            // fais ceci." 
+            // Anatomie d'un forEach
+            //Le forEach est une méthode qui appartient aux tableaux.Elle prend en paramètre une fonction
+            // (souvent une fonction fléchée).
+            playlist.forEach((titre, index) => console.log(`${index + 1}. ${titre}`));
+            // Utilisation d'une boucle for sans expression initiale, ni incrémentation
+            // La condition est omise (équivalent à true) pour simuler le comportement du while
+            for (; ;) {
+                // 1. Saisie du nouveau morceau
+                let info = `🎵 Playlist actuelle : ${playlist.join(', ')}\n➕ Nouveau morceau ? (ou 'stop' pour finir)`;
+                let nouveau = prompt(info);
+                // Sortie de boucle si 'stop' ou si l'utilisateur annule (null)
+                if (!nouveau || nouveau.toLowerCase() === 'stop') {
+                    break;
+                }
+                // 2. Ajout et Gestion de la limite
+                playlist.push(nouveau);
+                if (playlist.length > MAX_CHANSONS) {
+                    playlist.shift(); // Plus sémantique que splice(0,1) pour supprimer le premier
+                    alert(`📱 Limite ${MAX_CHANSONS} atteinte ! 1er morceau supprimé.`);
+                }
+                // 3. Option de remplacement (Index 1 = 2ème position)
+                if (playlist.length >= 2) {
+                    let remplacer = prompt("🔄 Remplacer le 2ème morceau ? (o/n)");
+                    if (remplacer?.toLowerCase() === "o") {
+                        let choix = prompt("Nouveau titre pour la 2ème position ?");
+                    if (choix) playlist.splice(1, 1, choix);
+                    }
+                }
+            }
+            // 4. Construction et affichage du message final
+            let messageFinal = `🎵 PLAYLIST FINALE (${playlist.length} chansons)\n\n`;
+            for (let i = 0; i < playlist.length; i++) {
+                messageFinal += `${i + 1}. ${playlist[i]}\n`;
+            }
+            if (playlist.length > 0) {
+                messageFinal += `\n🎯 Dernier : ${playlist[playlist.length - 1]}`;
+            }
+            alert(messageFinal);
         </script>
         <!-- Objectif : Simuler une machine à laver qui compte le temps de lavage selon le type de linge.
         Demander le type de linge avec prompt() : "blanc", "coloré", "draps"
