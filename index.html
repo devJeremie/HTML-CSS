@@ -981,8 +981,67 @@
              messageFinal += "\n🎯 Dernier: " + playlist[playlist.length - 1];  // Dernier élément
             alert(messageFinal);  // ✅ 1 SEULE POPUP avec tout !
         </script> -->
-        <!--Avec boucle for vide -meme comportement que while-->
+        <!-- <section class="playlist">
+            <div id="song-container"></div>
+                <span id="2nd-modifier"></span>
+            <div id="song-adding-container">
+                <h2>Ajouter un nouveau son</h2>
+                <input type="text" id="song-input" placeholder="Entrez le nom du son ici...">
+                <button id="input-button">Ajouter</button>
+            </div>
+        </section>
         <script>
+            let playlist = [];
+                const songContainer = document.getElementById("song-container");
+                let songModifier = document.getElementById("song-modifier");
+                const inputButton = document.getElementById("input-button");
+                let songInput = document.getElementById("song-input");
+
+                let warningTitle = document.createElement("h3");
+
+                function playlistActivation() {
+                    songContainer.innerHTML = '';
+                    if (playlist.length !== 0) {
+                        for (let a of playlist) { //pour chaque element de l'array playlist
+                            let songDiv = document.createElement("div"); //creation d'une div qui contiendra le son parcouru
+                            let songSpan = document.createElement("span"); //creation d'un span qui contiendra le nom du son
+                            let songPosition = playlist.indexOf(a) + 1; //récupération de la position du son dans la playlist avec +1 pour que ça commence visuellement à 1
+                            songSpan.innerText = songPosition + " " + a; //définition du contenu du span avec du texte comprenant la position du son et son nom
+                            songSpan.className = "song"; //ajout d'une classe "song" au son pour le css
+                            let songIndex = playlist.indexOf(a) + "-song"; //creation d'une variable dynamique avec la position du son actuel
+                            songDiv.setAttribute("id", songIndex); //ajout d'un id dynamique au conteneur du son actuel grace a la variable ci-dessus qui sera utile pour target avec précision le son lors de la gestion de modification/suppression
+                            let songDeleteIcon = document.createElement("i"); //creation d'une icone de poubelle
+                            songDeleteIcon.className = "fa-solid fa-trash deleteIcon"; //ajout de la classe qui définira le type d'icone
+
+                            let songModifyIcon = document.createElement("i"); //creation d'une icone de modification
+                            songModifyIcon.className = "fa-solid fa-pen"; //ajout de la classe qui définira le type d'icone
+
+                            if (playlist.indexOf(a) === 1) { //si on est au deuxième élément de la playlist
+                                songDiv.appendChild(songModifyIcon); //on défini l'icone de modif, qui est uniquement possible pour le deuxième élément
+                            }
+
+                            songDiv.append(songSpan, songDeleteIcon); //ici on ajoute nos éléments standard (le son et une icone de suppression)
+                            songContainer.appendChild(songDiv); //on ajoute notre conteneur custom au conteneur principal déjà présent dans l'html
+                            console.log(playlist);
+
+                        }
+                        warningTitle.innerText = ""; //si la playlist n'est pas vide, on efface le contenu du title de warning
+                    } else {
+                        warningTitle.innerText = "Aucun son n'est actuellement enregistré."; //si la playlist est vide, on défini du contenu dans le title de warning
+                        songContainer.appendChild(warningTitle); //et on ajoute le title de warning toujours dans ce cas précis
+                    }
+                }
+
+                playlistActivation();
+
+                inputButton.addEventListener("click", () => {
+                    let songName = songInput.value;
+                    playlist.push(songName);
+                    playlistActivation();
+                });
+        </script> -->
+        <!--Avec boucle for vide -meme comportement que while-->
+        <!-- <script>
         // =========================================
         // GESTIONNAIRE PLAYLIST SPOTIFY (Version FOR)
         // =========================================
@@ -1033,7 +1092,7 @@
                 messageFinal += `\n🎯 Dernier : ${playlist[playlist.length - 1]}`;
             }
             alert(messageFinal);
-        </script>
+        </script> -->
         <!-- Objectif : Simuler une machine à laver qui compte le temps de lavage selon le type de linge.
         Demander le type de linge avec prompt() : "blanc", "coloré", "draps"
         Boucle for qui compte de 1 à 15 minutes
@@ -1674,7 +1733,7 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
         crossorigin="anonymous">
     </script>
     <!------Modal en HTML/CSS------>
-    <section>
+    <!-- <section>
         <a href="#modal1" class="btn-ouvrir">Ouvrir Modal</a>
         <div id="modal1" class="modal">
             <a href="#" class="modal-overlay"></a>
@@ -1686,17 +1745,17 @@ document.querySelectorAll('a[href*="#"]:not([href="#"])').forEach(function(ancho
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 </body>
 <!--Exercice 12 caroussel-->
 <!-- Carousel HTML -->
-<section class="carouselSec" id="carousel-section" style="text-align:center; ">
+<!-- <section class="carouselSec" id="carousel-section" style="text-align:center; ">
     <img id="carousel-img" src="" alt="Image du carousel" style="width:300px; height:200px; object-fit:cover; border-radius:10px; box-shadow:0 2px 8px #888;">
     <br>
     <button id="next-btn" style="margin-top:15px; padding:8px 20px; background:#6c3cff; color:#fff; border:none; border-radius:5px; cursor:pointer;">Image suivante</button>
-</section>
+</section> -->
 <!--Script caroussel-->
-<script>
+<!-- <script>
 // 1. Tableau d'URLs d'images
     const pictures = [
         "image/R1.jpg",
@@ -1727,7 +1786,7 @@ btn.onclick = function() {
         img.style.opacity = 1;          // Remet l'opacité à 1 (effet fondu)
     }, 200);
 };
-</script>
+</script> -->
 <!--Et donc en composant réutilisable cela donne cela-->
 <!-- <script>
 function createCarousel(containerId, pictures) {
@@ -1806,7 +1865,7 @@ createCarousel("carousel-section", pictures);
     </div>
   </div>
 </section>
-<script>
+<!-- <script>
     //Accordéon JS
 const titles = document.getElementsByClassName('accordion-title');
 const contents = document.getElementsByClassName('accordion-content');
@@ -1826,13 +1885,13 @@ for (let i = 0; i < titles.length; i++) {
         }
     };
 }
-</script>
+</script> -->
 <!--Exercice 12 Galerie Vidéo-->
 <h2>Galerie Vidéo</h2>
     <button id="showGalleryBtn">Afficher la galerie</button>
   <div id="gallery" class="gallery"></div>
   <div id="videoContainer" class="video-container"></div>
-    <script>
+    <!-- <script>
         const videos = [
             {
                 titre: "Simple man",
@@ -1882,7 +1941,7 @@ for (let i = 0; i < titles.length; i++) {
 
             // // Afficher la première vidéo par défaut
             // showVideo(0);
-    </script>
+    </script> -->
     <!--Avec Boucle For-->
     <!--Exercice Intermédiaire-->
     <!-- Horloge TP-->
@@ -1941,7 +2000,7 @@ for (let i = 0; i < titles.length; i++) {
             <p class="copyright">&copy; 2026 Disney - Tous droits réservés</p>
         </div>
     </footer>
-    <script>
+    <!-- <script>
         function updateClock() {
             const now = new Date();
             const seconds = now.getSeconds();
@@ -1961,7 +2020,7 @@ for (let i = 0; i < titles.length; i++) {
             setInterval(updateClock, 1000);
             updateClock();
 
-    </script>
+    </script> -->
 
 <script src="Javascript/gallery.js"></script>
 </html>
