@@ -436,6 +436,31 @@
                 </button>
             </div>
         </section>
+        <section>
+            <input type="text" id="premier-nombre" placeholder="Premier nombre">
+            <input type="text" id="deuxieme-nombre" placeholder="Deuxième nombre">
+            <input type="text" id="resultat" readonly>
+            <!-- <button
+                onclick="document.getElementById('resultat').value=parseInt(document.getElementById('premier-nombre').value)+parseInt(document.getElementById('deuxieme-nombre').value)">Calculer
+            </button> -->
+            <button id="mon-bouton" onclick="calculer()">Calculer</button>
+            <script>
+                function calculer() {
+                    // Récupère l’élément du premier champ de saisie par son ID
+                    var premierNombre = document.getElementById('premier-nombre');
+                    // Récupère l’élément du deuxième champ de saisie par son ID
+                    var deuxiemeNombre = document.getElementById('deuxieme-nombre');
+                    // Récupère l’élément du champ où sera affiché le résultat
+                    var resultat = document.getElementById('resultat');
+                    // Convertit la valeur du premier champ en nombre entier (ou 0 si vide ou invalide)
+                    var nombre1 = parseInt(premierNombre.value) || 0;
+                    var nombre2 = parseInt(deuxiemeNombre.value) || 0;
+                    // Calcule la somme des deux nombres et assigne le résultat au champ de résultat
+                    resultat.value = nombre1 + nombre2;
+                }
+            </script>
+            
+        </section>
         <section><!--JAVASCRIPT-->
            <!-- <p id="demo"></p>
                <script>
@@ -1260,7 +1285,7 @@
         annuaireAlert();
         </script> -->
         <!--Exercice Poo-->
-        <script>
+        <!-- <script>
             class Etudiant {
                 constructor(age, poids, sexe) {
                     this.age = age; 
@@ -1278,7 +1303,7 @@
             alert('etudiant1 a ' + etudiant1.age + ' ans et pèse ' + etudiant1.poids + ' kg' + ' et est de sexe ' + etudiant1.sexe);
             alert('etudiant2 a ' + etudiant2.age + 'ans et est de sexe ' + etudiant2.sexe) ;
              
-        </script>
+        </script> -->
         <!--Exercice 9 Le DOM-->
          <!-- <script>
             document.body.onload = function() {
@@ -1298,17 +1323,17 @@
             });
         </script> -->
         <!--Exercice 9 Le DOM (suite 2 Calculatrice)-->
-          
-        <!--<script>
-            document.addEventListener('DOMContentLoaded', function() {
+<!--           
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
                 // Récupérer les éléments du formulaire
                 var premierNombre = document.getElementById('premier-nombre');
                 var deuxiemeNombre = document.getElementById('deuxieme-nombre');
                 var resultat = document.getElementById('resultat');
                 var bouton = document.getElementById('mon-bouton');
-+
+
                 // Définir le gestionnaire d'événements du bouton
-                bouton.addEventListener('click', function() {
+                bouton.addEventListener('click', function () {
                     // Récupérer les valeurs des champs et les convertir en nombres
                     var nombre1 = parseInt(premierNombre.value);
                     var nombre2 = parseInt(deuxiemeNombre.value);
@@ -1316,29 +1341,37 @@
                     // Calculer la somme et l'afficher dans le champ resultat
                     resultat.value = nombre1 + nombre2;
                 });
-
-
-                Pour Arnaud avec on click
-                <button onclick="addition()">Additionner</button>
-                <script>
-                    // Fonction appelée par le onclick du bouton
-                    function addition() {
-                        var nombre1 = parseInt(document.getElementById('premier-nombre').value);
-                        var nombre2 = parseInt(document.getElementById('deuxieme-nombre').value);
-                        document.getElementById('resultat').value = nombre1 + nombre2;
-                    }
-                </script>
-                <script>
-                    // Fonction addition qui prend deux paramètres
-                    function addition(a, b) {
-                        // Convertit les paramètres en nombres
-                        var nombre1 = parseInt(a);
-                        var nombre2 = parseInt(b);
-                        document.getElementById('resultat').value = nombre1 + nombre2;
-                    }
-                </script>
             });
-        </script>-->
+        </script> -->
+        <!-- <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                    console.log("Script chargé");
+
+                    var premierNombre = document.getElementById('premier-nombre');
+                    var deuxiemeNombre = document.getElementById('deuxieme-nombre');
+                    var resultat = document.getElementById('resultat');
+                    var bouton = document.getElementById('mon-bouton');
+
+                    console.log("Éléments:", premierNombre, deuxiemeNombre, resultat, bouton);
+
+                    // TEST 1 : Clique simple
+                    bouton.addEventListener('click', function () {
+                        console.log("✅ BOUTON CLIQUE !");
+                        var nombre1 = parseInt(premierNombre.value) || 0;
+                        var nombre2 = parseInt(deuxiemeNombre.value) || 0;
+                        resultat.value = nombre1 + nombre2;
+                        console.log("Résultat:", resultat.value);
+                    });
+
+                    // TEST 2 : Alert pour être sûr
+                    bouton.onclick = function () {
+                        alert("CLIC DÉTECTÉ !");
+                    };
+                });
+
+
+        </script> -->
+
         <!--Exercice 10 getElementBYClassName-->
         <!-- <script>
             function cacherSpoilers() {
