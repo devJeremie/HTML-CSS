@@ -1202,6 +1202,17 @@ footer {
   border-radius: 8px !important;
   font-weight: 600 !important;
 }
+/*----------------SPOILER---------------*/
+.disappear {
+  display: none;
+}
+
+.spoiler {
+  background-color: #e39a9a;
+  padding: 10px;
+  border-left: 4px solid #ccc;
+  margin: 10px 0;
+}
   /*------------------media Query-----------------*/
   /*On peut ecrire min-width ou max-width personnellement je prefere le max*/
   /*EXEMPLE*/

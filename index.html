@@ -1374,16 +1374,28 @@
         </script> -->
 
         <!--Exercice 10 getElementBYClassName-->
-        <!-- <script>
+        <!--Cacher spoiler-->
+        <div>
+            <p class="spoiler">Ceci est un spoiler caché ! (spoiler 1)</p>
+            <p>Contenu normal entre spoilers.</p>
+            <p class="spoiler">Un autre spoiler secret (spoiler 2).</p>
+            <p class="spoiler">Un autre spoiler secret (spoiler 3).</p>
+            <p class="spoiler">Un autre spoiler secret (spoiler 4).</p>
+            <button onclick="cacherSpoilers()">Cacher tous les spoilers</button>
+        </div>
+        <script>
             function cacherSpoilers() {
                 // Récupère tous les éléments avec la classe "spoiler"
                 let spoilers = document.getElementsByClassName('spoiler');
-                // Parcourt la collection et ajoute la classe "hidden" à chacun
                 for (var i = 0; i < spoilers.length; i++) {
-                    spoilers[i].classList.add('hidden');
+                    //setTimeout(quoi faire (function) et quand (index) dans notre cas )
+                    setTimeout(function (index) { 
+                        // Parcourt la collection et ajoute la classe "hidden" à chacun
+                        spoilers[index].classList.add('disappear');
+                       }, i * 300, i);  // Délai = index * 300ms
                 }
-            } 
-        </script> -->
+            }
+        </script>
         <!-- <script>
             //fond jaune
             document.getElementById('second').style.backgroundColor = 'yellow';
