@@ -1419,7 +1419,7 @@
             }
         </script> -->
         <!--Avec Parametres-->
-        <div>
+        <!-- <div>
             <p onclick="toggleJaune(this)">Premier paragraphe</p>
             <p onclick="toggleJaune(this)">Deuxième paragraphe</p>
             <p onclick="toggleJaune(this)">Troisième paragraphe</p>
@@ -1433,7 +1433,7 @@
                     paragraphe.style.backgroundColor = 'yellow';  // Jaune
                 }
             }
-        </script>
+        </script> -->
         <!--<script> //la meme chose mais avec un bouton qui colore tous
             // les paragraphes d'un coup
             // Fonction appelée au clic sur le bouton
@@ -1446,6 +1446,27 @@
             colorierParagraphes();
         </script>
         <button onclick="colorierParagraphes()" class="toto" id="tata">click</button> -->
+        <!--getAttribute() et setAttribute()-->
+        <!-- <div>
+            <h2>Clique pour changer l'image !</h2>
+            <img id="image" src="image/ArriereMoto.jpg" alt="Chat" width="150" height="150">
+            <button onclick="changerImage()">Changer image</button>
+        </div>
+        <script>
+            function changerImage() {
+                let img = document.getElementById('image');
+                // LIT l'attribut actuel
+                let srcActuelle = img.getAttribute('src');
+                // CHANGE l'attribut src
+                if (srcActuelle.includes('ArriereMoto')) {
+                    img.setAttribute('src', 'image/R1.jpg');
+                } else {
+                    img.setAttribute('src', 'image/motoBlackRed.jpg');
+                }
+            }
+        </script>
+        </div> -->
+
         <!--Exercice filtrage-->
         <!-- <script>
             function filtrer(categorie) {
@@ -2011,27 +2032,49 @@ for (let i = 0; i < titles.length; i++) {
     <!--Avec Boucle For-->
     <!--Exercice Intermédiaire-->
     <!-- Horloge TP-->
-    <!-- <section>
-    <div class="clock">
-        <div class="hand hour-hand"></div>
-        <div class="hand minute-hand"></div>
-        <div class="hand second-hand"></div>
-        <div class="center-dot"></div>
-    </div>
-        <!-- Réglage de l'alarme -->
-        <!-- <div class="alarm-set">
-            <label for="alarmTime">Définir l’alarme :</label>
+    <section>
+        <div class="clock">
+            <div class="hour-number hour-12" data-hour="12">12</div>
+            <div class="hour-number hour-1" data-hour="1">1</div>
+            <div class="hour-number hour-2" data-hour="2">2</div>
+            <div class="hour-number hour-3" data-hour="3">3</div>
+            <div class="hour-number hour-4" data-hour="4">4</div>
+            <div class="hour-number hour-5" data-hour="5">5</div>
+            <div class="hour-number hour-6" data-hour="6">6</div>
+            <div class="hour-number hour-7" data-hour="7">7</div>
+            <div class="hour-number hour-8" data-hour="8">8</div>
+            <div class="hour-number hour-9" data-hour="9">9</div>
+            <div class="hour-number hour-10" data-hour="10">10</div>
+            <div class="hour-number hour-11" data-hour="11">11</div>
+    
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+            <div class="center-dot"></div>
+        </div>
+        <div class="alarm-set">
+            <label for="alarmTime">Définir l'alarme :</label>
             <input type="time" id="alarmTime" />
             <button onclick="setAlarm()">Régler</button>
             <span id="alarm-status"></span>
         </div>
-        <!-- Sons -->
-        <!-- <audio id="hourly-chime" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12d12eae7d.mp3"></audio>
+        <audio id="hourly-chime" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12d12eae7d.mp3"></audio>
         <audio id="alarm-sound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124b0ba2b0.mp3"></audio>
-        
-    </section>  --> 
+    </section>
+    <section>
+        <div class="digital-clock">
+            <div class="time">
+                <span class="hours" id="hours">14</span>
+                <span class="colon">:</span>
+                <span class="minutes" id="minutes">30</span>
+                <span class="colon">:</span>
+                <span class="seconds" id="seconds">00</span>
+            </div>
+        </div>
+    </section>
+
     <!--Section hover et  animation de base-->
-    <section class="demo-section">
+    <!-- <section class="demo-section">
         <button class="btn-intro">Découvrir les effets</button>
         <div class="links-container">
             <a href="#" class="hover-color">Changement de couleur</a>
@@ -2042,7 +2085,7 @@ for (let i = 0; i < titles.length; i++) {
         </div>
     </section>
     <!--------Footer------->
-    <footer>
+    <!-- <footer>
         <div class="footer-content">
             <div class="footer-logo">
                 <img src="image/disney_logo.png" alt="Logo Disney">
@@ -2065,7 +2108,7 @@ for (let i = 0; i < titles.length; i++) {
         <div class="footer-bottom">
             <p class="copyright">&copy; 2026 Disney - Tous droits réservés</p>
         </div>
-    </footer>
+    </footer> -->
     <!-- <script>
         function updateClock() {
             const now = new Date();
@@ -2089,4 +2132,5 @@ for (let i = 0; i < titles.length; i++) {
     </script> -->
 
 <script src="Javascript/gallery.js"></script>
+<script src="Javascript/horloge.js"></script>
 </html>
