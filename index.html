@@ -1375,7 +1375,7 @@
 
         <!--Exercice 10 getElementBYClassName-->
         <!--Cacher spoiler-->
-        <div>
+        <!-- <div>
             <p class="spoiler">Ceci est un spoiler caché ! (spoiler 1)</p>
             <p>Contenu normal entre spoilers.</p>
             <p class="spoiler">Un autre spoiler secret (spoiler 2).</p>
@@ -1395,30 +1395,46 @@
                        }, i * 300, i);  // Délai = index * 300ms
                 }
             }
-        </script>
+        </script> -->
+        <!--Sans parametre-->
+        <!-- <div>
+            <h1>Clique sur un paragraphe pour le rendre jaune</h1>
+            <p id="premier">Premier - Clique-moi !</p>
+            <p id="second">Deuxième - Clique-moi !</p>
+            <p id="troisieme">Troisième - Clique-moi !</p>
+        </div> -->
         <!-- <script>
-            //fond jaune
-            document.getElementById('second').style.backgroundColor = 'yellow';
-            //au click
-            document.getElementById('second').onclick = function() {
-                this.style.backgroundColor = 'yellow';
-            };
-            //n'importe quel paragraphe au click sur le paragraphe
-            // Sélectionne tous les éléments <p> de la page et les
-            // place dans la variable paragraphs
-            let paragraphs = document.getElementsByTagName('p');
-                // Parcourt chaque paragraphe
-                for (let i = 0; i < paragraphs.length; i++) {
-                    // Pour chaque paragraphe, on ajoute un 'onclick'
-                    paragraphs[i].onclick = function(event) {
-                        // Quand le paragraphe est cliqué, on change sa couleur de fond en jaune
-                        // event.target représente le paragraphe cliqué
-                        event.target.style.backgroundColor = 'yellow';
-                    };
+            // Récupère TOUS les paragraphes
+            let paragraphes = document.getElementsByTagName('p');
+            // Pour CHAQUE paragraphe, ajoute un écouteur
+            for (let i = 0; i < paragraphes.length; i++) {
+                paragraphes[i].addEventListener('click', function () {
+                    // SI jaune → enlève, SINON met jaune
+                    if (this.style.backgroundColor === 'yellow') {
+                        this.style.backgroundColor = '';  // Normal (blanc)
+                    } else {
+                        this.style.backgroundColor = 'yellow';
+                    }
+                });
+            }
+        </script> -->
+        <!--Avec Parametres-->
+        <div>
+            <p onclick="toggleJaune(this)">Premier paragraphe</p>
+            <p onclick="toggleJaune(this)">Deuxième paragraphe</p>
+            <p onclick="toggleJaune(this)">Troisième paragraphe</p>
+        </div>
+        <script>
+            // FONCTION qui reçoit le paramètre "celui que j'ai cliqué"
+            function toggleJaune(paragraphe) {
+                if (paragraphe.style.backgroundColor === 'yellow') {
+                    paragraphe.style.backgroundColor = '';  // Normal
+                } else {
+                    paragraphe.style.backgroundColor = 'yellow';  // Jaune
                 }
-
+            }
         </script>
-        <script> //la meme chose mais avec un bouton qui colore tous
+        <!--<script> //la meme chose mais avec un bouton qui colore tous
             // les paragraphes d'un coup
             // Fonction appelée au clic sur le bouton
             function colorierParagraphes() {
