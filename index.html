@@ -2041,31 +2041,34 @@ for (let i = 0; i < titles.length; i++) {
     
     <script>
         function updateDigitalClock() {
+            // Crée un objet Date représentant l'heure et la date actuelles
             const now = new Date();
             // Date FR (jeudi 5 février 2026)
             const dateText = now.toLocaleDateString("fr-FR", {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                timeZone: "Europe/Paris"
+                weekday: 'long',            // Nom complet du jour de la semaine
+                year: 'numeric',            // Année sur quatre chiffres
+                month: 'long',              // Nom complet du mois
+                day: 'numeric',             // Numéro du jour dans le mois
+                timeZone: "Europe/Paris"    // Fait en sorte qu'on soit toujours à l'heure parisienne
             });
             // Heure FR 24h (08:32:05)
             const timeText = now.toLocaleTimeString("fr-FR", {
-                hour: '2-digit',
-                minute: '2-digit',
-                second: '2-digit',
-                hour12: false,
-                timeZone: "Europe/Paris"
+                hour: '2-digit',            // Heure sur deux chiffres
+                minute: '2-digit',          // Minutes sur deux chiffres
+                second: '2-digit',          // Secondes sur deux chiffres
+                hour12: false,              // Format 24h au lieu de 12h
+                timeZone: "Europe/Paris"    // Fuseau horaire de Paris
             });
             // Affichage
             document.getElementById('date').textContent = dateText;
             // Si tu veux juste HH:MM:SS sans span :
             document.getElementById('time').textContent = timeText;
-            // Si tu veux les deux-points qui clignotent, on peut faire ensuite :
+            // Si on veut les deux-points qui clignotent, on peut faire ensuite :
             // document.getElementById('time').innerHTML = timeText.replace(/:/g, '<span class="dots">:</span>');
         }
+        // Met à jour l'heure chaque seconde (toutes les 1000 millisecondes)
         setInterval(updateDigitalClock, 1000);
+        // Met à jour immédiatement l'horloge à l'ouverture de la page, avant le premier intervalle
         updateDigitalClock();
     </script>
 
