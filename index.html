@@ -2033,45 +2033,42 @@ for (let i = 0; i < titles.length; i++) {
     <!--Exercice Intermédiaire-->
     <!-- Horloge TP-->
     <section>
-        <div class="clock">
-            <div class="hour-number hour-12" data-hour="12">12</div>
-            <div class="hour-number hour-1" data-hour="1">1</div>
-            <div class="hour-number hour-2" data-hour="2">2</div>
-            <div class="hour-number hour-3" data-hour="3">3</div>
-            <div class="hour-number hour-4" data-hour="4">4</div>
-            <div class="hour-number hour-5" data-hour="5">5</div>
-            <div class="hour-number hour-6" data-hour="6">6</div>
-            <div class="hour-number hour-7" data-hour="7">7</div>
-            <div class="hour-number hour-8" data-hour="8">8</div>
-            <div class="hour-number hour-9" data-hour="9">9</div>
-            <div class="hour-number hour-10" data-hour="10">10</div>
-            <div class="hour-number hour-11" data-hour="11">11</div>
-    
-            <div class="hand hour-hand"></div>
-            <div class="hand minute-hand"></div>
-            <div class="hand second-hand"></div>
-            <div class="center-dot"></div>
-        </div>
-        <div class="alarm-set">
-            <label for="alarmTime">Définir l'alarme :</label>
-            <input type="time" id="alarmTime" />
-            <button onclick="setAlarm()">Régler</button>
-            <span id="alarm-status"></span>
-        </div>
-        <audio id="hourly-chime" src="https://cdn.pixabay.com/audio/2022/10/16/audio_12d12eae7d.mp3"></audio>
-        <audio id="alarm-sound" src="https://cdn.pixabay.com/audio/2022/07/26/audio_124b0ba2b0.mp3"></audio>
-    </section>
-    <section>
         <div class="digital-clock">
-            <div class="time">
-                <span class="hours" id="hours">14</span>
-                <span class="colon">:</span>
-                <span class="minutes" id="minutes">30</span>
-                <span class="colon">:</span>
-                <span class="seconds" id="seconds">00</span>
-            </div>
+            <div id="time">08:32:00</div>
+            <div id="date">Jeudi 05 Février 2026</div>
         </div>
     </section>
+    
+    <script>
+        function updateDigitalClock() {
+            const now = new Date();
+            // Date FR (jeudi 5 février 2026)
+            const dateText = now.toLocaleDateString("fr-FR", {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                timeZone: "Europe/Paris"
+            });
+            // Heure FR 24h (08:32:05)
+            const timeText = now.toLocaleTimeString("fr-FR", {
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false,
+                timeZone: "Europe/Paris"
+            });
+            // Affichage
+            document.getElementById('date').textContent = dateText;
+            // Si tu veux juste HH:MM:SS sans span :
+            document.getElementById('time').textContent = timeText;
+            // Si tu veux les deux-points qui clignotent, on peut faire ensuite :
+            // document.getElementById('time').innerHTML = timeText.replace(/:/g, '<span class="dots">:</span>');
+        }
+        setInterval(updateDigitalClock, 1000);
+        updateDigitalClock();
+    </script>
+
 
     <!--Section hover et  animation de base-->
     <!-- <section class="demo-section">

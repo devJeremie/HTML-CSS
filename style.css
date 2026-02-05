@@ -718,178 +718,47 @@ donc les % et vh, vw, rem et em plutot que px
 } 
 /*-------------Ex 12 Galerie Vidéo Fin--------------*/
 /*------------------Horloge Tp-----------------*/
-.clock {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  border: 8px solid #333;
-  border-radius: 50%;
-  background: #936285;
-  margin: 40px auto;
-  overflow: visible;
-}
-.hand {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform-origin: bottom center;
-  border-radius: 4px;
-}
-.hour-hand {
-  width: 8px;
-  height: 70px;
-  background: #222;
-  z-index: 3;
-  margin-left: -4px;
-  /* Moitié de 8px */
-  margin-top: -70px;
-  /* -sa hauteur */
-}
-.minute-hand {
-  width: 4px;
-  height: 110px;
-  background: #555;
-  z-index: 2;
-  margin-left: -2px;
-  /* Moitié de 4px */
-  margin-top: -110px;
-  /* -sa hauteur */
-}
-.second-hand {
-  width: 2px;
-  height: 130px;
-  background: #c00;
-  z-index: 1;
-  margin-left: -1px;
-  /* Moitié de 2px */
-  margin-top: -130px;
-  /* -sa hauteur */
-}
-.center-dot {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  background: #333;
-  border-radius: 50%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 4;
-}
-/* Chiffres 1-12 - Z-INDEX IMPORTANT */
-.hour-number {
-  position: absolute;
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  /* ✅ BLANC sur mon fond violet */
-  font-family: Arial, sans-serif;
-  z-index: 0;
- 
-}
-/* Position exacte chaque chiffre */
-.hour-12 {
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.hour-1 {
-  top: 22px;
-  right: 68px;
-}
-.hour-2 {
-  top: 62px;
-  right: 28px;
-}
-.hour-3 {
-  top: 50%;
-  right: 12px;
-  transform: translateY(-50%);
-}
-.hour-4 {
-  bottom: 68px;
-  right: 35px;
-}
-.hour-5 {
-  bottom: 24px;
-  right: 78px;
-}
-.hour-6 {
-  bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.hour-7 {
-  bottom: 35px;
-  left: 65px;
-}
-.hour-8 {
-  bottom: 55px;
-  left: 38px;
-}
-.hour-9 {
-  top: 50%;
-  left: 12px;
-  transform: translateY(-50%);
-}
-.hour-10 {
-  top: 55px;
-  left: 38px;
-}
-.hour-11 {
-  top: 35px;
-  left: 65px;
-}
+    .digital-clock {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 40px 60px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+  
+    #time {
+      font-size: 4rem;
+      color: #00ff88;
+      text-shadow: 0 0 20px #00ff88;
+      letter-spacing: 10px;
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+  
+    #date {
+      font-size: 1.2rem;
+      color: #fff;
+      opacity: 0.8;
+    }
+  
+    .dots {
+      animation: blink 1.5s infinite;
+    }
+  
+    @keyframes blink {
+  
+      0%,
+      50% {
+        opacity: 1;
+      }
+  
+      51%,
+      100% {
+        opacity: 0;
+      }
+    }
 /*------------------Horloge Tp Fin-----------------*/
-/*horloge digital*/
-.digital-clock {
-  width: 300px;
-  margin: 20px auto;
-  text-align: center;
-  font-family: 'Courier New', monospace;
-}
-.time {
-  display: inline-flex;
-  background: #222;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-}
-.hours,
-.minutes,
-.seconds {
-  font-size: 48px;
-  font-weight: bold;
-  color: #00ff00;
-  text-shadow: 0 0 10px #00ff00;
-  min-width: 50px;
-  animation: glow 1.5s ease-in-out infinite alternate;
-}
-.colon {
-  font-size: 48px;
-  color: #00ff00;
-  font-weight: bold;
-  animation: blink 1s infinite;
-}
-@keyframes glow {
-  from {
-    text-shadow: 0 0 10px #00ff00;
-  }
 
-  to {
-    text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00;
-  }
-}
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-  51%,
-  100% {
-    opacity: 0;
-  }
-}
 /*--------------SEction test pour sabrina, karim, melissa--------------*/ 
 .imagSectionTest{
   width: 150px;
