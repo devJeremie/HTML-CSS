@@ -1577,6 +1577,113 @@
           </script>
           
        </section>-->
+    <!--Exercice Ternaire-->
+       <section>
+        <!--Exo 1-->
+        <script>
+            let age = 20; // tu peux changer la valeur pour tester
+            let acces = age >= 18 ? "autorisé" : "refusé";
+
+            console.log(acces); // affiche "autorisé" si age >= 18, sinon "refusé"
+        </script>
+        <!--Exo 2-->
+        <script>
+            const prenom = prompt("Quel est ton prénom ?");
+            const message = prenom ? `Bonjour, ${prenom} !` : "Aucun prénom saisi";
+            alert(message);
+        </script>
+        <!--Exo 3-->
+        <script>
+            const nombre = prompt("Entrez un nombre :");
+            const resultat = parseInt(nombre) % 2 === 0 ? "Pair" : "Impair";
+            alert(resultat);
+        </script>
+        <!--Exo 4-->
+        <script>
+            const note = parseInt(prompt("Entrez votre note (0-20) :"));
+            const result = note >= 16 ? "Excellent" :
+                    note >= 12 ? "Bien" :
+                    note >= 10 ? "Moyen" :
+                        "Insuffisant";
+                    alert(result);
+        </script>
+        <!--Exo 5-->
+        <script>
+            const nombres = [-2, 5, 0, -1, 8, -7];
+            const signes = nombres.map(nombre =>
+                nombre > 0 ? '+' :
+                nombre < 0 ? '-' :
+                    '0'
+                );
+                console.log(signes);
+                // Résultat: ['-', '+', '0', '-', '+', '-']
+        </script>
+        <!--Exo 6-->
+        <script>
+            const nbr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            const pairs = nbr.filter(nombre => nombre % 2 === 0);
+                console.log(pairs);
+                // Résultat: [2, 4, 6, 8, 10]
+        </script>
+        <!--Exo 7-->
+        <script>
+            const mots = ["chat", "maison", "chien", "livre", "arbre", "pomme"];
+            const mots5Lettres = mots.filter(mot =>
+                mot.length === 5 ? true : false
+            );
+                console.log(mots5Lettres);
+                // Résultat: ["chien", "livre", "arbre", "pomme"]
+        </script>
+        <!--Exo 8-->
+        <script>
+            let personnes = [
+                { nom: "Alice", age: 22 },
+                { nom: "Bob", age: 17 },
+                { nom: "Charlie", age: 30 }
+            ];
+            const majeures = personnes.filter(personne =>
+                personne.age >= 18 ? true : false
+            );
+            console.log(majeures);
+                // Résultat: [ { nom: "Alice", age: 22 }, { nom: "Charlie", age: 30 } ]
+        </script>
+        <!--Exo 9-->
+        <script>
+            const nombresArray = [1, 2, 3, 4, 5];
+            const somme = nombresArray.reduce((accumulateur, nombre) =>
+                accumulateur + nombre, 0
+            );
+            console.log(somme);
+            // Résultat: 15
+            //Avec ternaire meme si pour cet exercice cela na aucun interet car le ternaire et toujours vrai
+            const nombresArray2 = [1, 2, 3, 4, 5];
+            const sum = nombresArray2.reduce((accumulateur, nombre) =>
+                accumulateur + nombre > 0 ? accumulateur + nombre : accumulateur, 0
+            );
+            console.log(sum);
+                // Résultat: 15
+        </script>
+        <!--Exo 10-->
+        <script>
+            const nbres = [2, 3, 4, 5];
+            const produit = nbres.reduce((accumulateur, nombre) =>
+                nombre !== 0 ? accumulateur * nombre : accumulateur, 1
+            );
+            console.log(produit);
+                // Résultat: 120 (2 × 3 × 4 × 5)
+        </script>
+        <!--Exo 11-->
+        <script>
+            const mot = prompt("Entrez un mot :").toLowerCase();
+            const voyelles = "aeiouy";
+            const nombreVoyelles = mot
+                .split('')   //transforme en tableau compme ca on peut utiliser reduce
+                .reduce((compteur, lettre) =>  //parcours chaque élément individuellement 
+                    voyelles.includes(lettre) ? compteur + 1 : compteur, 0
+                );
+                alert(`Nombre de voyelles : ${nombreVoyelles}`);
+        </script>
+    </section>
     </section>
     <!--PENDU OUSMANE-->
     <!--<script>
