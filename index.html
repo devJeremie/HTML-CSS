@@ -1602,9 +1602,10 @@
         <script>
             const note = parseInt(prompt("Entrez votre note (0-20) :"));
             const result = note >= 16 ? "Excellent" :
-                    note >= 12 ? "Bien" :
+                    (note >= 12 ? "Bien" :
                     note >= 10 ? "Moyen" :
-                        "Insuffisant";
+                        "Insuffisant"
+                    )
                     alert(result);
         </script>
         <!--Exo 5-->
@@ -1677,7 +1678,7 @@
             const mot = prompt("Entrez un mot :").toLowerCase();
             const voyelles = "aeiouy";
             const nombreVoyelles = mot
-                .split('')   //transforme en tableau compme ca on peut utiliser reduce
+                .split('')   //transforme en tableau comme ca on peut utiliser reduce
                 .reduce((compteur, lettre) =>  //parcours chaque élément individuellement 
                     voyelles.includes(lettre) ? compteur + 1 : compteur, 0
                 );
